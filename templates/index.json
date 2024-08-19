@@ -87,21 +87,11 @@
         "padding_top": 48,
         "padding_bottom": 48
       }
-    },
-    "custom_liquid_jiLFJk": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "custom_liquid_e4g7xU",
-    "custom_liquid_jiLFJk"
+    "custom_liquid_e4g7xU"
   ]
 }
