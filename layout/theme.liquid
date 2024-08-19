@@ -5,8 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="theme-color" content="">
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.0/mapbox-gl.css' rel='stylesheet' />
 
     <link rel="canonical" href="{{ canonical_url }}">
 
@@ -375,15 +373,6 @@
     {%- if settings.cart_type == 'drawer' -%}
       <script src="{{ 'cart-drawer.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <div id="map" style="width: 100%; height: 400px;"></div>
-    <script>
-    mapboxgl.accessToken = 'pk.eyJ1IjoiZ3JlZW5mbGVldCIsImEiOiJjbTAxNmc5ZXkwcGkzMnJvcWhuNGRid2xzIn0.XzHCf_SYSR8zy-RPzMw0PA';
-    var map = new mapboxgl.Map({
-        container: 'map', // ID of the map container
-        style: 'mapbox://styles/mapbox/streets-v11', // Map style
-        center: [longitude, latitude], // Starting position [lng, lat]
-        zoom: 10 // Starting zoom level
-    });
-</script>
+    
   </body>
 </html>
