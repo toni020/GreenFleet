@@ -82,16 +82,26 @@
 
       ],
       "settings": {
-        "custom_liquid": "<iframe\n  width=\"600\"\n  height=\"450\"\n  style=\"border:0\"\n  loading=\"lazy\"\n  allowfullscreen\n  referrerpolicy=\"no-referrer-when-downgrade\"\n  src=\"https:\/\/www.google.com\/maps\/embed\/v1\/place?key=AIzaSyD_ldx3iVzSC-3Y8dFUMvG3-kKecW-jles\n    &q=Space+Needle,Seattle+WA\"\n&center=-37.72019620201051, 145.04690113680994>\n<\/iframe>",
+        "custom_liquid": "<iframe\n  width=\"600\"\n  height=\"450\"\n  style=\"border:0\"\n  loading=\"lazy\"\n  allowfullscreen\n  referrerpolicy=\"no-referrer-when-downgrade\"\n  src=\"https:\/\/www.google.com\/maps\/embed\/v1\/place?key=AIzaSyD_ldx3iVzSC-3Y8dFUMvG3-kKecW-jles\n&center=-37.72019620201051, 145.04690113680994\n&zoom=16\n&q=La+Trobe+University\">\n<\/iframe>",
         "color_scheme": "",
         "padding_top": 48,
         "padding_bottom": 48
+      }
+    },
+    "custom_liquid_jiLFJk": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "",
+        "color_scheme": "",
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "image_banner",
     "featured_collection",
-    "custom_liquid_e4g7xU"
+    "custom_liquid_e4g7xU",
+    "custom_liquid_jiLFJk"
   ]
 }
