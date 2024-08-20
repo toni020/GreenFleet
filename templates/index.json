@@ -37,18 +37,6 @@
         "show_text_below": false
       }
     },
-    "custom_liquid_e4g7xU": {
-      "type": "custom-liquid",
-      "custom_css": [
-        "iframe {padding: 15px;}"
-      ],
-      "settings": {
-        "custom_liquid": "<iframe\n  width= 100%\n  height=\"450\"\n  style=\"border:0\"\n  loading=\"lazy\"\n  allowfullscreen\n  referrerpolicy=\"no-referrer-when-downgrade\"\n  src=\"https:\/\/www.google.com\/maps\/embed\/v1\/place?key=AIzaSyD_ldx3iVzSC-3Y8dFUMvG3-kKecW-jles\n&center=-37.72019620201051, 145.04690113680994\n&zoom=16\n&q=La+Trobe+University\">\n<\/iframe>",
-        "color_scheme": "",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    },
     "custom_liquid_j47HpH": {
       "type": "custom-liquid",
       "settings": {
@@ -61,7 +49,6 @@
   },
   "order": [
     "image_banner",
-    "custom_liquid_e4g7xU",
     "custom_liquid_j47HpH"
   ]
 }
