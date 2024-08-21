@@ -1,6 +1,29 @@
 {% schema %}
   {
     "name": "Section name",
-    "settings": []
+    "settings": [
+      {
+        "type": "text",
+        "label": "Headline",
+        "id" : "headline"
+      }
+    ],
+    "blocks": [
+      {
+        "name" : "image",
+        "type": "image",
+        "settings": [
+          {
+            "type": "text",
+            "id": "image",
+            "label": "image"
+          }
+        ]
+      }
+    ],
+    "presets": [{
+        "name": "Forest"
+      }
+    ]
   }
 {% endschema %}
