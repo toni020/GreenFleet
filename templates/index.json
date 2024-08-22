@@ -48,6 +48,17 @@
     },
     "forest_ifpmzM": {
       "type": "forest",
+      "blocks": {
+        "image_JEy4ia": {
+          "type": "image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_JEy4ia"
+      ],
       "settings": {
         "headline": "I love Forest"
       }
