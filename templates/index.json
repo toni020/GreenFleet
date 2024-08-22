@@ -46,16 +46,16 @@
         "padding_bottom": 52
       }
     },
-    "forest_6BEyLM": {
+    "forest_ifpmzM": {
       "type": "forest",
       "settings": {
-        "headlin": "knklnlknlkn"
+        "headline": "I love Forest"
       }
     }
   },
   "order": [
     "image_banner",
     "custom_liquid_j47HpH",
-    "forest_6BEyLM"
+    "forest_ifpmzM"
   ]
 }
