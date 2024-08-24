@@ -54,10 +54,17 @@
           "settings": {
             "image_1": "shopify:\/\/shop_images\/fall-vegetable-box.jpg"
           }
+        },
+        "image_qALYfg": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/small-business-interior.jpg"
+          }
         }
       },
       "block_order": [
-        "image_JEy4ia"
+        "image_JEy4ia",
+        "image_qALYfg"
       ],
       "settings": {
         "headline": "I love Forest"

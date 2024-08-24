@@ -13,5 +13,12 @@
     "market": "au"
   },
   "sections": {
+    "announcement_bar_ntrTNr": {
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+      }
+    }
   }
 }
