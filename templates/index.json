@@ -60,11 +60,18 @@
           "settings": {
             "image_1": "shopify:\/\/shop_images\/small-business-interior.jpg"
           }
+        },
+        "image_NYBREW": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
+          }
         }
       },
       "block_order": [
         "image_JEy4ia",
-        "image_qALYfg"
+        "image_qALYfg",
+        "image_NYBREW"
       ],
       "settings": {
         "headline": "I love Forest"
