@@ -21,22 +21,13 @@ async function initMap() {
     gmpClickable: true,
   });
   
-  // const mapMarker2 = new AdvancedMarkerElement({
-  //   map,
-  //   position: { lat: -35.095109193240894, lng: 148.9273121122105 },
-  //   content: pin.element,
+  marker.addListener("click", ({ domEvent, latLng }) => {
+    const { target } = domEvent;
 
-  // });
-  //  const mapMarker3 = new AdvancedMarkerElement({
-  //   map,
-  //   position: { lat: -36.39263272647331, lng:  148.59409546808754 },
-  //    content: pin.element,
-  // });
-  //  const mapMarker4 = new AdvancedMarkerElement({
-  //   map,
-  //   position: { lat: -26.591114609395387, lng: 151.74961726769178 },
-  //   content: pin.element,
-  // });
+    infoWindow.close();
+    infoWindow.setContent(marker.title);
+    infoWindow.open(marker.map, marker);
+  });
 }
 
 initMap();
