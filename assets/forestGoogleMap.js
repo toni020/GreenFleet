@@ -17,7 +17,6 @@ async function initMap() {
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
     title: '01',
-    content: pin.element,
     gmpClickable: true,
     
   });
