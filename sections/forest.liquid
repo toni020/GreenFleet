@@ -1,7 +1,7 @@
 {{ "forestMap.css" | asset_url | stylesheet_tag }}
 
 <div>
-  <h1>{{ section.settings.headline }}</h1>
+  <h1 color = "red">{{ section.settings.headline }}</h1>
   
   {% for block in section.blocks %}
     <img src ={{ block.settings.image_1 |image_url: width:50, height:50}} alt=""/>
