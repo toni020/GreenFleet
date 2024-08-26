@@ -14,7 +14,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
   const pin = new PinElement({
-     scale= 2.0,
+     scale= 1.5,
    });
   const mapMarker = new AdvancedMarkerElement({
     map,
