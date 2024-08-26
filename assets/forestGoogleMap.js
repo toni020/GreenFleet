@@ -16,7 +16,10 @@ async function initMap() {
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
+    title: '${i + 1}. ${title}',
+    content: pin.element,
     gmpClickable: true,
+    
   });
   const mapMarker2 = new AdvancedMarkerElement({
     map,
