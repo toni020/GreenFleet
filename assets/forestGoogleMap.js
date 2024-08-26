@@ -13,31 +13,31 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
-  const pin = new PinElement({
-     scale= 2.0,
-   });
+  // const pin = new PinElement({
+  //    scale= 2.0,
+  //  });
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content: pin.element,
+    // content: pin.element,
     // gmpClickable: true,
   });
-  const mapMarker2 = new AdvancedMarkerElement({
-    map,
-    position: { lat: -35.095109193240894, lng: 148.9273121122105 },
-    content: pin.element,
+  // const mapMarker2 = new AdvancedMarkerElement({
+  //   map,
+  //   position: { lat: -35.095109193240894, lng: 148.9273121122105 },
+  //   content: pin.element,
 
-  });
-   const mapMarker3 = new AdvancedMarkerElement({
-    map,
-    position: { lat: -36.39263272647331, lng:  148.59409546808754 },
-     content: pin.element,
-  });
-   const mapMarker4 = new AdvancedMarkerElement({
-    map,
-    position: { lat: -26.591114609395387, lng: 151.74961726769178 },
-    content: pin.element,
-  });
+  // });
+  //  const mapMarker3 = new AdvancedMarkerElement({
+  //   map,
+  //   position: { lat: -36.39263272647331, lng:  148.59409546808754 },
+  //    content: pin.element,
+  // });
+  //  const mapMarker4 = new AdvancedMarkerElement({
+  //   map,
+  //   position: { lat: -26.591114609395387, lng: 151.74961726769178 },
+  //   content: pin.element,
+  // });
 }
 
 initMap();
