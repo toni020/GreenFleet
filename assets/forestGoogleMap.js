@@ -17,7 +17,18 @@ async function initMap() {
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
   });
-
+  const mapMarker2 = new AdvancedMarkerElement({
+    map,
+    position: { lat: -35.095109193240894, lng: 148.9273121122105 },
+  });
+   const mapMarker3 = new AdvancedMarkerElement({
+    map,
+    position: { lat: -35.095109193240894, lng: 148.9273121122105 },
+  });
+   const mapMarker4 = new AdvancedMarkerElement({
+    map,
+    position: { lat: -35.095109193240894, lng: 148.9273121122105 },
+  });
 }
 
 initMap();
