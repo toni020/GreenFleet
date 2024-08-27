@@ -14,10 +14,12 @@ img{
   height: 100px;
 }
 
-.dropdown{
-  position: relative;
-}
-
-.dropdown-menu{
-  position: absolute;
+.context-menu {
+  position: fixed;
+  background: #fff;
+  z-index: 9999999;
+  width: 150px;
+  top: 0;
+  left: 0;
+  box-shadow: 0 0 6px tgba(0,0,0,0.2);
 }

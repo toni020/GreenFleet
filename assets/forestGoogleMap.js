@@ -28,3 +28,17 @@ async function initMap() {
 }
 
 initMap();
+
+function markerMenu(params) {
+  const contextMenu = document.createElement('ul');
+  contextMenu.className = 'context-menu';
+  contextMenu.innerHTML = '<div>Item 1</div><div>Item 2</div>';
+
+
+  document.appendChild(contextMenu);
+
+  document.addEventListener('mousemove', e => {
+    contextMenu.style.left = e.clientX + 'px';
+    contextMenu.style.top = e.clientY + 'px';
+  })
+}
