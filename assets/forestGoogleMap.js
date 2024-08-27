@@ -16,7 +16,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
   
-  const menuContent = '<div>Item 1</div> + <div>Item 2</div>'
+  const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
   const infowindow = new google.map.InfoWindow({
     content: menuContent,
   });
@@ -28,12 +28,12 @@ async function initMap() {
     gmpClickable: true,
   });
   
-  mapMarker.addListener("click", () => {
+  mapMarker.addListener("click", ({ domEvent, latLng }) => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    infowindow.open({
+    // infowindow.open({
 
-    });
+    // });
   });
 
 }
