@@ -22,11 +22,8 @@ async function initMap() {
   });
   
   mapMarker.addListener("click", ({ domEvent, latLng }) => {
-    const { target } = domEvent;
-
-    infoWindow.close();
-    infoWindow.setContent(marker.title);
-    infoWindow.open(marker.map, marker);
+    map.setCenter(mapMarker.position);
+    map.setZoom(8);
   });
 }
 
