@@ -25,7 +25,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Greenfleet_2022_Impact_Video.jpg",
-        "image_overlay_opacity": 30,
+        "image_overlay_opacity": 20,
         "image_height": "large",
         "desktop_content_position": "bottom-center",
         "show_text_box": false,
