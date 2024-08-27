@@ -24,23 +24,23 @@ async function initMap() {
   mapMarker.addListener("click", ({ domEvent, latLng }) => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    markerMenu();
+    // markerMenu();
   });
 
 }
 
 initMap();
 
-function markerMenu() {
-  const contextMenu = document.createElement('ul');
-  contextMenu.className = 'context-menu';
-  contextMenu.innerHTML = '<div>Item 1</div><div>Item 2</div>';
+// function markerMenu() {
+//   const contextMenu = document.createElement('ul');
+//   contextMenu.className = 'context-menu';
+//   contextMenu.innerHTML = '<div>Item 1</div><div>Item 2</div>';
 
 
-  document.appendChild(contextMenu);
+//   document.appendChild(contextMenu);
 
-  document.addEventListener('mousemove', e => {
-    contextMenu.style.left = e.clientX + 'px';
-    contextMenu.style.top = e.clientY + 'px';
-  })
-}
+//   document.addEventListener('mousemove', e => {
+//     contextMenu.style.left = e.clientX + 'px';
+//     contextMenu.style.top = e.clientY + 'px';
+//   })
+// }
