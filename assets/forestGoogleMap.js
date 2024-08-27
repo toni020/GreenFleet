@@ -31,9 +31,9 @@ async function initMap() {
   mapMarker.addListener("click", ({ domEvent, latLng }) => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    // infowindow.open({
-
-    // });
+    infowindow.open({
+      anchor: mapMarker, map
+    });
   });
 
 }
