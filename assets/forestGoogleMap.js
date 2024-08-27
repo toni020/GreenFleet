@@ -28,12 +28,12 @@ async function initMap() {
     gmpClickable: true,
   });
   
-  mapMarker.addListener("click", ({ domEvent, latLng }) => {
-    map.setCenter(mapMarker.position);
-    map.setZoom(8);
-    // infowindow.open({
-    //   anchor: mapMarker, map
-    // });
+  mapMarker.addListener("click", () => {
+    // map.setCenter(mapMarker.position);
+    // map.setZoom(8);
+    infowindow.open({
+      anchor: mapMarker, map
+    });
   });
 
 }
