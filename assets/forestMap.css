@@ -13,3 +13,11 @@ img{
   width: 100px;
   height: 100px;
 }
+
+.dropdown{
+  position: relative;
+}
+
+.dropdown-menu{
+  position: absolute;
+}
