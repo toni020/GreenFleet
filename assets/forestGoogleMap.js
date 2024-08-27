@@ -25,11 +25,13 @@ async function initMap() {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
   });
+
+  markerMenu();
 }
 
 initMap();
 
-function markerMenu(params) {
+function markerMenu() {
   const contextMenu = document.createElement('ul');
   contextMenu.className = 'context-menu';
   contextMenu.innerHTML = '<div>Item 1</div><div>Item 2</div>';
