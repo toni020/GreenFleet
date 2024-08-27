@@ -48,6 +48,24 @@
     },
     "forest_ifpmzM": {
       "type": "forest",
+      "blocks": {
+        "image_jeJp4V": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/person-stands-on-rocks-poking-out-of-the-ocean-shoreline.jpg"
+          }
+        },
+        "image_DR9HFy": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/Greenfleet_2022_Impact_Video.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_jeJp4V",
+        "image_DR9HFy"
+      ],
       "settings": {
         "headline": "I love Forest"
       }
