@@ -16,10 +16,10 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
   
-  const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
-  const infowindow = new google.map.InfoWindow({
-    content: menuContent,
-  });
+  // const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
+  // const infowindow = new google.map.InfoWindow({
+  //   content: menuContent,
+  // });
   
   
   const mapMarker = new AdvancedMarkerElement({
@@ -31,25 +31,12 @@ async function initMap() {
   mapMarker.addListener("click", ({ domEvent, latLng }) => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    infowindow.open({
-      anchor: mapMarker, map
-    });
+    // infowindow.open({
+    //   anchor: mapMarker, map
+    // });
   });
 
 }
 
 initMap();
 
-// function markerMenu() {
-//   const contextMenu = document.createElement('ul');
-//   contextMenu.className = 'context-menu';
-//   contextMenu.innerHTML = '<div>Item 1</div><div>Item 2</div>';
-
-
-//   document.appendChild(contextMenu);
-
-//   document.addEventListener('mousemove', e => {
-//     contextMenu.style.left = e.clientX + 'px';
-//     contextMenu.style.top = e.clientY + 'px';
-//   })
-// }
