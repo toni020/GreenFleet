@@ -21,7 +21,7 @@ async function initMap() {
     gmpClickable: true,
   });
   
-  marker.addListener("click", ({ domEvent, latLng }) => {
+  mapMarker.addListener("click", ({ domEvent, latLng }) => {
     const { target } = domEvent;
 
     infoWindow.close();
