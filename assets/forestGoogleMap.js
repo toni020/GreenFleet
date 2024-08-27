@@ -32,8 +32,7 @@ async function initMap() {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
     infowindow.open({
-      anchor: mapMarker,
-      map,
+
     });
   });
 
