@@ -15,6 +15,13 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
+  
+  const menuContent = '<div>Item 1</div> + <div>Item 2</div>'
+  const infowindow = new google.map.InfoWindow({
+    content: menuContent,
+  });
+  
+  
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
@@ -24,7 +31,10 @@ async function initMap() {
   mapMarker.addListener("click", ({ domEvent, latLng }) => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    // markerMenu();
+    infowindow.open({
+      anchor: mapMarker,
+      map,
+    });
   });
 
 }
