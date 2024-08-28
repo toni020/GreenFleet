@@ -1,4 +1,4 @@
-let map;
+let map2;
 
 async function initMap() {
   // The location of Uluru
