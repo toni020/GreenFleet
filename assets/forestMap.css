@@ -10,6 +10,7 @@
   margin: 0 auto; 
   border-top: 30px solid transparent; 
   border-bottom: 30px solid transparent; 
+  position: relative;
 }
 
 #test1 h1{
