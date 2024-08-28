@@ -7,10 +7,12 @@
   max-width: 80%; 
   height: 500px;
   margin: 0 auto; 
-  border-top: 30px solid #f0f0f0; /* Change to a visible color */
-  border-bottom: 30px solid #f0f0f0; /* Change to a visible color */
+  border-top: 30px solid transparent; 
+  border-bottom: 30px solid transparent; 
   border-radius: 20px;
+  overflow: hidden; /* Ensures the map doesn't overflow the rounded corners */
 }
+
 
 
 #test1 h1{
