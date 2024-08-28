@@ -15,6 +15,11 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
+  map2 = new Map(document.getElementById("map2"), {
+    zoom: 4,
+    center: position,
+    mapId: "DEMO_MAP_ID",
+  });
   
   const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
   const infowindow = new google.maps.InfoWindow({
