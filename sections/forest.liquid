@@ -1,5 +1,5 @@
 {{ "forestMap.css" | asset_url | stylesheet_tag }}
-{{ "forestGoogleMap.js" | asset_url | script_tag }}
+<!-- {{ "forestGoogleMap.js" | asset_url | script_tag }} -->
 {{ "forestGoogleMap2.js" | asset_url | script_tag }}
 <div>
   <h1>{{ section.settings.headline }}</h1>
@@ -12,29 +12,10 @@
 
   {% endfor %} -->
 </div>
-<!-- <gmp-map
-      center="-37.72019620201051, 145.04690113680994"
-      zoom="15"
-      map-id="DEMO_MAP_ID"
-      style="height: 400px"
->
-<gmp-advanced-marker
-        position="-37.72019620201051, 145.04690113680994"
-        title="La Trobe University"
-></gmp-advanced-marker> 
-<script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&libraries=maps,marker&v=beta"
-      defer
-></script> -->
+
 <div id="map"></div>
 <script 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap"
-  defer>
-</script>
-
-<div id="map2"></div>
-<script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap2"
   defer>
 </script>
 
