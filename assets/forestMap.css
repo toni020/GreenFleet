@@ -3,9 +3,14 @@
   height: 500px;
 }
 #map2 {
-  width: 100% ;
+  width: 100%; /* Full width */
+  max-width: 80%; /* Restricting the maximum width */
   height: 500px;
+  margin: 0 auto; /* Centering the map */
+  border-left: 10px solid transparent; /* Adding space on the left */
+  border-right: 10px solid transparent; /* Adding space on the right */
 }
+
 #test1 h1{
   width: 300px;
   height: 200px;
