@@ -48,6 +48,24 @@
     },
     "forest_ifpmzM": {
       "type": "forest",
+      "blocks": {
+        "image_zJ9j8j": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
+          }
+        },
+        "image_q6pkYP": {
+          "type": "image",
+          "settings": {
+            "image_1": "shopify:\/\/shop_images\/woman-holding-coffee-mug.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_zJ9j8j",
+        "image_q6pkYP"
+      ],
       "settings": {
         "headline": "I love Forest"
       }
