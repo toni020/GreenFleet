@@ -1,6 +1,6 @@
 {{ "forestMap.css" | asset_url | stylesheet_tag }}
 {{ "forestGoogleMap.js" | asset_url | script_tag }}
-{{ "forestGoogleMap2.js" | asset_url | script_tag }}
+<script src="{{ "forestGoogleMap2.js" | asset_url }}" defer="defer"></script>
 <div>
   <h1>{{ section.settings.headline }}</h1>
   
@@ -26,19 +26,16 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&libraries=maps,marker&v=beta"
       defer
 ></script> -->
-<div id="map"></div>
+
 <script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap"
-    async 
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" 
+    defer
+></script>
+<script 
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap2"
     defer
 ></script>
 
-<div id="map2"></div>
-<script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap2"
-    async 
-    defer
-></script>
 
 
 {% schema %}
