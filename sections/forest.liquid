@@ -1,6 +1,5 @@
 {{ "forestMap.css" | asset_url | stylesheet_tag }}
 {{ "forestGoogleMap.js" | asset_url | script_tag }}
-{{ "forestGoogleMap2.js" | asset_url | script_tag }}
 <div>
   <h1>{{ section.settings.headline }}</h1>
   
@@ -32,11 +31,7 @@
     defer
 ></script>
 
-<div id="map2"></div>
-<script 
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap2"
-    defer
-></script>
+
 
 {% schema %}
   {
