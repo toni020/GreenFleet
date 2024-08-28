@@ -13,7 +13,7 @@ async function initMap2() {
   map2 = new Map(document.getElementById("map2"), {
     zoom: 4,
     center: position,
-    mapId: "DEMO_MAP_ID",
+    mapId: "DEMO_MAP_ID2",
   });
   
   const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
