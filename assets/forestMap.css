@@ -3,12 +3,12 @@
   height: 500px;
 }
 #map2 {
-  width: 100%; /* Full width */
-  max-width: 80%; /* Restricting the maximum width */
+  width: 100%; 
+  max-width: 80%; 
   height: 500px;
-  margin: 0 auto; /* Centering the map */
-  border-left: 10px solid transparent; /* Adding space on the left */
-  border-right: 10px solid transparent; /* Adding space on the right */
+  margin: 0 auto; 
+  border-left: 10px solid transparent; 
+  border-right: 10px solid transparent; 
 }
 
 #test1 h1{
