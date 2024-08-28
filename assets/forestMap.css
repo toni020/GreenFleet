@@ -6,7 +6,8 @@
   width: 100%; 
   max-width: 80%; 
   height: 500px;
-  border-top: 30px solid transparent; 
+  margin: 0 auto; 
+  border-top: 1030px solid transparent; 
   border-bottom: 30px solid transparent; 
 }
 
