@@ -16,7 +16,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
   
-  const menuContent = '<div>Item 1</div> + <div>Item 2</div>';
+  const menuContent = '<div>Item 1</div>  <div>Item 2</div>';
   const infowindow = new google.maps.InfoWindow({
     content: menuContent,
   });
