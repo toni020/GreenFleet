@@ -15,13 +15,8 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
-  
-  const menuContent = '<div>Item 1</div>  <div>Item 2</div>';
-  const infowindow = new google.maps.InfoWindow({
-    content: menuContent,
-  });
-  
-  
+
+    
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
@@ -29,14 +24,41 @@ async function initMap() {
   });
   
   mapMarker.addListener("click", () => {
-    map.setCenter(mapMarker.position);
-    map.setZoom(8);
-    infowindow.open({
-      anchor: mapMarker, map
-    });
+    // map.setCenter(mapMarker.position);
+    // map.setZoom(8);
+    // infowindow.open({
+    //   anchor: mapMarker, map
+    // });
+    // myFunction();
   });
-
 }
+function myFunction(){
+
+  var menu = document.getElementsByClassName("menu");
+
+  if (menu[0].classList.contains("active")){fdsa
+      menu[0].classList.remove("active");
+  }else{
+      menu[0].classList.add("active");
+
+  }
+}
+
+// function buildContent(property){
+//   const content = document.createElement("div");
+//   content.classList.add("property");
+  
+//   content.innerHTML = `
+//     <div id = "icon">
+//      <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
+//     </div>
+//     <ul class="menu">
+//       <li id="aboutMe">More about Me</li>
+//       <li id="feedMe">Feed Me</li>
+//       <li id="shareMe">Make me amous</li>
+//     </ul> 
+//   `;
+// }
 
 window.initMap = initMap;
 
