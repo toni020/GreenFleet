@@ -46,7 +46,7 @@ function setupToggle() {
     
     markers.forEach((marker, index) => {
       marker.setVisible(visible);
-      console.log(`Marker ${index} visibility: ${visible}`); // Debugging line
+      console.log(`Marker ${index} visibility set to: ${visible}`); // Debugging line
     });
   });
 }
