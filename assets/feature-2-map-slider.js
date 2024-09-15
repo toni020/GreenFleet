@@ -14,7 +14,7 @@ const locations = [
 const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
 // Fixed icon size
-const fixedIconSize = 32;
+const fixedIconSize = 40;
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
