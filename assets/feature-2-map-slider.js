@@ -11,110 +11,10 @@ const locations = [
 ];
 
 // Replace with the URL of your tree icon
-const treeIconUrl = 'https://example.com/path/to/tree-icon.png';
+const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
 // Fixed icon size
-const fixedIconSize = 32;
-
-// Define map styles
-const defaultMapStyle = []; // Add your default map style if needed
-const desaturatedYellowStyle = [
-  {
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#f5f5f5"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "elementType": "labels.text.stroke",
-    "stylers": [
-      {
-        "color": "#ffffff"
-      }
-    ]
-  },
-  {
-    "featureType": "administrative.land_parcel",
-    "elementType": "labels.text.fill",
-    "stylers": [
-      {
-        "color": "#bdbdbd"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#eeeeee"
-      }
-    ]
-  },
-  {
-    "featureType": "poi",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "color": "#9e9e9e"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#fdfdfd"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "labels.text",
-    "stylers": [
-      {
-        "color": "#616161"
-      }
-    ]
-  },
-  {
-    "featureType": "road",
-    "elementType": "labels.icon",
-    "stylers": [
-      {
-        "visibility": "off"
-      }
-    ]
-  },
-  {
-    "featureType": "water",
-    "elementType": "geometry",
-    "stylers": [
-      {
-        "color": "#c6c6c6"
-      }
-    ]
-  }
-];
+const fixedIconSize = 40;
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -124,7 +24,6 @@ async function initMap() {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
-    styles: defaultMapStyle // Apply the default style initially
   });
 
   setupToggle(); // Initialize the toggle after the map is ready
@@ -143,10 +42,8 @@ function setupToggle() {
   function updateToggleLabel() {
     if (toggle.checked) {
       toggleLabel.textContent = 'Hide Forests'; // Text when checked
-      map.setOptions({ styles: defaultMapStyle }); // Set default style
     } else {
       toggleLabel.textContent = 'Show Forests'; // Text when unchecked
-      map.setOptions({ styles: desaturatedYellowStyle }); // Apply desaturated yellow style
     }
   }
 
