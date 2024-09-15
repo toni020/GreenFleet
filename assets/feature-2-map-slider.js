@@ -29,40 +29,20 @@ async function initMap() {
     });
   });
 
-  setupSlider(); // Call setupSlider here to initialize after map is loaded
+  setupToggle(); // Call setupToggle here to initialize after map is loaded
 }
 
-function setupSlider() {
-  const slider = document.querySelector('.slider');
-  const container = document.getElementById('map-container');
-  let isDragging = false;
-
-  slider.addEventListener('mousedown', (e) => {
-    isDragging = true;
-    document.addEventListener('mousemove', onMouseMove);
-    document.addEventListener('mouseup', () => {
-      isDragging = false;
-      document.removeEventListener('mousemove', onMouseMove);
+function setupToggle() {
+  const toggle = document.getElementById('toggleMarkers');
+  toggle.addEventListener('change', () => {
+    const visible = toggle.checked;
+    markers.forEach(marker => {
+      marker.setVisible(visible);
     });
   });
-
-  function onMouseMove(e) {
-    if (isDragging) {
-      const containerRect = container.getBoundingClientRect();
-      const x = e.clientX - containerRect.left;
-      const percentage = (x / containerRect.width) * 100;
-
-      // Show markers based on the slider's position
-      markers.forEach((marker, index) => {
-        marker.setVisible(index < Math.round((percentage / 100) * markers.length));
-      });
-
-      slider.style.left = `${percentage}%`;
-    }
-  }
 }
 
 window.initMap = initMap;
 window.addEventListener('load', () => {
-  setupSlider(); // Ensure setupSlider is called on load
+  setupToggle(); // Ensure setupToggle is called on load
 });
