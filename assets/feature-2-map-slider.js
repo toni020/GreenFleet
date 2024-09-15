@@ -9,7 +9,7 @@ const locations = [
 ];
 
 // Replace with the URL of your tree icon
-const treeIconUrl = 'https://example.com/path/to/tree-icon.png';
+const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
