@@ -36,13 +36,15 @@ function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
   toggle.addEventListener('change', () => {
     const visible = toggle.checked;
-    markers.forEach(marker => {
+    console.log('Toggle state:', visible); // Debugging line
+    markers.forEach((marker, index) => {
       marker.setVisible(visible);
+      console.log(`Marker ${index} visibility: ${visible}`); // Debugging line
     });
   });
 }
 
 window.initMap = initMap;
 window.addEventListener('load', () => {
-  setupToggle(); // Ensure setupToggle is called on load
+  initMap(); // Ensure initMap is called on load
 });
