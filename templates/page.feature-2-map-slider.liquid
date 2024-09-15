@@ -3,33 +3,122 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feature 2 - Map Toggle</title>
-  <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
-
-  <!-- Google Maps JavaScript API -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap">
-  </script>
+  <title>Map Toggle Test</title>
+  <style>
+    #map {
+      height: 500px;
+      width: 100%;
+    }
+    .toggle-container {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      z-index: 10;
+    }
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 60px;
+      height: 34px;
+    }
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      transition: .4s;
+      border-radius: 34px;
+    }
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 26px;
+      width: 26px;
+      border-radius: 50%;
+      left: 4px;
+      bottom: 4px;
+      background-color: white;
+      transition: .4s;
+    }
+    input:checked + .slider {
+      background-color: #2196F3;
+    }
+    input:checked + .slider:before {
+      transform: translateX(26px);
+    }
+  </style>
 </head>
 <body>
-
-  <h1 class="feature-2-map-slider-title">Feature 2 - Map Toggle</h1>
-
-  <p class="feature-2-map-slider-description">
-    Nam Hoang implementing feature 2 - map toggle for Greenfleet.
-  </p>
-
-  <div id="map-container">
-    <div id="map"></div>
-    <div class="toggle-container">
-      <label class="switch">
-        <input type="checkbox" id="toggleMarkers">
-        <span class="slider round"></span>
-      </label>
-      <span class="toggle-label">Show Markers</span>
-    </div>
+  <div id="map"></div>
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="toggleMarkers">
+      <span class="slider round"></span>
+    </label>
+    <span>Show Markers</span>
   </div>
 
-  <script src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
+  <script>
+    let map;
+    let markers = [];
+    const locations = [
+      { lat: -34.2923902, lng: 149.7934873 }
+    ];
+
+    async function initMap() {
+      const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
+      const { Map } = await google.maps.importLibrary("maps");
+      const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+
+      map = new Map(document.getElementById("map"), {
+        zoom: 4,
+        center: position,
+      });
+
+      markers = locations.map(location => {
+        return new AdvancedMarkerElement({
+          map: map,
+          position: location,
+          gmpClickable: true,
+          visible: false // Initially hide all markers
+        });
+      });
+
+      setupToggle();
+    }
+
+    function setupToggle() {
+      const toggle = document.getElementById('toggleMarkers');
+      
+      if (!toggle) {
+        console.error('Toggle switch not found!');
+        return;
+      }
+
+      toggle.addEventListener('change', () => {
+        const visible = toggle.checked;
+        console.log('Toggle state:', visible); // Debugging line
+        
+        markers.forEach((marker, index) => {
+          marker.setVisible(visible);
+          console.log(`Marker ${index} visibility: ${visible}`); // Debugging line
+        });
+      });
+    }
+
+    window.initMap = initMap;
+    window.addEventListener('load', initMap);
+  </script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+  </script>
 </body>
 </html>
