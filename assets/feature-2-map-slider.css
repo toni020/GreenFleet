@@ -1,0 +1,15 @@
+.feature-2-map-slider-container {
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.feature-2-map-slider-title {
+  font-size: 2em;
+  color: #333;
+}
+
+.feature-2-map-slider-content {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #666;
+}
