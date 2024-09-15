@@ -1,15 +1,15 @@
 let map;
 let markers = [];
 const locations = [
-  { lat: -34.2923902, lng: 149.7934873 },
-  { lat: -35.282, lng: 149.128 },
-  { lat: -33.8688, lng: 151.2093 },
-  { lat: -37.8136, lng: 144.9631 },
-  { lat: -27.4698, lng: 153.0251 },
+  { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
+  { lat: -35.282, lng: 149.128, city: 'Canberra' },
+  { lat: -33.8688, lng: 151.2093, city: 'Sydney' },
+  { lat: -37.8136, lng: 144.9631, city: 'Melbourne' },
+  { lat: -27.4698, lng: 153.0251, city: 'Brisbane' },
 ];
 
 async function initMap() {
-  const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
+  const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
@@ -23,7 +23,7 @@ async function initMap() {
   markers = locations.map(location => {
     return new AdvancedMarkerElement({
       map: map,
-      position: location,
+      position: { lat: location.lat, lng: location.lng },
       gmpClickable: true,
       visible: false // Initially hide all markers
     });
@@ -46,7 +46,7 @@ function setupToggle() {
     
     markers.forEach((marker, index) => {
       marker.setVisible(visible);
-      console.log(`Marker ${index} visibility set to: ${visible}`); // Debugging line
+      console.log(`Marker ${index} (${locations[index].city}) visibility set to: ${visible}`); // Debugging line
     });
   });
 }
