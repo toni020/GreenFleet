@@ -8,7 +8,7 @@
 
   <!-- Google Maps JavaScript API -->
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
   </script>
 </head>
 <body>
@@ -20,13 +20,10 @@
   </p>
 
   <div id="map-container">
-    <div id="map-before"></div>
-    <div id="map-after"></div>
+    <div id="map"></div>
     <div class="slider"></div>
   </div>
 
-  <!-- Link to external JavaScript file -->
   <script src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
-
 </body>
 </html>
