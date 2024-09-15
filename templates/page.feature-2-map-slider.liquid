@@ -1,5 +1,3 @@
-<link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,17 +7,9 @@
   <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
 
   <!-- Google Maps JavaScript API -->
-  <!-- Hardcoded API Key -->
   <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap">
   </script>
-
-  <style>
-    #map {
-      height: 500px; 
-      width: 100%; 
-    }
-  </style>
 </head>
 <body>
 
@@ -29,29 +19,13 @@
     Nam Hoang implementing feature 2 - map slider for Greenfleet.
   </p>
 
-  <!-- Map container -->
   <div id="map-container">
-    <div id="map"></div>
+    <div id="map-before"></div>
+    <div id="map-after"></div>
+    <div class="slider"></div>
   </div>
 
-  <script>
-    let map;
-
-    async function initMap() {
-      // The location of Uluru
-      const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
-      const { Map } = await google.maps.importLibrary("maps");
-
-      // The map, centered at Uluru
-      map = new Map(document.getElementById("map"), {
-        zoom: 4,
-        center: position,
-        mapId: "DEMO_MAP_ID",
-      });
-    }
-
-    window.initMap = initMap;
-  </script>
-
+  <!-- Link to external JavaScript file -->
+  <script src="{{ 'feature-2-map-slider.js' | asset_url }}"></script>
 </body>
 </html>
