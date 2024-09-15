@@ -18,7 +18,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  position: relative; /* Make sure container has position relative for absolute positioning of maps */
+  width: 100%;
+  height: 500px; /* Set a fixed height for the container */
   margin: 0;
 }
 
@@ -41,4 +43,3 @@
   transform: translate(-50%, -50%);
   z-index: 10;
 }
-
