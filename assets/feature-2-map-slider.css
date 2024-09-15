@@ -29,7 +29,7 @@
   
   /* Aspect ratio 3:4 */
   height: 0;
-  padding-bottom: 75%; /* 4:3 ratio (75% = (3 / 4) * 100) */
+  padding-bottom: 66%; /* 4:3 ratio (75% = (3 / 4) * 100) */
   
   box-sizing: border-box;
   border: 2px solid #ccc;
