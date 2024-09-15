@@ -14,10 +14,10 @@
 
 #map {
   height: 500px;
-  width: 100%;
+  width: calc(100% - 40px); /* Adjust width to account for horizontal margins */
   padding: 20px;
   box-sizing: border-box;
-  margin: 20 auto;
+  margin: 20px; /* Add margin on all sides */
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
@@ -29,3 +29,4 @@
   align-items: center;
   height: 100%;
 }
+
