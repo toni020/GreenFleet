@@ -19,7 +19,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
   });
 
-  // Create markers but keep them hidden initially
+  // Create markers and keep them hidden initially
   markers = locations.map(location => {
     return new AdvancedMarkerElement({
       map: map,
@@ -29,14 +29,21 @@ async function initMap() {
     });
   });
 
-  setupToggle(); // Call setupToggle here to initialize after map is loaded
+  setupToggle(); // Initialize the toggle after the map and markers are ready
 }
 
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
+  
+  if (!toggle) {
+    console.error('Toggle switch not found!');
+    return;
+  }
+
   toggle.addEventListener('change', () => {
     const visible = toggle.checked;
     console.log('Toggle state:', visible); // Debugging line
+    
     markers.forEach((marker, index) => {
       marker.setVisible(visible);
       console.log(`Marker ${index} visibility: ${visible}`); // Debugging line
@@ -44,7 +51,6 @@ function setupToggle() {
   });
 }
 
+// Initialize the map when the window loads
 window.initMap = initMap;
-window.addEventListener('load', () => {
-  initMap(); // Ensure initMap is called on load
-});
+window.addEventListener('load', initMap);
