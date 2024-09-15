@@ -28,7 +28,6 @@
   width: 100%;
   max-width: 900px;
   min-width: 300px;
-
   height: 100%; /* Fill the height of the container */
   position: relative;
   border: 2px solid #ccc;
@@ -39,9 +38,9 @@
 
 .toggle-container {
   position: absolute;
-  bottom: 20px;
-  left: 20px;
-  z-index: 10;
+  bottom: 20px; /* Distance from the bottom */
+  left: 20px; /* Distance from the left */
+  z-index: 1000; /* Ensure it's on top of other elements */
   display: flex;
   align-items: center;
 }
