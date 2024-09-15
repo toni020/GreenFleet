@@ -27,9 +27,9 @@
   max-width: 600px; /* Maximum width */
   min-width: 300px; /* Minimum width */
   
-  /* Aspect ratio 3:4 */
+  /* Aspect ratio 2:3 */
   height: 0;
-  padding-bottom: 66%; /* 4:3 ratio (75% = (3 / 4) * 100) */
+  padding-bottom: 150%; /* 3:2 ratio (150% = (3 / 2) * 100) */
   
   box-sizing: border-box;
   border: 2px solid #ccc;
@@ -40,3 +40,4 @@
   margin: 20px;
   padding: 10px;
 }
+
