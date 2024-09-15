@@ -13,14 +13,12 @@
   margin-bottom: 10px;
 }
 
-/* feature-2-map-slider.css */
-
 #map-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 20px; /* Margin around the container */
+  margin: 20px; 
 }
 
 #map {
