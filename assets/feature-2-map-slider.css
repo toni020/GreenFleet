@@ -1,15 +1,14 @@
-.feature-2-map-slider-container {
-  padding: 20px;
-  background-color: #f0f0f0;
-}
-
 .feature-2-map-slider-title {
-  font-size: 2em;
-  color: #333;
+  font-size: 2em; 
+  color: #333;    
+  padding: 20px 0; 
+  text-align: center; 
 }
 
-.feature-2-map-slider-content {
-  margin-top: 10px;
-  font-size: 1em;
-  color: #666;
+/* Style for the p element */
+.feature-2-map-slider-description {
+  font-size: 1.2em; 
+  color: #666;      
+  padding: 10px 20px; 
+  text-align: center;
 }
