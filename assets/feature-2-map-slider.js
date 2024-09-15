@@ -51,4 +51,6 @@ function setupSlider() {
 }
 
 window.initMap = initMap;
-window.addEventListener('load', setupSlider);
+window.addEventListener('load', () => {
+  setupSlider();
+});
