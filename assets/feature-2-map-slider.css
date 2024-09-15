@@ -12,7 +12,6 @@
   text-align: center;
 }
 
-
 /* feature-2-map-slider.css */
 
 #map-container {
@@ -20,17 +19,24 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 20px; /* Add margin around the container if needed */
+  margin: 20px; /* Margin around the container */
 }
 
 #map {
-  width: 33.33vw; /* Set width to one-third of the viewport width */
-  max-width: 600px; /* Set a maximum width for large screens */
-  min-width: 300px; /* Set a minimum width for small screens */
-  height: auto; /* Adjust height automatically to maintain aspect ratio */
-  padding: 20px;
+  width: 33.33vw; /* One-third of the viewport width */
+  max-width: 600px; /* Maximum width */
+  min-width: 300px; /* Minimum width */
+  
+  /* Aspect ratio 3:4 */
+  height: 0;
+  padding-bottom: 75%; /* 4:3 ratio (75% = (3 / 4) * 100) */
+  
   box-sizing: border-box;
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
+  
+  /* Optional additional padding/margins */
+  margin: 20px;
+  padding: 10px;
 }
