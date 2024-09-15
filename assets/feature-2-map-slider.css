@@ -15,13 +15,10 @@
 }
 
 #map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative; /* Make sure container has position relative for absolute positioning of maps */
+  position: relative; /* Ensure container is positioned relative for absolute positioning of maps */
   width: 100%;
-  height: 500px; /* Set a fixed height for the container */
-  margin: 0;
+  height: 500px; /* Adjust as needed */
+  margin: 0 auto; /* Center container horizontally */
 }
 
 #map-before, #map-after {
