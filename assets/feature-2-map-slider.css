@@ -24,7 +24,7 @@
 
 #map {
   width: 33.33vw; /* One-third of the viewport width */
-  max-width: 600px; /* Maximum width */
+  max-width: 900px; /* Maximum width */
   min-width: 300px; /* Minimum width */
   
   /* Aspect ratio 2:3 */
