@@ -11,7 +11,6 @@ const locations = [
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
   const { Map } = await google.maps.importLibrary("maps");
-  const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
   map = new Map(document.getElementById("map"), {
     zoom: 4,
@@ -24,16 +23,33 @@ async function initMap() {
 
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
-  
-  if (!toggle) {
-    console.error('Toggle switch not found!');
+  const toggleLabel = document.querySelector('.toggle-label');
+
+  if (!toggle || !toggleLabel) {
+    console.error('Toggle switch or label not found!');
     return;
   }
 
+  // Update the toggle label text based on the toggle state
+  function updateToggleLabel() {
+    if (toggle.checked) {
+      toggleLabel.textContent = 'Hide Forests'; // Text when checked
+    } else {
+      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
+    }
+  }
+
+  // Initialize label text
+  updateToggleLabel();
+
+  // Update label text when toggle state changes
+  toggle.addEventListener('change', updateToggleLabel);
+
+  // Handle markers visibility
   toggle.addEventListener('change', () => {
     const visible = toggle.checked;
     console.log('Toggle state:', visible); // Debugging line
-    
+
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
@@ -44,7 +60,7 @@ function setupToggle() {
         return new google.maps.Marker({
           map: map,
           position: { lat: location.lat, lng: location.lng },
-          title: location.city
+          title: location.city,
         });
       });
     }
