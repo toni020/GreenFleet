@@ -29,7 +29,7 @@
   
   /* Aspect ratio 2:3 */
   height: 0;
-  padding-bottom: 150%; /* 3:2 ratio (150% = (3 / 2) * 100) */
+  padding-bottom: 66.67%; /* 2:3 ratio (66.67% = (2 / 3) * 100) */
   
   box-sizing: border-box;
   border: 2px solid #ccc;
