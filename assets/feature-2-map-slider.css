@@ -25,6 +25,18 @@
   align-items: center;
 }
 
+#map {
+  width: 100%;
+  max-width: 900px;
+  min-width: 300px;
+  height: 100%;
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -42,17 +54,7 @@
   display: block; /* Show when toggle is off */
 }
 
-#map {
-  width: 100%;
-  max-width: 900px;
-  min-width: 300px;
-  height: 100%;
-  position: relative;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
+
 
 .toggle-container {
   position: absolute;
