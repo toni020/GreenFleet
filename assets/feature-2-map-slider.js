@@ -14,7 +14,7 @@ const locations = [
 const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
 // Fixed icon size
-const fixedIconSize = 32;
+const fixedIconSize = 40;
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -32,21 +32,18 @@ async function initMap() {
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
   const toggleLabel = document.querySelector('.toggle-label');
-  const overlay = document.querySelector('.overlay');
 
-  if (!toggle || !toggleLabel || !overlay) {
-    console.error('Toggle switch, label, or overlay not found!');
+  if (!toggle || !toggleLabel) {
+    console.error('Toggle switch or label not found!');
     return;
   }
 
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
     if (toggle.checked) {
-      toggleLabel.textContent = 'After Greenfleet'; // Text when checked
-      overlay.classList.remove('active'); // Hide the overlay
+      toggleLabel.textContent = 'Hide Forests'; // Text when checked
     } else {
-      toggleLabel.textContent = 'Before Greenfleet'; // Text when unchecked
-      overlay.classList.add('active'); // Show the overlay
+      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
     }
   }
 
