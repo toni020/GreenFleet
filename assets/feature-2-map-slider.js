@@ -6,8 +6,8 @@ const locations = [
   { lat: -33.8688, lng: 151.2093, city: 'Sydney' },
   { lat: -37.8136, lng: 144.9631, city: 'Melbourne' },
   { lat: -27.4698, lng: 153.0251, city: 'Brisbane' },
-  { lat: -31.9505, lng: 115.8605, city: 'Perth' },  // Added Perth
-  { lat: -12.4634, lng: 130.8456, city: 'Darwin' }  // Added Darwin
+  { lat: -31.9505, lng: 115.8605, city: 'Perth' },
+  { lat: -12.4634, lng: 130.8456, city: 'Darwin' }
 ];
 
 // Replace with the URL of your tree icon
@@ -34,8 +34,8 @@ async function initMap() {
 function calculateIconSize() {
   const zoomLevel = map.getZoom();
   // Adjust icon size based on zoom level
-  // You can tweak the formula to fit your needs
-  const size = Math.max(10, baseIconSize * (zoomLevel / 10));
+  // Ensure minimum size for visibility
+  const size = Math.max(20, baseIconSize * (zoomLevel / 10));
   return new google.maps.Size(size, size);
 }
 
@@ -60,45 +60,4 @@ function setupToggle() {
 
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
-    if (toggle.checked) {
-      toggleLabel.textContent = 'Hide Forests'; // Text when checked
-    } else {
-      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
-    }
-  }
-
-  // Initialize label text
-  updateToggleLabel();
-
-  // Update label text when toggle state changes
-  toggle.addEventListener('change', updateToggleLabel);
-
-  // Handle markers visibility
-  toggle.addEventListener('change', () => {
-    const visible = toggle.checked;
-    console.log('Toggle state:', visible); // Debugging line
-
-    // Clear existing markers
-    markers.forEach(marker => marker.setMap(null));
-    markers = [];
-
-    if (visible) {
-      // Recreate and add markers with custom icon and size
-      markers = locations.map(location => {
-        return new google.maps.Marker({
-          map: map,
-          position: { lat: location.lat, lng: location.lng },
-          title: location.city,
-          icon: {
-            url: treeIconUrl, // Use the custom icon
-            scaledSize: calculateIconSize() // Scale the icon to the desired size
-          }
-        });
-      });
-    }
-  });
-}
-
-// Initialize the map when the window loads
-window.initMap = initMap;
-window.addEventListener('load', initMap);
+ 
