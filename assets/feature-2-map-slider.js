@@ -1,27 +1,31 @@
-let mapBefore, mapAfter;
+let map;
+let markers = [];
+let markerData = [
+  { lat: -34.2923902, lng: 149.7934873 },
+  { lat: -33.8688, lng: 151.2093 }, // Add more marker data as needed
+];
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  mapBefore = new Map(document.getElementById("map-before"), {
+  map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID",
   });
 
-  mapAfter = new Map(document.getElementById("map-after"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID",
+  markers = markerData.map((data) => {
+    return new AdvancedMarkerElement({
+      map,
+      position: data,
+      gmpClickable: true,
+      visible: false // Initially hide all markers
+    });
   });
 
-  new AdvancedMarkerElement({
-    map: mapAfter,
-    position: { lat: -34.2923902, lng: 149.7934873 },
-    gmpClickable: true,
-  });
+  setupSlider();
 }
 
 function setupSlider() {
@@ -43,14 +47,15 @@ function setupSlider() {
       const containerRect = container.getBoundingClientRect();
       const x = e.clientX - containerRect.left;
       const percentage = (x / containerRect.width) * 100;
+
+      // Show markers based on slider position
+      markers.forEach((marker, index) => {
+        marker.setVisible(index < (percentage / 100) * markers.length);
+      });
+
       slider.style.left = `${percentage}%`;
-      document.getElementById('map-before').style.width = `${percentage}%`;
-      document.getElementById('map-after').style.width = `${100 - percentage}%`;
     }
   }
 }
 
 window.initMap = initMap;
-window.addEventListener('load', () => {
-  setupSlider();
-});
