@@ -11,7 +11,7 @@ const locations = [
 ];
 
 // Replace with the URL of your tree icon
-const treeIconUrl = 'https://example.com/path/to/tree-icon.png';
+const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
 // Base icon size
 const baseIconSize = 32;
