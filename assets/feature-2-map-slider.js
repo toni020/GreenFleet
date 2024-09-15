@@ -13,8 +13,8 @@ const locations = [
 // Replace with the URL of your tree icon
 const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
 
-// Base icon size
-const baseIconSize = 32;
+// Fixed icon size
+const fixedIconSize = 32;
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -26,27 +26,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
   });
 
-  map.addListener('zoom_changed', updateMarkerIcons); // Update icons on zoom change
-
   setupToggle(); // Initialize the toggle after the map is ready
-}
-
-function calculateIconSize() {
-  const zoomLevel = map.getZoom();
-  // Adjust icon size based on zoom level
-  // Ensure minimum size for visibility
-  const size = Math.max(20, baseIconSize * (zoomLevel / 10));
-  return new google.maps.Size(size, size);
-}
-
-function updateMarkerIcons() {
-  const iconSize = calculateIconSize();
-  markers.forEach(marker => {
-    marker.setIcon({
-      url: treeIconUrl, // Use the custom icon
-      scaledSize: iconSize // Scale the icon to the desired size
-    });
-  });
 }
 
 function setupToggle() {
@@ -60,4 +40,45 @@ function setupToggle() {
 
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
- 
+    if (toggle.checked) {
+      toggleLabel.textContent = 'Hide Forests'; // Text when checked
+    } else {
+      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
+    }
+  }
+
+  // Initialize label text
+  updateToggleLabel();
+
+  // Update label text when toggle state changes
+  toggle.addEventListener('change', updateToggleLabel);
+
+  // Handle markers visibility
+  toggle.addEventListener('change', () => {
+    const visible = toggle.checked;
+    console.log('Toggle state:', visible); // Debugging line
+
+    // Clear existing markers
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    if (visible) {
+      // Recreate and add markers with fixed icon size
+      markers = locations.map(location => {
+        return new google.maps.Marker({
+          map: map,
+          position: { lat: location.lat, lng: location.lng },
+          title: location.city,
+          icon: {
+            url: treeIconUrl, // Use the custom icon
+            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+          }
+        });
+      });
+    }
+  });
+}
+
+// Initialize the map when the window loads
+window.initMap = initMap;
+window.addEventListener('load', initMap);
