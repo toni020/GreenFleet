@@ -14,30 +14,30 @@
   margin: 0 0 20px 0;
 }
 
-  #map-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    margin: 0;
-  }
-  
-  #map {
-    width: 33.33vw; 
-    max-width: 900px; 
-    min-width: 300px; 
-    
-    height: 0;
-    padding-bottom: 66.67%; 
-    
-    box-sizing: border-box;
-    border: 2px solid #ccc;
-    border-radius: 10px;
-    overflow: hidden;
-    
-    margin: 0;
-    padding: 0;
-  }
+#map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+#map {
+  width: 33.33vw;
+  max-width: 900px;
+  min-width: 300px;
+
+  height: 0;
+  padding-bottom: 66.67%;
+
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+
+  margin: 0;
+  padding: 0;
+}
 
 .toggle-container {
   position: absolute;
