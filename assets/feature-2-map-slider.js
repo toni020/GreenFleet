@@ -19,17 +19,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
   });
 
-  // Create markers and keep them hidden initially
-  markers = locations.map(location => {
-    return new AdvancedMarkerElement({
-      map: map,
-      position: { lat: location.lat, lng: location.lng },
-      gmpClickable: true,
-      visible: false // Initially hide all markers
-    });
-  });
-
-  setupToggle(); // Initialize the toggle after the map and markers are ready
+  setupToggle(); // Initialize the toggle after the map is ready
 }
 
 function setupToggle() {
@@ -44,10 +34,20 @@ function setupToggle() {
     const visible = toggle.checked;
     console.log('Toggle state:', visible); // Debugging line
     
-    markers.forEach((marker, index) => {
-      marker.setVisible(visible);
-      console.log(`Marker ${index} (${locations[index].city}) visibility set to: ${visible}`); // Debugging line
-    });
+    // Clear existing markers
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    if (visible) {
+      // Recreate and add markers
+      markers = locations.map(location => {
+        return new google.maps.Marker({
+          map: map,
+          position: { lat: location.lat, lng: location.lng },
+          title: location.city
+        });
+      });
+    }
   });
 }
 
