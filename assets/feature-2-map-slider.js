@@ -17,7 +17,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
 
-  const mapMarker = new AdvancedMarkerElement({
+  new AdvancedMarkerElement({
     map: mapAfter,
     position: { lat: -34.2923902, lng: 149.7934873 },
     gmpClickable: true,
