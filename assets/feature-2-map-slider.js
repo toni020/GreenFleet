@@ -32,52 +32,51 @@ async function initMap() {
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
   const toggleLabel = document.querySelector('.toggle-label');
-  const overlay = document.querySelector('.overlay');
 
-  if (!toggle || !toggleLabel || !overlay) {
-    console.error('Toggle switch, label, or overlay not found!');
+  if (!toggle || !toggleLabel) {
+    console.error('Toggle switch or label not found!');
     return;
   }
 
-  // Update the toggle label text and manage overlay state based on the toggle state
-  function updateToggleState() {
+  // Update the toggle label text based on the toggle state
+  function updateToggleLabel() {
     if (toggle.checked) {
-      toggleLabel.textContent = 'Hide Forests'; // Text when checked (Show markers)
-      overlay.classList.remove('active'); // Hide the overlay
-      showMarkers(); // Show the markers on the map
+      toggleLabel.textContent = 'Hide Forests'; // Text when checked
     } else {
-      toggleLabel.textContent = 'Show Forests'; // Text when unchecked (Hide markers)
-      overlay.classList.add('active'); // Show the overlay
-      clearMarkers(); // Hide the markers from the map
+      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
     }
   }
 
-  // Initialize the label text and the overlay state
-  updateToggleState();
+  // Initialize label text
+  updateToggleLabel();
 
-  // Add an event listener to update the state when the toggle is changed
-  toggle.addEventListener('change', updateToggleState);
-}
+  // Update label text when toggle state changes
+  toggle.addEventListener('change', updateToggleLabel);
 
-// Function to show markers
-function showMarkers() {
-  markers = locations.map(location => {
-    return new google.maps.Marker({
-      map: map,
-      position: { lat: location.lat, lng: location.lng },
-      title: location.city,
-      icon: {
-        url: treeIconUrl, // Use the custom icon
-        scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
-      }
-    });
+  // Handle markers visibility
+  toggle.addEventListener('change', () => {
+    const visible = toggle.checked;
+    console.log('Toggle state:', visible); // Debugging line
+
+    // Clear existing markers
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    if (visible) {
+      // Recreate and add markers with fixed icon size
+      markers = locations.map(location => {
+        return new google.maps.Marker({
+          map: map,
+          position: { lat: location.lat, lng: location.lng },
+          title: location.city,
+          icon: {
+            url: treeIconUrl, // Use the custom icon
+            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+          }
+        });
+      });
+    }
   });
-}
-
-// Function to clear all markers from the map
-function clearMarkers() {
-  markers.forEach(marker => marker.setMap(null));
-  markers = [];
 }
 
 // Initialize the map when the window loads
