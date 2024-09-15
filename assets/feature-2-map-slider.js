@@ -8,6 +8,9 @@ const locations = [
   { lat: -27.4698, lng: 153.0251, city: 'Brisbane' },
 ];
 
+// Replace with the URL of your tree icon
+const treeIconUrl = 'https://example.com/path/to/tree-icon.png';
+
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
   const { Map } = await google.maps.importLibrary("maps");
@@ -33,7 +36,7 @@ function setupToggle() {
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
     if (toggle.checked) {
-      toggleLabel.textContent = 'Show Forests'; // Text when checked
+      toggleLabel.textContent = 'Hide Forests'; // Text when checked
     } else {
       toggleLabel.textContent = 'Show Forests'; // Text when unchecked
     }
@@ -55,12 +58,13 @@ function setupToggle() {
     markers = [];
 
     if (visible) {
-      // Recreate and add markers
+      // Recreate and add markers with custom icon
       markers = locations.map(location => {
         return new google.maps.Marker({
           map: map,
           position: { lat: location.lat, lng: location.lng },
           title: location.city,
+          icon: treeIconUrl // Use the custom icon
         });
       });
     }
