@@ -41,9 +41,9 @@ function setupToggle() {
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
     if (toggle.checked) {
-      toggleLabel.textContent = 'Hide Forests'; // Text when checked
+      toggleLabel.textContent = 'Before Greenfleet'; // Text when checked
     } else {
-      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
+      toggleLabel.textContent = 'After Greenfleet'; // Text when unchecked
     }
   }
 
