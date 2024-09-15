@@ -42,10 +42,10 @@ function setupToggle() {
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
     if (toggle.checked) {
-      toggleLabel.textContent = 'Hide Forests'; // Text when checked
+      toggleLabel.textContent = 'After Greenfleet'; // Text when checked
       overlay.classList.remove('active'); // Hide the overlay
     } else {
-      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
+      toggleLabel.textContent = 'Before Greenfleet'; // Text when unchecked
       overlay.classList.add('active'); // Show the overlay
     }
   }
