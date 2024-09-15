@@ -1,16 +1,19 @@
+/* Adjusted CSS for better spacing management */
+
 .feature-2-map-slider-title {
   font-size: 2em; 
   color: #333;    
-  padding: 20px 0; 
+  padding: 10px 0; /* Reduced padding to minimize space */
   text-align: center; 
+  margin: 0; /* Remove default margin if not needed */
 }
 
 .feature-2-map-slider-description {
   font-size: 1.2em; 
   color: #666;      
-  padding: 10px 20px; 
+  padding: 10px 0; /* Adjusted padding for spacing */
   text-align: center;
-  margin-bottom: 10px;
+  margin: 0 0 20px 0; /* Adjust bottom margin to space elements */
 }
 
 #map-container {
@@ -18,7 +21,7 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 20px; 
+  margin: 0; /* Removed margin to reduce excess spacing */
 }
 
 #map {
@@ -34,7 +37,6 @@
   border-radius: 10px;
   overflow: hidden;
   
-  margin: 20px;
-  padding: 10px;
+  margin: 0; /* Removed margin to reduce excess spacing */
+  padding: 0; /* Removed padding to avoid extra space */
 }
-
