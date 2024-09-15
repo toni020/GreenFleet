@@ -12,21 +12,24 @@
   text-align: center;
 }
 
-#map {
-  height: 500px;
-  width: calc(100% - 40px); /* Adjust width to account for horizontal margins */
-  padding: 20px;
-  box-sizing: border-box;
-  margin: 20px; /* Add margin on all sides */
+#map-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 75%; 
+  height: 0;
+  margin: 20px; 
   border: 2px solid #ccc;
   border-radius: 10px;
   overflow: hidden;
 }
 
-#map-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+#map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 100%;
+  border-radius: 10px; 
 }
+
 
