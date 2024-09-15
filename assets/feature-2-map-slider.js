@@ -1,29 +1,35 @@
-let mapBefore, mapAfter;
+let map;
+let markers = [];
+const locations = [
+  { lat: -34.2923902, lng: 149.7934873 },
+  { lat: -35.282, lng: 149.128 },
+  { lat: -33.8688, lng: 151.2093 },
+  { lat: -37.8136, lng: 144.9631 },
+  { lat: -27.4698, lng: 153.0251 },
+];
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
   const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
 
-  mapBefore = new Map(document.getElementById("map-before"), {
+  map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
   });
 
-  mapAfter = new Map(document.getElementById("map-after"), {
-    zoom: 4,
-    center: position,
-    mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
+  // Create markers but keep them hidden initially
+  markers = locations.map(location => {
+    return new AdvancedMarkerElement({
+      map: map,
+      position: location,
+      gmpClickable: true,
+      visible: false // Initially hide all markers
+    });
   });
 
-  const mapMarker = new AdvancedMarkerElement({
-    map: mapAfter,
-    position: { lat: -34.2923902, lng: 149.7934873 },
-    gmpClickable: true,
-  });
-
-  setupSlider(); // Call setupSlider here to initialize after maps are loaded
+  setupSlider(); // Call setupSlider here to initialize after map is loaded
 }
 
 function setupSlider() {
@@ -45,9 +51,13 @@ function setupSlider() {
       const containerRect = container.getBoundingClientRect();
       const x = e.clientX - containerRect.left;
       const percentage = (x / containerRect.width) * 100;
+
+      // Show markers based on the slider's position
+      markers.forEach((marker, index) => {
+        marker.setVisible(index < Math.round((percentage / 100) * markers.length));
+      });
+
       slider.style.left = `${percentage}%`;
-      document.getElementById('map-before').style.width = `${percentage}%`;
-      document.getElementById('map-after').style.width = `${100 - percentage}%`;
     }
   }
 }
