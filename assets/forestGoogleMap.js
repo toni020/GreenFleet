@@ -23,7 +23,7 @@ async function initMap() {
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content:buildContent().icon,
+    content:buildContent(),
     gmpClickable: true,
   });
   
@@ -57,6 +57,7 @@ function buildContent(){
 //       <li id="feedMe">Feed Me</li>
 //       <li id="shareMe">Make me amous</li>
 //     </ul> `;
+    return icon;
 }
 
 window.initMap = initMap;
