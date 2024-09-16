@@ -23,7 +23,7 @@ async function initMap() {
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content:priceTag,
+    content:buildContent(),
     gmpClickable: true,
   });
   
@@ -46,16 +46,18 @@ function myFunction(markerView){
 }
 
 function buildContent(){
-  const content = document.createElement("div");
+  const icon = document.createElement("img");
   // content.classList.add("menu");
-  content.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
-  content.innerHTML = `
-    <ul class="menu">
-      <li id="aboutMe">More about Me</li>
-      <li id="feedMe">Feed Me</li>
-      <li id="shareMe">Make me amous</li>
-    </ul> `;
-}
+  icon.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
+
+//   const content = document.createElement("div");
+//   content.innerHTML = `
+//     <ul class="menu">
+//       <li id="aboutMe">More about Me</li>
+//       <li id="feedMe">Feed Me</li>
+//       <li id="shareMe">Make me amous</li>
+//     </ul> `;
+// }
 
 window.initMap = initMap;
 
