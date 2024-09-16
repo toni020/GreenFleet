@@ -70,7 +70,7 @@ forest.active .icon{
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  gap: 10px;;
+  gap: 10px;
 }
 .forest.icon.active .aboutMe {
   display: flex;
