@@ -44,13 +44,13 @@ function myFunction(markerView){
 
 function buildContent(){
   const content = document.createElement("div");
-  content.classList.add("menu");
+  // content.classList.add("menu");
   
   content.innerHTML = `
     <div id = "icon">
      <img src="{{tree.gif | assets}}" alt="https://www.flaticon.com/free-animated-icons/season"></img>
     </div>
-    <ul >
+    <ul class="menu">
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
       <li id="shareMe">Make me amous</li>
