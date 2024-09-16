@@ -72,18 +72,18 @@ forest.active .icon{
 .forest.icon.active .aboutMe {
   align-items: flex-end;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
 .forest.icon.active .feedMe {
   align-items: flex-end;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   gap: 10px;
 }
 .forest.icon.active .shareMe {
   align-items: flex-end;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
 }
