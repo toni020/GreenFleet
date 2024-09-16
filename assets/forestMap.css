@@ -7,10 +7,9 @@
   border-bottom: 30px solid transparent; 
 }
 
-icon{
-  width: 60px;
-  height: 40px;
-}
+/*
+ * Forest styles in deactive state.
+ */
 
 .forest{
   align-items: center;
@@ -34,6 +33,25 @@ icon{
   height: 30px;
 }
 
+.forest.icon .aboutMe {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+.forest.icon .feedMe {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+.forest.icon .shareMe {
+  display: none;
+  flex-direction: column;
+  flex: 1;
+}
+
+/*
+ * Forest styles in active state.
+ */
 
 .forest.active {
   background-color: #FFFFFF;
