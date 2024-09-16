@@ -50,7 +50,7 @@ function buildContent(){
     <div id = "icon">
      <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
     </div>
-    <ul class="menu">
+    <ul >
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
       <li id="shareMe">Make me amous</li>
