@@ -48,11 +48,8 @@ function myFunction(markerView){
 function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
-  
+  content.src="{{tree.gif|image_url}}";
   content.innerHTML = `
-    <div id = "icon">
-     <img src="{{'tree.gif' | image_url }}"></img>
-    </div>
     <ul class="menu">
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
