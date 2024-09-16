@@ -28,3 +28,28 @@ img{
   left: 0;
   box-shadow: 0 0 6px tgba(0,0,0,0.2);
 }
+.menu {
+  align-items: center;
+  background-color: #FFFFFF;
+  border-radius: 50%;
+  color: #263238;
+  display: flex;
+  font-size: 14px;
+  gap: 15px;
+  height: 30px;
+  justify-content: center;
+  padding: 4px;
+  position: relative;
+  position: relative;
+  transition: all 0.3s ease-out;
+  width: 30px;
+}
+
+.menu.active {
+  background-color: #FFFFFF;
+  border-radius: 8px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+  height: 80px;
+  padding: 8px 15px;
+  width: auto;
+} */
