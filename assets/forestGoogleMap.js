@@ -44,21 +44,21 @@ function myFunction(){
   }
 }
 
-// function buildContent(property){
-//   const content = document.createElement("div");
-//   content.classList.add("property");
+function buildContent(property){
+  const content = document.createElement("div");
+  content.classList.add("property");
   
-//   content.innerHTML = `
-//     <div id = "icon">
-//      <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
-//     </div>
-//     <ul class="menu">
-//       <li id="aboutMe">More about Me</li>
-//       <li id="feedMe">Feed Me</li>
-//       <li id="shareMe">Make me amous</li>
-//     </ul> 
-//   `;
-// }
+  content.innerHTML = `
+    <div id = "icon">
+     <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
+    </div>
+    <ul class="menu">
+      <li id="aboutMe">More about Me</li>
+      <li id="feedMe">Feed Me</li>
+      <li id="shareMe">Make me amous</li>
+    </ul> 
+  `;
+}
 
 window.initMap = initMap;
 
