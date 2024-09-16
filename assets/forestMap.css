@@ -21,6 +21,10 @@
   justify-content: center;
   color: #FFFFFF;
 }
+.icon svg {
+  height: 20px;
+  width: auto;
+}
 
 .menu {
   align-items: center;
