@@ -33,7 +33,7 @@ async function initMap() {
     // infowindow.open({
     //   anchor: mapMarker, map
     // });
-    // myFunction(mapMarker);
+    myFunction(mapMarker);
   });
 }
 function myFunction(markerView){
