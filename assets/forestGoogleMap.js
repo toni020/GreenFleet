@@ -15,15 +15,12 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
-  const priceTag = document.createElement("div");
 
-  priceTag.className = "price-tag";
-  priceTag.textContent = "$2.5M";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content:priceTag,
+    content:buildContent(),
     gmpClickable: true,
   });
   
@@ -49,13 +46,13 @@ function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
   content.src="{{tree.gif|image_url}}";
-  content.innerHTML = `
-    <ul class="menu">
-      <li id="aboutMe">More about Me</li>
-      <li id="feedMe">Feed Me</li>
-      <li id="shareMe">Make me amous</li>
-    </ul> `;
-}
+//   content.innerHTML = `
+//     <ul class="menu">
+//       <li id="aboutMe">More about Me</li>
+//       <li id="feedMe">Feed Me</li>
+//       <li id="shareMe">Make me amous</li>
+//     </ul> `;
+// }
 
 window.initMap = initMap;
 
