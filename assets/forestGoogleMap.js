@@ -54,6 +54,21 @@ function buildContent(){
     </div> `;
     return content;
 }
-
+const forest = [
+  {
+    address: "Esdale Road, Mullion, NSW 2582",
+    position: {
+      lat: -35.0953155,
+      lng: 148.9246943,
+    },
+  }
+  {
+    address: "5798 Taralga Rd, Curraweela, NSW 2580",
+    position: {
+      lat: -34.2899561,
+      lng: 149.7985828,
+    },
+  }
+]
 window.initMap = initMap;
 
