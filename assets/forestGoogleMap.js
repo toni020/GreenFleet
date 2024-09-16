@@ -49,7 +49,7 @@ function buildContent(){
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
     <div class="menu">
       <div class="aboutMe">More about Me</div>
-      <div class="feedMe">Feed Me1</div>
+      <div class="feedMe">Feed Me</div>
       <div class="shareMe">Make me famous</div>
     </div> `;
     return content;
