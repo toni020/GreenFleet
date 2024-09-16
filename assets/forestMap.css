@@ -65,3 +65,13 @@ forest.active .icon{
   width: 50px;
   height: 50px;
 }
+
+.forest.icon.active .aboutMe {
+  display: flex;
+}
+.forest.icon.active .feedMe {
+  display: flex;
+}
+.forest.icon.active .shareMe {
+  display: flex;
+}
