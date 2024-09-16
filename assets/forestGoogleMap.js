@@ -19,11 +19,12 @@ async function initMap() {
 
   priceTag.className = "price-tag";
   priceTag.textContent = "$2.5M";
+  priceTag.src="{{'tree.gif' | image_url}}";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content:buildContent(),
+    content:priceTag,
     gmpClickable: true,
   });
   
