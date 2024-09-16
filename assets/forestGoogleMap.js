@@ -15,10 +15,9 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
-  const priceTag = document.createElement("div");
+  const priceTag = document.createElement("img");
 
   priceTag.className = "price-tag";
-  priceTag.textContent = "$2.5M";
   priceTag.src="{{'tree.gif' | image_url}}";
     
   const mapMarker = new AdvancedMarkerElement({
