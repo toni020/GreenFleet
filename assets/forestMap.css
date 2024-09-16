@@ -14,20 +14,12 @@
   position: relative;
 }
 
-img{
+.icon{
+  background: url('https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389');
   width: 80px;
   height: 60px;
 }
 
-.context-menu {
-  position: fixed;
-  background: #fff;
-  z-index: 9999999;
-  width: 150px;
-  top: 0;
-  left: 0;
-  box-shadow: 0 0 6px tgba(0,0,0,0.2);
-}
 .menu {
   align-items: center;
   background-color: #FFFFFF;
