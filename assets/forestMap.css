@@ -67,23 +67,18 @@ forest.active .icon{
   height: 50px;
 }
 .forest.active .menu{
+  align-items: flex-end;
   display: flex;
+  flex-direction: column;
+  gap: 10px;;
 }
 .forest.icon.active .aboutMe {
-  align-items: flex-end;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 .forest.icon.active .feedMe {
-  align-items: flex-end;
   display: flex;
-  flex-direction: column;
-  gap: 10px;
 }
 .forest.icon.active .shareMe {
-  align-items: flex-end;
   display: flex;
-  flex-direction: column;
 
 }
