@@ -48,7 +48,7 @@ function myFunction(markerView){
 function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
-  content.src="{{'tree.gif' | image_url width:50, height: 50}}";
+  content.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
   content.innerHTML = `
     <ul class="menu">
       <li id="aboutMe">More about Me</li>
