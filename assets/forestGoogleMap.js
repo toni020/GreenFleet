@@ -15,12 +15,15 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
+  const priceTag = document.createElement("div");
 
+  priceTag.className = "price-tag";
+  priceTag.textContent = "$2.5M";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
-    content:buildContent(),
+    content:priceTag,
     gmpClickable: true,
   });
   
@@ -30,32 +33,32 @@ async function initMap() {
     // infowindow.open({
     //   anchor: mapMarker, map
     // });
-    myFunction(mapMarker);
+    // myFunction(mapMarker);
   });
 }
-function myFunction(markerView){
-  if (markerView.content.classList.contains("active")){
-      markerView.content.classList.remove("active");
-  }else{
-      markerView.content.classList.add("active");
+// function myFunction(markerView){
+//   if (markerView.content.classList.contains("active")){
+//       markerView.content.classList.remove("active");
+//   }else{
+//       markerView.content.classList.add("active");
 
-  }
-}
+//   }
+// }
 
-function buildContent(){
-  const content = document.createElement("div");
-  // content.classList.add("menu");
+// function buildContent(){
+//   const content = document.createElement("div");
+//   // content.classList.add("menu");
   
-  content.innerHTML = `
-    <div id = "icon">
-     <img src="{{'tree.gif' | asset_img_url }}"></img>
-    </div>
-    <ul class="menu">
-      <li id="aboutMe">More about Me</li>
-      <li id="feedMe">Feed Me</li>
-      <li id="shareMe">Make me amous</li>
-    </ul> `;
-}
+//   content.innerHTML = `
+//     <div id = "icon">
+//      <img src="{{'tree.gif' | asset_img_url }}"></img>
+//     </div>
+//     <ul class="menu">
+//       <li id="aboutMe">More about Me</li>
+//       <li id="feedMe">Feed Me</li>
+//       <li id="shareMe">Make me amous</li>
+//     </ul> `;
+// }
 
 window.initMap = initMap;
 
