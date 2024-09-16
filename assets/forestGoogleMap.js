@@ -50,13 +50,13 @@ function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
   content.src="{{'tree.gif' | image_url}}";
-//   content.innerHTML = `
-//     <ul class="menu">
-//       <li id="aboutMe">More about Me</li>
-//       <li id="feedMe">Feed Me</li>
-//       <li id="shareMe">Make me amous</li>
-//     </ul> `;
-// }
+  content.innerHTML = `
+    <ul class="menu">
+      <li id="aboutMe">More about Me</li>
+      <li id="feedMe">Feed Me</li>
+      <li id="shareMe">Make me amous</li>
+    </ul> `;
+}
 
 window.initMap = initMap;
 
