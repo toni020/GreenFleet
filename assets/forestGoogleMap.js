@@ -46,18 +46,16 @@ function myFunction(markerView){
 }
 
 function buildContent(){
-  const icon = document.createElement("img");
-  // content.classList.add("menu");
-  icon.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
 
-//   const content = document.createElement("div");
-//   content.innerHTML = `
-//     <ul class="menu">
-//       <li id="aboutMe">More about Me</li>
-//       <li id="feedMe">Feed Me</li>
-//       <li id="shareMe">Make me amous</li>
-//     </ul> `;
-    return icon;
+  const content = document.createElement("div");
+  content.innerHTML = `
+    <img src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
+    <ul class="menu">
+      <li id="aboutMe">More about Me</li>
+      <li id="feedMe">Feed Me</li>
+      <li id="shareMe">Make me amous</li>
+    </ul> `;
+    return content;
 }
 
 window.initMap = initMap;
