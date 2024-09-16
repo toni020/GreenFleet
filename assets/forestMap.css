@@ -35,18 +35,15 @@
 
 .forest.icon .aboutMe {
   display: none;
-  flex-direction: column;
-  flex: 1;
+
 }
 .forest.icon .feedMe {
   display: none;
-  flex-direction: column;
-  flex: 1;
+
 }
 .forest.icon .shareMe {
   display: none;
-  flex-direction: column;
-  flex: 1;
+
 }
 
 /*
