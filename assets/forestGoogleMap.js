@@ -27,33 +27,30 @@ async function initMap() {
   mapMarker.addListener("click", () => {
     map.setCenter(mapMarker.position);
     map.setZoom(8);
-    infowindow.open({
-      anchor: mapMarker, map
-    });
-    // myFunction();
+    // infowindow.open({
+    //   anchor: mapMarker, map
+    // });
+    myFunction(mapMarker);
   });
 }
-function myFunction(){
-
-  var menu = document.getElementsByClassName("menu");
-
-  if (menu[0].classList.contains("active")){fdsa
-      menu[0].classList.remove("active");
+function myFunction(markerView){
+  if (markerView.content.classList.contains("active")){fdsa
+      markerView.conten.classList.remove("active");
   }else{
-      menu[0].classList.add("active");
+      markerView.conten.classList.add("active");
 
   }
 }
 
-function buildContent(property){
+function buildContent(){
   const content = document.createElement("div");
-  content.classList.add("property");
+  content.classList.add("menu");
   
   content.innerHTML = `
     <div id = "icon">
      <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
     </div>
-    <ul class="menu">
+    <ul>
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
       <li id="shareMe">Make me amous</li>
