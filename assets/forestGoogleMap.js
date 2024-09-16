@@ -35,9 +35,9 @@ async function initMap() {
 }
 function myFunction(markerView){
   if (markerView.content.classList.contains("active")){
-      markerView.conten.classList.remove("active");
+      markerView.content.classList.remove("active");
   }else{
-      markerView.conten.classList.add("active");
+      markerView.content.classList.add("active");
 
   }
 }
