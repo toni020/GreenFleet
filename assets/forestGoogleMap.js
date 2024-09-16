@@ -18,7 +18,7 @@ async function initMap() {
   const priceTag = document.createElement("img");
 
   priceTag.className = "price-tag";
-  priceTag.src="https://cdn-icons-png.flaticon.com/512/489/489969.png";
+  priceTag.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
