@@ -48,7 +48,7 @@ function buildContent(){
   
   content.innerHTML = `
     <div id = "icon">
-     <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
+     <img src="{{tree.gif | assets}}" alt="https://www.flaticon.com/free-animated-icons/season"></img>
     </div>
     <ul >
       <li id="aboutMe">More about Me</li>
