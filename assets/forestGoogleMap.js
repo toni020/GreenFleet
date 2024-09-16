@@ -49,12 +49,12 @@ function buildContent(){
 
   const content = document.createElement("div");
   content.innerHTML = `
-    <img src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
-    <ul class="menu">
-      <li id="aboutMe">More about Me</li>
-      <li id="feedMe">Feed Me</li>
-      <li id="shareMe">Make me amous</li>
-    </ul> `;
+    <img src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">`
+    // <ul class="menu">
+    //   <li id="aboutMe">More about Me</li>
+    //   <li id="feedMe">Feed Me</li>
+    //   <li id="shareMe">Make me amous</li>
+    // </ul> `;
     return content;
 }
 
