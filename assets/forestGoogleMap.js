@@ -15,11 +15,7 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
-  const priceTag = document.createElement("img");
-
-  priceTag.className = "price-tag";
-  priceTag.src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389";
-    
+  
   const mapMarker = new AdvancedMarkerElement({
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
