@@ -14,16 +14,9 @@
   position: relative;
 }
 
-.icon{
-  background: url('https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.svg?v=1726459410');
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  color: #FFFFFF;
-}
-.icon svg {
-  height: 20px;
-  width: auto;
+icon{
+  width: 80px;
+  height: 60px;
 }
 
 .menu {
