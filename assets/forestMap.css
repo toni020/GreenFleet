@@ -67,10 +67,8 @@ forest.active .icon{
   height: 50px;
 }
 .forest.active .menu{
-  align-items: flex-end;
   display: flex;
   flex-direction: column;
-  height: 150px;
 }
 .forest.menu.active .aboutMe {
   display: flex;
