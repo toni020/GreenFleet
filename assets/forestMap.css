@@ -71,12 +71,12 @@ forest.active .icon{
   flex-direction: column;
 }
 .forest.menu.active .aboutMe {
-  display: flex;
+  display: block;
 }
 .forest.menu.active .feedMe {
-  display: flex;
+  display: block;
 }
 .forest.menu.active .shareMe {
-  display: flex;
+  display: block;
 
 }
