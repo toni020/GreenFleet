@@ -18,7 +18,7 @@ async function initMap() {
   const priceTag = document.createElement("img");
 
   priceTag.className = "price-tag";
-  priceTag.src="{{'tree.gif' | image_url: width:100, height:100}}";
+  priceTag.src="{{'tree.png' | image_url: width:50, height:50}}";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
