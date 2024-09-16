@@ -15,7 +15,10 @@ async function initMap() {
     center: position,
     mapId: "DEMO_MAP_ID",
   });
+  const priceTag = document.createElement("div");
 
+  priceTag.className = "price-tag";
+  priceTag.textContent = "$2.5M";
     
   const mapMarker = new AdvancedMarkerElement({
     map,
@@ -45,7 +48,7 @@ function myFunction(markerView){
 function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
-  content.src="{{tree.gif|image_url}}";
+  content.src="{{'tree.gif' | image_url}}";
 //   content.innerHTML = `
 //     <ul class="menu">
 //       <li id="aboutMe">More about Me</li>
