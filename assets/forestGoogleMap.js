@@ -48,7 +48,7 @@ function myFunction(markerView){
 function buildContent(){
   const content = document.createElement("div");
   // content.classList.add("menu");
-  content.src="{{'tree.gif' | image_url}}";
+  content.src="{{'tree.gif' | image_url width:50, height: 50}}";
   content.innerHTML = `
     <ul class="menu">
       <li id="aboutMe">More about Me</li>
