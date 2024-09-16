@@ -70,15 +70,14 @@ forest.active .icon{
   align-items: flex-end;
   display: flex;
   flex-direction: column;
-  gap: 10px;
 }
-.forest.icon.active .aboutMe {
+.forest.menu.active .aboutMe {
   display: flex;
 }
-.forest.icon.active .feedMe {
+.forest.menu.active .feedMe {
   display: flex;
 }
-.forest.icon.active .shareMe {
+.forest.menu.active .shareMe {
   display: flex;
 
 }
