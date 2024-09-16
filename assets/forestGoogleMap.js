@@ -54,8 +54,7 @@ function buildContent(){
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
       <li id="shareMe">Make me amous</li>
-    </ul> 
-  `;
+    </ul> `;
 }
 
 window.initMap = initMap;
