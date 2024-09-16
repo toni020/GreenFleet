@@ -28,20 +28,20 @@
   z-index: 1
 }
 
-.forest .icon {
+.forest.menu .icon {
   width: 30px;
   height: 30px;
 }
 
-.forest.icon .aboutMe {
+.forest.menu .aboutMe {
   display: none;
 
 }
-.forest.icon .feedMe {
+.forest.menu .feedMe {
   display: none;
 
 }
-.forest.icon .shareMe {
+.forest .shareMe {
   display: none;
 
 }
