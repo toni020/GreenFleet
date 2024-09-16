@@ -34,7 +34,7 @@ async function initMap() {
   });
 }
 function myFunction(markerView){
-  if (markerView.content.classList.contains("active")){fdsa
+  if (markerView.content.classList.contains("active")){
       markerView.conten.classList.remove("active");
   }else{
       markerView.conten.classList.add("active");
@@ -50,7 +50,7 @@ function buildContent(){
     <div id = "icon">
      <img src="tree.gif" alt="https://www.flaticon.com/free-animated-icons/season"></img>
     </div>
-    <ul>
+    <ul class="menu">
       <li id="aboutMe">More about Me</li>
       <li id="feedMe">Feed Me</li>
       <li id="shareMe">Make me amous</li>
