@@ -22,15 +22,22 @@ async function initMap() {
     content:buildContent(),
     gmpClickable: true,
   });
-  
-  mapMarker.addListener("click", () => {
-    map.setCenter(mapMarker.position);
-    map.setZoom(8);
-    // infowindow.open({
-    //   anchor: mapMarker, map
-    // });
-    myFunction(mapMarker);
-  });
+
+  for (const forest of forests) {
+    const mapMarker = new AdvancedMarkerElement({
+    map,
+    position: forest.position,
+    content:buildContent(forest),
+    gmpClickable: true,
+    });
+      
+    mapMarker.addListener("click", () => {
+      map.setCenter(mapMarker.position);
+      map.setZoom(8);
+      myFunction(mapMarker);
+    });
+  }
+
 }
 function myFunction(markerView){
   if (markerView.content.classList.contains("active")){
@@ -54,21 +61,21 @@ function buildContent(){
     </div> `;
     return content;
 }
-const forest = [
+const forests = [
   {
     address: "Esdale Road, Mullion, NSW 2582",
     position: {
       lat: -35.0953155,
       lng: 148.9246943,
     },
-  }
+  },
   {
     address: "5798 Taralga Rd, Curraweela, NSW 2580",
     position: {
       lat: -34.2899561,
       lng: 149.7985828,
     },
-  }
+  },
 ]
 window.initMap = initMap;
 
