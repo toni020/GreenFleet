@@ -28,7 +28,6 @@ async function initMap() {
     map,
     position: forest.position,
     content:buildContent(forest),
-    gmpClickable: true,
     });
       
     mapMarker.addListener("click", () => {
