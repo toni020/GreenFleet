@@ -24,10 +24,10 @@ async function initMap() {
   });
 
   for (const forest of forests) {
-    const mapMarker = new AdvancedMarkerElement({
+    const mapMarker = new google.maps.marker.AdvancedMarkerElement({
     map,
-    position: forest.position,
     content:buildContent(forest),
+    position: forest.position,
     });
       
     mapMarker.addListener("click", () => {
