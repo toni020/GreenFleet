@@ -41,10 +41,6 @@ async function initMap() {
 function myFunction(markerView){
   if (!markerView.content.classList.contains("active")){
       markerView.content.classList.add("active");
-  }else{
-     
-      
-
   }
 }
 
