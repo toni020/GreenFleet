@@ -75,6 +75,13 @@ const forests = [
       lng: 149.7985828,
     },
   },
+  {
+    address: "Kosciuszko Road, Jindabyne, NSW 2627",
+    position: {
+      lat: -36.392758,
+      lng: 148.5915313,
+    },
+  },
 ]
 window.initMap = initMap;
 
