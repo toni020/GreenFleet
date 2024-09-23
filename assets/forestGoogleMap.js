@@ -41,7 +41,14 @@ async function initMap() {
 function myFunction(markerView){
   if (!markerView.content.classList.contains("active")){
       markerView.content.classList.add("active");
-  }
+  }else{
+      markerView.content.classList.remove("active");
+      }
+  // if (document.getElement('clickbox').contains(e.target)){
+  // 	alert("Clicked in Box");
+  // } else{
+  // 	alert("Clicked outside Box");
+  // }
 }
 
 function buildContent(){
