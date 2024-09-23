@@ -45,7 +45,7 @@ function myFunction(markerView){
   // else{
   //     markerView.content.classList.remove("active");
   //     }
-  if (!document.getelementsbyclassname('active').contains(e.target)){
+  if (document.getelementsbyclassname('active').contains(e.target)){
   	markerView.content.classList.remove("active");
   }
 }
