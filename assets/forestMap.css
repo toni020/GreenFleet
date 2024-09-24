@@ -29,10 +29,10 @@
   z-index: 1
 }
 
-.icon {
+.forest .icon {
   width: 30px;
   height: 30px;
-  background: black;
+
 }
 
 .forest .menu{
