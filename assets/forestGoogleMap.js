@@ -36,6 +36,9 @@ async function initMap() {
       myFunction(mapMarker);
     });
   }
+  for(const i of forests){
+    console.log(forests.address)
+  }
 
 }
 function myFunction(markerView){
@@ -89,8 +92,6 @@ const forests = [
     },
   },
 ];
-for(const i of forests){
-  console.log(forests.address)
-}
+
 window.initMap = initMap;
 
