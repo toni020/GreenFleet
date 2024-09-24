@@ -73,10 +73,11 @@
 .forest.active .menu{
   display: flex;
   flex-direction: column;
-  margin: 10px;
+  
 }
 .forest.active .aboutMe {
   display: block;
+  margin: 10px;
 }
 .forest.active .aboutMe:hover{
   box-shadow: 1px 1px 1px 1px lightblue;
