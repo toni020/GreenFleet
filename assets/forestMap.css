@@ -87,11 +87,15 @@
   display: block;
 }
 .forest.active .feedMe:hover{
-  box-shadow: 1px 1px 1px lightblue;
+  box-shadow: 1px 1px 1px 1px lightblue;
+  border-radius: 0px 5px 5px 0px;
+  padding: 5px;
 }
 .forest.active .shareMe {
   display: block;
 }
 .forest.active .shareMe:hover{
-  box-shadow: 1px 1px 1px lightblue;
+  box-shadow: 1px 1px 1px 1px lightblue;
+  border-radius: 0px 5px 5px 0px;
+  padding: 5px;
 }
