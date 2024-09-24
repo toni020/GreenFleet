@@ -26,7 +26,7 @@ async function initMap() {
   for (const forest of forests) {
     const mapMarker = new google.maps.marker.AdvancedMarkerElement({
     map,
-    content:buildContent(forest),
+    content: buildContent(forest),
     position: forest.position,
     });
       
