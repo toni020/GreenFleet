@@ -36,9 +36,7 @@ async function initMap() {
       myFunction(mapMarker);
     });
   }
-  for(const i of forests){
-    console.log(forests.address)
-  }
+
 
 }
 function myFunction(markerView){
@@ -53,7 +51,7 @@ function myFunction(markerView){
 });
 }
 
-function buildContent(forest){
+function buildContent(f){
 
   const content = document.createElement("div");
   content.classList.add("forest");
@@ -61,7 +59,7 @@ function buildContent(forest){
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
     <div class="menu">
       <div class="name">Forest Name</div>
-
+      <div class="address">${f.address}</div>
       <div class="aboutMe">More about Me</div>
       <div class="feedMe">Feed Me</div>
       <div class="shareMe">Make me famous</div>
