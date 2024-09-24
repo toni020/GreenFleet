@@ -50,8 +50,8 @@
 .forest.menu .shareMe {
   display: none;
 }
-.forest.menu .address {
-  color: #9E9E9E;
+.menu .address {
+  color: red;
   font-size: 10px;
   margin-bottom: 10px;
   margin-top: 5px;
