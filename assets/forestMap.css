@@ -79,7 +79,7 @@
 }
 .forest.active .aboutMe:hover{
   box-shadow: 1px 1px 1px 1px lightblue;
-  border: 5px;
+  border-radius: 5px;
 }
 
 .forest.active .feedMe {
