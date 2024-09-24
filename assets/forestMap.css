@@ -78,8 +78,10 @@
   display: block;
 }
 .forest.active .aboutMe:hover{
-  box-shadow: 1px 1px 1px lightblue;
+  box-shadow: 1px 1px 1px 1px lightblue;
+  border: 5px;
 }
+
 .forest.active .feedMe {
   display: block;
 }
