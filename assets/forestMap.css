@@ -75,6 +75,7 @@
   flex-direction: column;
 }
 .forest.menu.active .aboutMe {
+  background: black;
   display: block;
 }
 .forest.menu.active .feedMe {
