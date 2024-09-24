@@ -12,7 +12,7 @@
  */
 
 .forest{
-  background: yellow;
+  
   align-items: center;
   border-radius: 50%;
   color: #263238;
@@ -57,7 +57,7 @@
  */
 
 .forest.active {
-  background-color: #FFFFFF;
+  background-color: red;
   border-radius: 8px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: 80px;
