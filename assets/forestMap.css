@@ -78,10 +78,13 @@
   background: red;
   display: block;
 }
-.forest.menu.active .feedMe {
+.forest.active .aboutMe:hover{
+  box-shadow: 10px 10px 5px lightblue;
+}
+.forest.active .feedMe {
   display: block;
 }
-.forest.menu.active .shareMe {
+.forest.active .shareMe {
   display: block;
 
 }
