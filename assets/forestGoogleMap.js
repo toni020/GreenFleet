@@ -58,9 +58,9 @@ function buildContent(f){
   content.innerHTML = `
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
     <div class="menu">
-      <div class="name">Forest Name</div>
+      <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
-      <div class="aboutMe">More about Me</div>
+      <div class="aboutMe"><a href=${f?.link}>More about me</a></div>
       <div class="feedMe">Feed Me</div>
       <div class="shareMe">Make me famous</div>
     </div> `;
@@ -74,6 +74,7 @@ const forests = [
       lat: -35.0953155,
       lng: 148.9246943,
     },
+    link:"",
   },
   {
     name: "Back O'Slaters",
