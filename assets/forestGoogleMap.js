@@ -65,7 +65,7 @@ function buildContent(forest){
     </div> `;
     return content;
 }
-var forests = [
+const forests = [
   {
     address: "Esdale Road, Mullion, NSW 2582",
     position: {
@@ -89,6 +89,8 @@ var forests = [
     },
   },
 ];
-console.log(forests.address)
+for(const i of forests){
+  console.log(forests.address)
+}
 window.initMap = initMap;
 
