@@ -20,7 +20,7 @@ async function initMap() {
     map,
     position: { lat: -34.2923902, lng: 149.7934873 },
     content:buildContent(),
-    gmpClickable: true,
+
   });
 
   for (const forest of forests) {
@@ -73,21 +73,21 @@ var forests = [
       lng: 148.9246943,
     },
   },
-  {
-    address: "5798 Taralga Rd, Curraweela, NSW 2580",
-    position: {
-      lat: -34.2899561,
-      lng: 149.7985828,
-    },
+  // {
+  //   address: "5798 Taralga Rd, Curraweela, NSW 2580",
+  //   position: {
+  //     lat: -34.2899561,
+  //     lng: 149.7985828,
+  //   },
     
-  },
-  {
-    address: "Kosciuszko Road, Jindabyne, NSW 2627",
-    position: {
-      lat: -36.392758,
-      lng: 148.5915313,
-    },
-  },
+  // },
+  // {
+  //   address: "Kosciuszko Road, Jindabyne, NSW 2627",
+  //   position: {
+  //     lat: -36.392758,
+  //     lng: 148.5915313,
+  //   },
+  // },
 ];
 window.initMap = initMap;
 
