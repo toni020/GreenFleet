@@ -75,7 +75,6 @@
   flex-direction: column;
 }
 .forest.active .aboutMe {
-  background: red;
   display: block;
 }
 .forest.active .aboutMe:hover{
