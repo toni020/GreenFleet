@@ -91,5 +91,5 @@ const forests = [
   },
 ];
 
-window.initMap = initMap;
+initMap();
 
