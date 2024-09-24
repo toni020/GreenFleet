@@ -78,7 +78,7 @@
   display: block;
 }
 .forest.active .aboutMe:hover{
-  box-shadow: 5px 5px 5px lightblue;
+  box-shadow: 1px 1px 1px lightblue;
 }
 .forest.active .feedMe {
   display: block;
