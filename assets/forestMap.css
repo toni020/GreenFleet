@@ -73,6 +73,7 @@
 .forest.active .menu{
   display: flex;
   flex-direction: column;
+  margin: 10px;
 }
 .forest.active .aboutMe {
   display: block;
