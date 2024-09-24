@@ -83,7 +83,12 @@
 .forest.active .feedMe {
   display: block;
 }
+.forest.active .feedMe:hover{
+  box-shadow: 1px 1px 1px lightblue;
+}
 .forest.active .shareMe {
   display: block;
-
+}
+.forest.active .shareMe:hover{
+  box-shadow: 1px 1px 1px lightblue;
 }
