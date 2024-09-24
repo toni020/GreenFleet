@@ -12,6 +12,7 @@
  */
 
 .forest{
+  background: yellow;
   align-items: center;
   border-radius: 50%;
   color: #263238;
@@ -28,7 +29,7 @@
   z-index: 1
 }
 
- .icon {
+.icon {
   width: 30px;
   height: 30px;
   background: black;
