@@ -79,7 +79,7 @@ const forests = [
       lat: -34.2899561,
       lng: 149.7985828,
     },
-    link:"https://www.greenfleet.com.au/blogs/forest/back-oslaters",
+    
   },
   {
     address: "Kosciuszko Road, Jindabyne, NSW 2627",
