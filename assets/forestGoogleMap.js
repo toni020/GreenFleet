@@ -23,7 +23,7 @@ async function initMap() {
 
   });
 
-  for (const forest of forests) {
+  for (var forest of forests) {
     const mapMarker = new google.maps.marker.AdvancedMarkerElement({
     map,
     content: buildContent(forest),
@@ -91,5 +91,5 @@ const forests = [
   },
 ];
 
-initMap();
+window.initMap = initMap;
 
