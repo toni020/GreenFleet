@@ -66,28 +66,28 @@ function buildContent(forest){
     return content;
 }
 var forests = [
-  // {
-  //   address: "Esdale Road, Mullion, NSW 2582",
-  //   position: {
-  //     lat: -35.0953155,
-  //     lng: 148.9246943,
-  //   },
-  // },
-  // {
-  //   address: "5798 Taralga Rd, Curraweela, NSW 2580",
-  //   position: {
-  //     lat: -34.2899561,
-  //     lng: 149.7985828,
-  //   },
+  {
+    address: "Esdale Road, Mullion, NSW 2582",
+    position: {
+      lat: -35.0953155,
+      lng: 148.9246943,
+    },
+  },
+  {
+    address: "5798 Taralga Rd, Curraweela, NSW 2580",
+    position: {
+      lat: -34.2899561,
+      lng: 149.7985828,
+    },
     
-  // },
-  // {
-  //   address: "Kosciuszko Road, Jindabyne, NSW 2627",
-  //   position: {
-  //     lat: -36.392758,
-  //     lng: 148.5915313,
-  //   },
-  // },
+  },
+  {
+    address: "Kosciuszko Road, Jindabyne, NSW 2627",
+    position: {
+      lat: -36.392758,
+      lng: 148.5915313,
+    },
+  },
 ];
 window.initMap = initMap;
 
