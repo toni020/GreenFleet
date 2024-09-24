@@ -68,6 +68,7 @@ function buildContent(f){
 }
 const forests = [
   {
+    name: "River Bend",
     address: "Esdale Road, Mullion, NSW 2582",
     position: {
       lat: -35.0953155,
@@ -75,19 +76,23 @@ const forests = [
     },
   },
   {
+    name: "Back O'Slaters",
     address: "5798 Taralga Rd, Curraweela, NSW 2580",
     position: {
       lat: -34.2899561,
       lng: 149.7985828,
     },
+    link: "https://www.greenfleet.com.au/blogs/forest/back-oslaters",
     
   },
   {
+    name: "Kosciuszko National Park",
     address: "Kosciuszko Road, Jindabyne, NSW 2627",
     position: {
       lat: -36.392758,
       lng: 148.5915313,
     },
+    link: "https://www.greenfleet.com.au/blogs/forest/kosciuszko-national-park",
   },
 ];
 
