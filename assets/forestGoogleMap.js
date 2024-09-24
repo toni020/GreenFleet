@@ -45,9 +45,9 @@ function myFunction(markerView){
   // else{
   //     markerView.content.classList.remove("active");
   //     }
-  if (e.target.classList.contains('active')){
-  	markerView.content.classList.remove("active");
-  }
+  google.maps.event.addListener(map, "click", function(event) {
+    markerView.content.classList.remove("active");
+});
 }
 
 function buildContent(){
