@@ -76,15 +76,47 @@ function buildContent(f){
       demo(f);
     });
     content.querySelector(".shareMe").addEventListener("click", () => {
-      const cnt = document.createElement("div");
-      cnt.innerHTML = `
-        <div class="socalMedia">
-          <img class="iconSM" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-        </div>
-      `;
+      showFamousDiv(f)
     });
     return content;
 }
+
+function showFamousDiv(forest) {
+  // Create a new div element
+  const famousDiv = document.createElement("div");
+  famousDiv.classList.add("famous");
+
+  // Customize the content of the new div
+  famousDiv.innerHTML = `
+    <h2>${forest?.name} is now famous!</h2>
+    <p>This forest, located at ${forest?.address}, is getting popular!</p>
+  `;
+
+  // Style the new div (optional)
+  famousDiv.style.position = "fixed";
+  famousDiv.style.top = "50%";
+  famousDiv.style.left = "50%";
+  famousDiv.style.transform = "translate(-50%, -50%)";
+  famousDiv.style.padding = "20px";
+  famousDiv.style.backgroundColor = "#fff";
+  famousDiv.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.1)";
+  famousDiv.style.zIndex = "9999";
+
+  // Append the new div to the body
+  document.body.appendChild(famousDiv);
+
+  // Optional: Add a close button
+  const closeButton = document.createElement("button");
+  closeButton.textContent = "Close";
+  closeButton.style.marginTop = "10px";
+  closeButton.style.cursor = "pointer";
+  famousDiv.appendChild(closeButton);
+
+  // Add event listener to close the div when the button is clicked
+  closeButton.addEventListener("click", () => {
+    document.body.removeChild(famousDiv);
+  });
+
 const forests = [
   {
     name: "River Bend",
