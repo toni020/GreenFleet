@@ -98,7 +98,7 @@
 .media1 img{
   width:30px;
   height:30px;
-  padding: 2px;
+  background: yellow;
 }
 .forest.active .facebook{
   background: #1976d2;
