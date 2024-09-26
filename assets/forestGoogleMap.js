@@ -88,8 +88,9 @@ function showFamousDiv(forest) {
 
   // Customize the content of the new div
   famousDiv.innerHTML = `
-    <h2>${forest?.name} is now famous!</h2>
-    <p>This forest, located at ${forest?.address}, is getting popular!</p>
+    <div class="subShareMe">
+      <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+    </div>
   `;
 
   // Style the new div (optional)
