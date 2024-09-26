@@ -74,7 +74,7 @@ function buildContent(f){
       <div class="media1">
         <div class="facebook">
           <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-          <p>Facebook</p>
+          <p>Connect to facebook</p>
         </div>
       </div>
     </div> `;
