@@ -92,6 +92,7 @@
   border-radius: 0px 5px 5px 0px;
 }
 .socal{
+  position: fixed;
   right: 100%;
   top: 0%;
   background:red;
