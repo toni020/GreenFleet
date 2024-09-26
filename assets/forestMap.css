@@ -62,7 +62,6 @@
 .forest.active .menu{
   display: flex;
   flex-direction: column;
-  background: yellow;
   position:relative;
   
 }
@@ -92,4 +91,5 @@
 }
 .forest.active .facebook{
   background: #1976d2;
+  width: 100px;
 }
