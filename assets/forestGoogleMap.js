@@ -102,19 +102,19 @@ function showFamousDiv(forest) {
   // famousDiv.style.zIndex = "9999";
 
   // Append the new div to the body
-  document.body.appendChild(famousDiv);
+  // document.body.appendChild(famousDiv);
 
   // Optional: Add a close button
-  const closeButton = document.createElement("button");
-  closeButton.textContent = "Close";
-  closeButton.style.marginTop = "10px";
-  closeButton.style.cursor = "pointer";
-  famousDiv.appendChild(closeButton);
+  // const closeButton = document.createElement("button");
+  // closeButton.textContent = "Close";
+  // closeButton.style.marginTop = "10px";
+  // closeButton.style.cursor = "pointer";
+  // famousDiv.appendChild(closeButton);
 
-  // Add event listener to close the div when the button is clicked
-  closeButton.addEventListener("click", () => {
-    document.body.removeChild(famousDiv);
-  });
+  // // Add event listener to close the div when the button is clicked
+  // closeButton.addEventListener("click", () => {
+  //   document.body.removeChild(famousDiv);
+  // });
 }
 const forests = [
   {
