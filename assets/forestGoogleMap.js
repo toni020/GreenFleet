@@ -116,7 +116,7 @@ function showFamousDiv(forest) {
   closeButton.addEventListener("click", () => {
     document.body.removeChild(famousDiv);
   });
-
+}
 const forests = [
   {
     name: "River Bend",
