@@ -34,8 +34,8 @@ async function initMap() {
       map.setCenter(mapMarker.position);
       map.setZoom(8);
       myFunction(mapMarker);
+      document.getElementsByClassName("aboutMe").addListener("click",demo(forest));
     });
-    document.getElementsByClassName("aboutMe").addListener("click",demo(forest));
   }
 
 
