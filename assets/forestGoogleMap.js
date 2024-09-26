@@ -71,8 +71,8 @@ function buildContent(f){
       <div class="aboutMe");">More about me</div>
       <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
       <div class="shareMe">Make me famous</div>
-      <div class="media"> acaca
-        <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+      <div class="acd">
+      <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
       </div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
