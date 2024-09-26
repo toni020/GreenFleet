@@ -80,7 +80,7 @@
   position: absolute;
   margin-top: 20px;
   top: 100%;
-  width: 100%;
+  width: auto;
 
 }
 .media1 li{
@@ -88,7 +88,6 @@
   justify-content: space-between;
   align-items: center;
   list-style: none;
-  width: auto;
 }
 
 .media1 p{
