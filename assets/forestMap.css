@@ -86,7 +86,6 @@
 .media1 li{
   display: flex;
   justify-content: space-start;
-  align-items: left;
   list-style: none;
 }
 
