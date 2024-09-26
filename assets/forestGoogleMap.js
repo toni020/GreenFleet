@@ -72,10 +72,14 @@ function buildContent(f){
       <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
       <div class="shareMe">Make me famous</div>
       <div class="media1">
-        <div class="facebook">
-          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-          <p>Connect to facebook</p>
-        </div>
+          <ul>
+            <li class="facebook">
+              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+              <p>Connect to facebook</p>
+            </li>
+            <li></li>
+            <li></li>
+          </ul>
       </div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
