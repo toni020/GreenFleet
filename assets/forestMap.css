@@ -92,7 +92,6 @@
 
 .media1 p{
   color: white;
-  background: white;
   margin-left: 10px;
 }
 .media1 img{
@@ -100,7 +99,7 @@
   height:30px;
   margin-top: auto;
   margin-bottom: auto;
-  padding-left: 5px;
+  margin-left: 5px;
 }
 .forest.active .facebook{
   background: #1976d2;
