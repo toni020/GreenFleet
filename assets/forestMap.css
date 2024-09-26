@@ -86,6 +86,7 @@
 .media1 li{
   display: flex;
   justify-content: flex-start;
+  align-items: center;
   list-style: none;
 }
 
