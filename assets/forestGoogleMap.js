@@ -73,8 +73,18 @@ function buildContent(f){
       <div class="shareMe">Make me famous</div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
-    demo(f);
-  });
+      demo(f);
+    });
+    content.querySelector(".shareMe").addEventListener("click", () => {
+      const cnt = document.createElement("div");
+      cnt.innerHTML = `
+        <div class="socalMedia">
+          <img class="icon">
+          <img class="icon">
+          <img class="icon">
+        </div>
+      `;
+    });
     return content;
 }
 const forests = [
@@ -86,6 +96,9 @@ const forests = [
       lng: 148.9246943,
     },
     link:" ",
+    facebook: "https://www.facebook.com/GreenfleetAustralia/",
+    instagram: "https://www.instagram.com/greenfleetaustralia/",
+    Linkedin: "https://www.linkedin.com/company/greenfleet",
   },
   {
     name: "Back O'Slaters",
