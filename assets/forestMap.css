@@ -92,7 +92,7 @@
   border-radius: 0px 5px 5px 0px;
 }
 .socal{
-  display:non;
+  display:none;
   position: absolute;
   left: 100%;
   top: 100%;
