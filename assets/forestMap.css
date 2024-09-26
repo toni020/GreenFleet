@@ -83,19 +83,19 @@
   width: 200px;
 
 }
-.forest.active.media1 li{
+.media1 li{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: content;
   list-style: none;
 }
 
-.forest.active.media1 p{
+.media1 p{
   color: white;
   background: white;
   margin-left: 10px;
 }
-.forest.active.media1 img{
+.media1 img{
   width:30px;
   height:30px;
   margin: 5px auto 5px auto;
