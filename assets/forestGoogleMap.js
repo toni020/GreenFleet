@@ -54,7 +54,7 @@ function myFunction(markerView){
 function demo(forest){
   const link= ${forest?.link};
   if (link == "") {
-    alert("Sorry, the forest isn;t available now.");
+    alert("Sorry, the forest isn't available now.");
   }else{
     window.open(link, "_black");
   }
