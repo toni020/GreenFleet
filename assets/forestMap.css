@@ -100,6 +100,7 @@
   width:30px;
   height:30px;
   background: yellow;
+  margin: 5px auto 5px auto;
 }
 .forest.active .facebook{
   background: #1976d2;
