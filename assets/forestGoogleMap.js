@@ -88,20 +88,18 @@ function showFamousDiv(forest) {
 
   // Customize the content of the new div
   famousDiv.innerHTML = `
-    <div class="subShareMe">
-      <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-    </div>
+    <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
   `;
 
   // Style the new div (optional)
-  famousDiv.style.position = "fixed";
-  famousDiv.style.top = "50%";
-  famousDiv.style.left = "50%";
-  famousDiv.style.transform = "translate(-50%, -50%)";
-  famousDiv.style.padding = "20px";
-  famousDiv.style.backgroundColor = "#fff";
-  famousDiv.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.1)";
-  famousDiv.style.zIndex = "9999";
+  // famousDiv.style.position = "fixed";
+  // famousDiv.style.top = "50%";
+  // famousDiv.style.left = "50%";
+  // famousDiv.style.transform = "translate(-50%, -50%)";
+  // famousDiv.style.padding = "20px";
+  // famousDiv.style.backgroundColor = "#fff";
+  // famousDiv.style.boxShadow = "0px 0px 10px rgba(0, 0, 0, 0.1)";
+  // famousDiv.style.zIndex = "9999";
 
   // Append the new div to the body
   document.body.appendChild(famousDiv);
