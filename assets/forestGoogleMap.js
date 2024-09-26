@@ -87,7 +87,7 @@ const forests = [
       lat: -35.0953155,
       lng: 148.9246943,
     },
-    link:" ",
+    link:"",
     facebook: "https://www.facebook.com/GreenfleetAustralia/",
     instagram: "https://www.instagram.com/greenfleetaustralia/",
     Linkedin: "https://www.linkedin.com/company/greenfleet",
