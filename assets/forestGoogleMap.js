@@ -79,7 +79,7 @@ function buildContent(f){
       const cnt = document.createElement("div");
       cnt.innerHTML = `
         <div class="socalMedia">
-          <img class="icon">
+          <img class="icon" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
           <img class="icon">
           <img class="icon">
         </div>
