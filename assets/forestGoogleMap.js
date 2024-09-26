@@ -71,7 +71,7 @@ function buildContent(f){
       <div class="aboutMe");">More about me</div>
       <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
       <div class="shareMe">Make me famous</div>
-      <div class="#">asdcas</div>
+      <div class="acd">asdcas</div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
       demo(f);
