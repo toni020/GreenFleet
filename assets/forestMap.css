@@ -78,10 +78,10 @@
 
 .forest.active .media1{
   position: absolute;
-  background: red;
   margin-top: 20px;
   top: 100%;
   width: 100%
+  height: auto;
 }
 
 .menu img{
