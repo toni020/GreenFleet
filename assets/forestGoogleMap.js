@@ -69,8 +69,8 @@ function buildContent(f){
       <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
       <div class="aboutMe");">More about me</div>
-      <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');"><p>Feed Me</p></div>
-      <div class="shareMe"><p>Make me famous</p></div>
+      <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
+      <div class="shareMe">Make me famous</div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
       demo(f);
