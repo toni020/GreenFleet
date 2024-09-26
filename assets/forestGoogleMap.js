@@ -34,7 +34,6 @@ async function initMap() {
       map.setCenter(mapMarker.position);
       map.setZoom(8);
       myFunction(mapMarker);
-      document.getElementsByClassName("aboutMe").addListener("click",demo(forest));
     });
   }
 
@@ -73,6 +72,9 @@ function buildContent(f){
       <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
       <div class="shareMe">Make me famous</div>
     </div> `;
+    content.querySelector(".aboutMe").addEventListener("click", () => {
+    demo(f);
+  });
     return content;
 }
 const forests = [
