@@ -35,6 +35,7 @@ async function initMap() {
       map.setZoom(8);
       myFunction(mapMarker);
     });
+    document.getElementsByClassName("aboutMe").addListener("click",demo(forset));
   }
 
 
@@ -51,7 +52,14 @@ function myFunction(markerView){
 });
 }
 
-
+function demo(forest){
+  const link= ${forest?.link};
+  if (link == "") {
+    alert("Sorry, the forest isn;t available now.")
+  }else{
+    window.open(link, "_black");
+  }
+}
 
 function buildContent(f){
 
@@ -62,7 +70,8 @@ function buildContent(f){
     <div class="menu">
       <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
-      <div class="aboutMe">More about me</div>
+      // <div class="aboutMe" onclick="window.open('${f?.link}', '_blank');">More about me</div>
+      <div class="aboutMe");">More about me</div>
       <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
       <div class="shareMe">Make me famous</div>
     </div> `;
