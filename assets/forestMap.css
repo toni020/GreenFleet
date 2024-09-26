@@ -92,5 +92,7 @@
 }
 
 .forest.active .acd{
-  display: none;
+  position: absolute;
+  bottom: 0%;
+  
 }
