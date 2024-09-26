@@ -77,8 +77,8 @@ function buildContent(f){
               <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
               <p>Connect to facebook</p>
             </li>
-            <li></li>
-            <li></li>
+            <li><p>Connect to facebook</p></li>
+            <li><p>Connect to facebook</p></li>
           </ul>
       </div>
     </div> `;
