@@ -92,5 +92,6 @@
 
 .forest.active .famous{
   background-color: #fff;
-  
+  width: auto;
+  height: auto;
 }
