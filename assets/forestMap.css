@@ -66,7 +66,7 @@
   position:relative;
   
 }
-.forest.active .aboutMe .feedMe .feedMe{
+.forest.active .aboutMe,.feedMe,.feedMe{
   display: block;
   padding: 5px;
 }
@@ -93,7 +93,7 @@
   width: 100%
 }
 
-.media img{
+.menu img{
   width:30px;
   height:30px;
   padding: 
