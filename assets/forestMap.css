@@ -93,7 +93,8 @@
 .media1 p{
   color: white;
   padding-left:4px;
-  background: white;
+  
+  text-align: left;
 }
 .media1 img{
   width:30px;
