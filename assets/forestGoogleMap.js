@@ -73,7 +73,7 @@ function buildContent(f){
       <div class="shareMe">
         <p>Make me famous</p>
         <div class="socal">
-        <img class="sub" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+        // <img class="sub" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
         </div>
       </div>
     </div> `;
