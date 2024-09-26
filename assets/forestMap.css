@@ -85,7 +85,7 @@
 }
 .media1 li{
   display: flex;
-  justify-content: space-start;
+  justify-content: flex-start;
   list-style: none;
 }
 
