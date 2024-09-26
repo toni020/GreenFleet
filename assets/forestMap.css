@@ -84,6 +84,7 @@
 .forest.active .shareMe {
   padding: 5px;
   display: block;
+  position: relative;
 }
 .forest.active .shareMe:hover{
   box-shadow: 0px 1px 1px 1px lightblue;
