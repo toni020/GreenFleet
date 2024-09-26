@@ -97,5 +97,6 @@
   position: absolute;
   background: red;
   padding: 5px;
-
+  top: 100%;
+  width: 100%
 }
