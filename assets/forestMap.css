@@ -85,6 +85,8 @@
 }
 .media1 li{
   display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 .media1 img{
   width:30px;
