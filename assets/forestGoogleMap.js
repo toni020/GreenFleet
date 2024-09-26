@@ -53,11 +53,11 @@ function myFunction(markerView){
 }
 
 function demo(forest){
-  const link= ${forest?.link};
-  if (link == "") {
+  const lik= ${forest?.link};
+  if (lik == "") {
     alert("Sorry, the forest isn;t available now.")
   }else{
-    window.open(link, "_blank");
+    window.open(lik, "_blank");
   }
 }
 
