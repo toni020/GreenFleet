@@ -74,10 +74,14 @@ function buildContent(f){
       <div class="media1">
           <li class="facebook">
             <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-            <p>Connect to facebook</p>
+            <p>Connect to Facebook</p>
           </li>
-          <li><p>Connect to facebook</p></li>
-          <li><p>Connect to facebook</p></li>
+          <li class="instagram">
+            <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
+            <p>Connect to Instagram</p></li>
+          <li class="linkedin">
+            <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+            <p>Connect to linkedin</p></li>
       </div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
