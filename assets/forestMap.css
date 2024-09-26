@@ -91,13 +91,7 @@
   box-shadow: 0px 1px 1px 1px lightblue;
   border-radius: 0px 5px 5px 0px;
 }
-.socal{
-  display:none;
-  position: absolute;
-  left: 100%;
-  top: 100%;
-  background:red;
-  width: 50px;
-  height: 50px;
-
+p{
+  width: 100%;
+  height: 50%;
 }
