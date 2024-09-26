@@ -94,6 +94,7 @@
 
 .forest.active .acd{
   position: absolute;
+  display: block;
   top: 100%;
 
   background: red;
