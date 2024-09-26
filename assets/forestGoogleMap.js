@@ -56,7 +56,7 @@ function demo(forest){
   if (forest?.link === "") {
     alert("Sorry, the forest isn;t available now.")
   }else{
-    window.open(forest?.link} , "_blank");
+    window.open(forest?.link, "_blank");
   }
 }
 
