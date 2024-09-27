@@ -25,11 +25,12 @@ async function initMap() {
 
   // Define the bounds for the aboriginal land overlay
   const aboriginalLandBounds = {
-    north: -12.0,  // Set the northern boundary based on your image
-    south: -37.0,  // Set the southern boundary based on your image
-    east: 150.0,   // Set the eastern boundary based on your image
-    west: 130.0    // Set the western boundary based on your image
+    north: -10.0,  // Northern boundary (approximate for northern Australia)
+    south: -40.0,  // Southern boundary (approximate for southern Australia)
+    east: 160.0,   // Eastern boundary (approximate for eastern Australia)
+    west: 110.0    // Western boundary (approximate for western Australia)
   };
+
 
   // Create and set the GroundOverlay
   const overlay = new google.maps.GroundOverlay(
