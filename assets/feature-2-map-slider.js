@@ -1,6 +1,5 @@
 let map;
 let markers = [];
-let overlay; // Variable to hold the overlay instance
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
   { lat: -35.282, lng: 149.128, city: 'Canberra' },
@@ -32,52 +31,61 @@ async function initMap() {
     west: 112.8    // Western boundary (approximate for western Australia)
   };
 
-  // Create the GroundOverlay but do not set it on the map yet
-  overlay = new google.maps.GroundOverlay(
+
+  // Create and set the GroundOverlay
+  const overlay = new google.maps.GroundOverlay(
     aboriginalLandImageUrl, // Use the dynamically set image URL
     aboriginalLandBounds
   );
 
-  setupToggles(); // Initialize toggles after the map is ready
+  overlay.setMap(map); // Set the overlay on the map
+
+  setupToggle(); // Initialize the toggle after the map is ready
 }
 
-function setupToggles() {
-  const toggleMarkers = document.getElementById('toggleMarkers');
-  const toggleOverlay = document.getElementById('toggleOverlay');
+function setupToggle() {
+  const toggle = document.getElementById('toggleMarkers');
+  const toggleLabel = document.querySelector('.toggle-label');
 
-  if (!toggleMarkers || !toggleOverlay) {
-    console.error('Toggle switches not found!');
+  if (!toggle || !toggleLabel) {
+    console.error('Toggle switch or label not found!');
     return;
   }
 
-  // Create markers but initially don't display them
-  markers = locations.map(location => {
-    return new google.maps.Marker({
-      position: { lat: location.lat, lng: location.lng },
-      title: location.city,
-      icon: {
-        url: treeIconUrl, // Use the custom icon
-        scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
-      }
-    });
-  });
+  // Update the toggle label text based on the toggle state
+  function updateToggleLabel() {
+    toggleLabel.textContent = toggle.checked ? 'Hide Forests' : 'Show Forests';
+  }
+
+  // Initialize label text
+  updateToggleLabel();
+
+  // Update label text when toggle state changes
+  toggle.addEventListener('change', updateToggleLabel);
 
   // Handle markers visibility
-  toggleMarkers.addEventListener('change', () => {
-    const visible = toggleMarkers.checked;
-    console.log('Markers toggle state:', visible);
-    
-    markers.forEach(marker => {
-      marker.setMap(visible ? map : null); // Show or hide markers
-    });
-  });
+  toggle.addEventListener('change', () => {
+    const visible = toggle.checked;
+    console.log('Toggle state:', visible); // Debugging line
 
-  // Handle overlay visibility
-  toggleOverlay.addEventListener('change', () => {
-    const visible = toggleOverlay.checked;
-    console.log('Overlay toggle state:', visible);
-    
-    overlay.setMap(visible ? map : null); // Show or hide overlay
+    // Clear existing markers
+    markers.forEach(marker => marker.setMap(null));
+    markers = [];
+
+    if (visible) {
+      // Recreate and add markers with fixed icon size
+      markers = locations.map(location => {
+        return new google.maps.Marker({
+          map: map,
+          position: { lat: location.lat, lng: location.lng },
+          title: location.city,
+          icon: {
+            url: treeIconUrl, // Use the custom icon
+            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+          }
+        });
+      });
+    }
   });
 }
 
