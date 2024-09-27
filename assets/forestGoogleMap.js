@@ -86,10 +86,10 @@ function buildContent(f){
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
       demo(f);
-    )};
+    });
     content.querySelector(".shareMe").addEventListener("click", () =>{
       document.getElementById("media1").style.display = "flex";
-    )};
+    });
     return content;
 }
 
