@@ -89,7 +89,7 @@ function buildContent(f){
     });
     content.querySelector(".shareMe").addEventListener("click", () =>{
       document.getElementById("media1").style.display = "flex";
-    };
+    )};
     return content;
 }
 
