@@ -27,8 +27,8 @@ async function initMap() {
   const aboriginalLandBounds = {
     north: -9.0,  // Northern boundary (approximate for northern Australia)
     south: -44.5,  // Southern boundary (approximate for southern Australia)
-    east: 157.0,   // Eastern boundary (approximate for eastern Australia)
-    west: 112.0    // Western boundary (approximate for western Australia)
+    east: 155.0,   // Eastern boundary (approximate for eastern Australia)
+    west: 111.0    // Western boundary (approximate for western Australia)
   };
 
 
