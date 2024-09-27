@@ -19,21 +19,26 @@
     Nam Hoang implementing feature 2 - map toggle for Greenfleet.
   </p>
 
-<div id="map-container">
-  <div class="toggle-container">
-    <div class="toggle-item">
-      <label class="toggle-label" for="toggleMarkers">Show Greenfleet Impact</label>
-      <input type="checkbox" id="toggleMarkers">
+  <div id="map-container">
+    <div class="toggle-container">
+      <div class="toggle-item">
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleMarkers">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Show Greenfleet Impact</span>
+      </div>
+      <div class="toggle-item">
+        <label class="toggle-switch">
+          <input type="checkbox" id="toggleAboriginalOverlay">
+          <span class="slider"></span>
+        </label>
+        <span class="toggle-label">Indigenous Forest Estate</span>
+      </div>
     </div>
-    <div class="toggle-item">
-      <label class="toggle-label" for="toggleAboriginalOverlay">Show Indigenous Forest Estate</label>
-      <input type="checkbox" id="toggleAboriginalOverlay">
-    </div>
+    <p class="source-text">Source: Australian Government - Aboriginal Lands</p> 
+    <div id="map"></div> 
   </div>
-  <div id="map"></div>
-  <div class="source-text">Source: Aboriginal Land Data</div> <!-- Ensure this element is here -->
-</div>
-
 
   <script>
     const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
