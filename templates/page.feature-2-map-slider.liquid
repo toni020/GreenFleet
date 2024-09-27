@@ -21,13 +21,22 @@
 
 <div id="map-container">
   <div id="map"></div>
-  <div class="button-container">
-    <button id="showMarkers">Show Forests</button>
-    <button id="hideMarkers">Hide Forests</button>
-    <button id="showOverlay">Show Aboriginal Land</button>
-    <button id="hideOverlay">Hide Aboriginal Land</button>
+  <div class="toggle-container">
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleMarkers">
+      <span class="slider"></span>
+      <span class="toggle-label">Show Forests</span>
+    </label>
+  </div>
+  <div class="toggle-container">
+    <label class="toggle-switch">
+      <input type="checkbox" id="toggleOverlay">
+      <span class="slider"></span>
+      <span class="toggle-label">Show Aboriginal Land</span>
+    </label>
   </div>
 </div>
+
 
 
   <script>
