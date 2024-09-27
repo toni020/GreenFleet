@@ -49,7 +49,6 @@
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
   align-items: center; /* Center the toggle and label vertically */
-  /* Removed margin-right to prevent trailing space */
 }
 
 .toggle-switch {
