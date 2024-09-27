@@ -27,9 +27,9 @@
 .toggle-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; /* Distribute space evenly */
-  width: 100%; /* Make sure it takes full width */
-  max-width: 600px; /* Optional: Limit maximum width */
+  justify-content: space-around; /* Change to space-around or flex-start to reduce space */
+  width: 100%; /* Ensure full width */
+  max-width: 600px; /* Optional: Limit max width */
   margin-bottom: 10px; /* Space between the toggle and the map */
 }
 
@@ -49,6 +49,7 @@
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
   align-items: center; /* Center the toggle and label vertically */
+  margin: 0 10px; /* Space on the left and right of each toggle item */
 }
 
 .toggle-switch {
