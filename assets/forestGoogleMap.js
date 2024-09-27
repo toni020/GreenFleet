@@ -93,7 +93,7 @@ function buildContent(f){
     return content;
 }
 function shareMe(){
-  document.getElementsByClass("media1")[0].style.display = "block";
+  document.getElementsByClassName("media1")[0].style.display = "block";
 }
 
 
