@@ -1,5 +1,6 @@
 let map;
 let markers = [];
+let overlay; // Variable to hold the overlay instance
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
   { lat: -35.282, lng: 149.128, city: 'Canberra' },
@@ -31,16 +32,14 @@ async function initMap() {
     west: 112.8    // Western boundary (approximate for western Australia)
   };
 
-
-  // Create and set the GroundOverlay
-  const overlay = new google.maps.GroundOverlay(
+  // Create the GroundOverlay but do not set it on the map yet
+  overlay = new google.maps.GroundOverlay(
     aboriginalLandImageUrl, // Use the dynamically set image URL
     aboriginalLandBounds
   );
 
-  overlay.setMap(map); // Set the overlay on the map
-
   setupToggle(); // Initialize the toggle after the map is ready
+  setupOverlayToggle(); // Setup the overlay toggle
 }
 
 function setupToggle() {
@@ -85,6 +84,23 @@ function setupToggle() {
           }
         });
       });
+    }
+  });
+}
+
+function setupOverlayToggle() {
+  const overlayToggle = document.getElementById('toggleOverlay');
+  if (!overlayToggle) {
+    console.error('Overlay toggle not found!');
+    return;
+  }
+
+  // Initially set overlay to the map if the toggle is checked
+  overlayToggle.addEventListener('change', () => {
+    if (overlayToggle.checked) {
+      overlay.setMap(map); // Show overlay
+    } else {
+      overlay.setMap(null); // Hide overlay
     }
   });
 }
