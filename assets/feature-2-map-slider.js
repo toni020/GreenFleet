@@ -79,10 +79,10 @@ function setupToggle() {
   toggleAboriginal.addEventListener('change', () => {
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
-      toggleLabelAboriginal.textContent = 'Hide Aboriginal Overlay'; // Update label text
+      toggleLabelAboriginal.textContent = 'Indigenous Land & Forests';
     } else {
       overlay.setMap(null); // Hide the overlay
-      toggleLabelAboriginal.textContent = 'Show Aboriginal Overlay'; // Update label text
+      toggleLabelAboriginal.textContent = 'Indigenous Land & Forests'; 
     }
   });
 }
