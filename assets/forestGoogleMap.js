@@ -87,7 +87,9 @@ function buildContent(f){
     content.querySelector(".aboutMe").addEventListener("click", () => {
       demo(f);
     });
-
+    content.querySelector(".shareMe").addEventListener("click", () =>{
+      document.getElementsByClass("media1").style.display = "flex";
+    };
     return content;
 }
 
