@@ -42,7 +42,7 @@
   left: 20px; /* Distance from the left */
   z-index: 1000; /* Ensure it's on top of other elements */
   display: flex;
-  flex-direction: column; /* Stack the toggle buttons vertically */
+  flex-direction: row; /* Stack the toggle buttons vertically */
   align-items: flex-start; /* Align items to the start (left) */
 }
 
