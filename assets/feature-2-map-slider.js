@@ -46,6 +46,7 @@ function setupToggle() {
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
   const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
+  const sourceText = document.querySelector('.source-text'); // Select the source text element
 
   // Initialize label text for forests
   toggleLabelForest.textContent = toggleForest.checked ? 'Hide Greenfleet Impact' : 'Show Greenfleet Impact';
@@ -79,12 +80,12 @@ function setupToggle() {
   toggleAboriginal.addEventListener('change', () => {
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
-      toggleLabelAboriginal.textContent = 'Indigenous Forest Estate';
-      sourceText.style.display = 'block'; // Show the source text
+      toggleLabelAboriginal.textContent = 'Hide Indigenous Forest Estate';
+      sourceText.classList.add('visible'); // Show the source text
     } else {
       overlay.setMap(null); // Hide the overlay
-      toggleLabelAboriginal.textContent = 'Indigenous Forest Estate';
-      sourceText.style.display = 'none'; // Hide the source text
+      toggleLabelAboriginal.textContent = 'Show Indigenous Forest Estate';
+      sourceText.classList.remove('visible'); // Hide the source text
     }
   });
 }
