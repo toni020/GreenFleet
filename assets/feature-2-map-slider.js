@@ -77,6 +77,9 @@ function setupToggle() {
   });
 
   toggleAboriginal.addEventListener('change', () => {
+
+    sourceText.textContent = toggleAboriginal.checked ? 'Source: Aboriginal Land Data' : '';
+
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
       sourceText.classList.add('visible'); // Add class to show the source text
