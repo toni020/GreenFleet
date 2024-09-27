@@ -42,22 +42,16 @@
   left: 20px; /* Distance from the left */
   z-index: 1000; /* Ensure it's on top of other elements */
   display: flex;
-  flex-direction: column; /* Stack the toggle switches vertically */
+  flex-direction: column; /* Stack the toggle buttons vertically */
   align-items: flex-start; /* Align items to the start (left) */
 }
 
 .toggle-switch {
   position: relative;
-  display: flex; /* Change to flex */
-  align-items: center; /* Center the toggle and label */
-  width: 100%; /* Ensure it uses full width for the toggle */
+  display: inline-block;
+  width: 60px;
+  height: 34px;
   margin-bottom: 10px; /* Space between the toggle switches */
-}
-
-.toggle-label {
-  margin-left: 10px; /* Space between toggle and label */
-  font-size: 1em;
-  color: #666;
 }
 
 .toggle-switch input {
