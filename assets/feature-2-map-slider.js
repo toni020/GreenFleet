@@ -63,15 +63,15 @@ function setupToggle() {
       // Recreate and add markers for forests
       markers = locations.map(location => {
         return new google.maps.Marker({
-          map: map,
-          position: { lat: location.lat, lng: location.lng },
-          title: location.city,
-          icon: {
-            url: 'tree.png', // Use the local tree image
-            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize)
-          }
+            map: map,
+            position: { lat: location.lat, lng: location.lng },
+            title: location.city,
+            icon: {
+                url: treeIconUrl,
+                scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Adjust the size as needed
+            }
         });
-      });
+    });
     }
   });
 
