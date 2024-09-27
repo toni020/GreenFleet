@@ -11,9 +11,6 @@ const locations = [
 ];
 
 const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
-const aboriginalLandImageUrl = 'assets/aboriginal_land.png'; 
-
-
 const fixedIconSize = 40;
 
 async function initMap() {
@@ -36,7 +33,7 @@ async function initMap() {
 
   // Create and set the GroundOverlay
   const overlay = new google.maps.GroundOverlay(
-    aboriginalLandImageUrl, // Replace with the uploaded image URL
+    aboriginalLandImageUrl, // Use the dynamically set image URL
     aboriginalLandBounds
   );
 
@@ -44,7 +41,6 @@ async function initMap() {
 
   setupToggle(); // Initialize the toggle after the map is ready
 }
-
 
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
@@ -57,11 +53,7 @@ function setupToggle() {
 
   // Update the toggle label text based on the toggle state
   function updateToggleLabel() {
-    if (toggle.checked) {
-      toggleLabel.textContent = 'Hide Forests'; // Text when checked
-    } else {
-      toggleLabel.textContent = 'Show Forests'; // Text when unchecked
-    }
+    toggleLabel.textContent = toggle.checked ? 'Hide Forests' : 'Show Forests';
   }
 
   // Initialize label text
