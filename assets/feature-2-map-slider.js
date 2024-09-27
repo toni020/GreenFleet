@@ -10,10 +10,10 @@ const locations = [
   { lat: -12.4634, lng: 130.8456, city: 'Darwin' }
 ];
 
-// Replace with the URL of your tree icon
 const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
+const aboriginalLandImageUrl = 'assets/aboriginal_land.png'; 
 
-// Fixed icon size
+
 const fixedIconSize = 40;
 
 async function initMap() {
