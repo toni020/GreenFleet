@@ -82,7 +82,7 @@
   width: 200px;
 }
 #media1 li{
-  display: none;
+  display: flex;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
