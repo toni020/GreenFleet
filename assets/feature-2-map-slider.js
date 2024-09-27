@@ -48,12 +48,12 @@ function setupToggle() {
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
 
   // Initialize label text for forests
-  toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
+  toggleLabelForest.textContent = toggleForest.checked ? 'Hide Greenfleet Forests' : 'Show Greenfleet Forests';
 
   // Forest toggle functionality
   toggleForest.addEventListener('change', () => {
     // Update forest toggle label text
-    toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
+    toggleLabelForest.textContent = toggleForest.checked ? 'Hide Greenfleet Forests' : 'Show Greenfleet Forests';
 
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
