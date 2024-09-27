@@ -116,5 +116,5 @@
 }
 
 .forest.active .facebook:hover, .instagram:hover, .linkedin:hover{
-  brightness: 1.25;
+  filter: brightness(1.25);
 }
