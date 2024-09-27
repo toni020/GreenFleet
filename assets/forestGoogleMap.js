@@ -87,6 +87,7 @@ function buildContent(f){
     content.querySelector(".aboutMe").addEventListener("click", () => {
       demo(f);
     });
+
     return content;
 }
 

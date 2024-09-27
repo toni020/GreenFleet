@@ -76,7 +76,7 @@
 
 
 .forest.active .media1{
-
+  display: none;
   position: absolute;
   margin-top: 20px;
   top: 100%;
