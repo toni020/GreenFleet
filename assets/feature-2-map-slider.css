@@ -34,16 +34,13 @@
 }
 
 .source-text {
-  display: none; /* Hidden by default */
   font-size: 0.9em;
   color: #444;
   text-align: center;
   margin-top: 10px;
+  display: none; /* Ensure it's hidden by default */
 }
 
-.source-text.visible {
-  display: block; /* Show the source text when the class is added */
-}
 
 
 #map {
