@@ -26,8 +26,25 @@ async function initMap() {
     mapId: "DEMO_MAP_ID", // Use your actual map ID or remove if not used
   });
 
+  // Define the bounds for the aboriginal land overlay
+  const aboriginalLandBounds = {
+    north: -12.0,  // Set the northern boundary based on your image
+    south: -37.0,  // Set the southern boundary based on your image
+    east: 150.0,   // Set the eastern boundary based on your image
+    west: 130.0    // Set the western boundary based on your image
+  };
+
+  // Create and set the GroundOverlay
+  const overlay = new google.maps.GroundOverlay(
+    aboriginalLandImageUrl, // Replace with the uploaded image URL
+    aboriginalLandBounds
+  );
+
+  overlay.setMap(map); // Set the overlay on the map
+
   setupToggle(); // Initialize the toggle after the map is ready
 }
+
 
 function setupToggle() {
   const toggle = document.getElementById('toggleMarkers');
