@@ -88,9 +88,12 @@ function buildContent(f){
       demo(f);
     });
     content.querySelector(".shareMe").addEventListener("click", () =>{
-      document.getElementsByClass("media1")[0].style.display = "block";
+      shareMe();
     });
     return content;
+}
+function shareMe(){
+  document.getElementsByClass("media1")[0].style.display = "block";
 }
 
 
