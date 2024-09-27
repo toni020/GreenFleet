@@ -42,7 +42,8 @@
   left: 20px; /* Distance from the left */
   z-index: 1000; /* Ensure it's on top of other elements */
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack the toggle buttons vertically */
+  align-items: flex-start; /* Align items to the start (left) */
 }
 
 .toggle-switch {
@@ -50,7 +51,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
-  margin-right: 10px; /* Space between the toggle switches */
+  margin-bottom: 10px; /* Space between the toggle switches */
 }
 
 .toggle-switch input {
