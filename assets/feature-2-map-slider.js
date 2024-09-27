@@ -78,7 +78,7 @@ function setupToggle() {
 
   toggleAboriginal.addEventListener('change', () => {
 
-    sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Indigenous estate" by National Forest Inventory 2020' : '';
+    sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020' : '';
 
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
