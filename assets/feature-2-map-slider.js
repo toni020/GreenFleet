@@ -28,7 +28,7 @@ async function initMap() {
     north: -10.7,  // Northern boundary (approximate for northern Australia)
     south: -44.8,  // Southern boundary (approximate for southern Australia)
     east: 153.7,   // Eastern boundary (approximate for eastern Australia)
-    west: 112.7    // Western boundary (approximate for western Australia)
+    west: 112.8    // Western boundary (approximate for western Australia)
   };
 
 
