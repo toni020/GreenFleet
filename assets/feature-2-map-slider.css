@@ -39,7 +39,7 @@
   text-align: center;
   margin-top: 10px;
   /* display: block; /* Ensure it's hidden by default */
-  visibility: visible; /* Hidden by default */
+  display: block; /* Hidden by default */
 }
 
 
