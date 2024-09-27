@@ -1,5 +1,6 @@
 let map;
 let markers = [];
+let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
   { lat: -35.282, lng: 149.128, city: 'Canberra' },
@@ -25,66 +26,63 @@ async function initMap() {
 
   // Define the bounds for the aboriginal land overlay
   const aboriginalLandBounds = {
-    north: -11,  // Northern boundary (approximate for northern Australia)
-    south: -44.0,  // Southern boundary (approximate for southern Australia)
-    east: 154.0,   // Eastern boundary (approximate for eastern Australia)
-    west: 112.8    // Western boundary (approximate for western Australia)
+    north: -11,
+    south: -44.0,
+    east: 154.0,
+    west: 112.8,
   };
 
-
-  // Create and set the GroundOverlay
-  const overlay = new google.maps.GroundOverlay(
+  // Create the GroundOverlay
+  overlay = new google.maps.GroundOverlay(
     aboriginalLandImageUrl, // Use the dynamically set image URL
     aboriginalLandBounds
   );
 
-  overlay.setMap(map); // Set the overlay on the map
-
-  setupToggle(); // Initialize the toggle after the map is ready
+  setupToggle(); // Initialize the toggles after the map is ready
 }
 
 function setupToggle() {
-  const toggle = document.getElementById('toggleMarkers');
-  const toggleLabel = document.querySelector('.toggle-label');
+  const toggleForest = document.getElementById('toggleMarkers');
+  const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
+  const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
+  const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
 
-  if (!toggle || !toggleLabel) {
-    console.error('Toggle switch or label not found!');
-    return;
-  }
+  // Initialize label text for forests
+  toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
 
-  // Update the toggle label text based on the toggle state
-  function updateToggleLabel() {
-    toggleLabel.textContent = toggle.checked ? 'Hide Forests' : 'Show Forests';
-  }
-
-  // Initialize label text
-  updateToggleLabel();
-
-  // Update label text when toggle state changes
-  toggle.addEventListener('change', updateToggleLabel);
-
-  // Handle markers visibility
-  toggle.addEventListener('change', () => {
-    const visible = toggle.checked;
-    console.log('Toggle state:', visible); // Debugging line
+  // Forest toggle functionality
+  toggleForest.addEventListener('change', () => {
+    // Update forest toggle label text
+    toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
 
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
-    if (visible) {
-      // Recreate and add markers with fixed icon size
+    if (toggleForest.checked) {
+      // Recreate and add markers for forests
       markers = locations.map(location => {
         return new google.maps.Marker({
           map: map,
           position: { lat: location.lat, lng: location.lng },
           title: location.city,
           icon: {
-            url: treeIconUrl, // Use the custom icon
-            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+            url: treeIconUrl,
+            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize)
           }
         });
       });
+    }
+  });
+
+  // Aboriginal overlay toggle functionality
+  toggleAboriginal.addEventListener('change', () => {
+    if (toggleAboriginal.checked) {
+      overlay.setMap(map); // Show the overlay
+      toggleLabelAboriginal.textContent = 'Hide Aboriginal Overlay'; // Update label text
+    } else {
+      overlay.setMap(null); // Hide the overlay
+      toggleLabelAboriginal.textContent = 'Show Aboriginal Overlay'; // Update label text
     }
   });
 }
