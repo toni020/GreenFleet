@@ -38,70 +38,50 @@ async function initMap() {
     aboriginalLandBounds
   );
 
-  setupToggle(); // Initialize the toggle after the map is ready
-  setupOverlayToggle(); // Setup the overlay toggle
+  setupButtons(); // Initialize buttons after the map is ready
 }
 
-function setupToggle() {
-  const toggle = document.getElementById('toggleMarkers');
-  const toggleLabel = document.querySelector('.toggle-label');
+function setupButtons() {
+  const showMarkersButton = document.getElementById('showMarkers');
+  const hideMarkersButton = document.getElementById('hideMarkers');
+  const showOverlayButton = document.getElementById('showOverlay');
+  const hideOverlayButton = document.getElementById('hideOverlay');
 
-  if (!toggle || !toggleLabel) {
-    console.error('Toggle switch or label not found!');
+  if (!showMarkersButton || !hideMarkersButton || !showOverlayButton || !hideOverlayButton) {
+    console.error('One or more buttons not found!');
     return;
   }
 
-  // Update the toggle label text based on the toggle state
-  function updateToggleLabel() {
-    toggleLabel.textContent = toggle.checked ? 'Hide Forests' : 'Show Forests';
-  }
-
-  // Initialize label text
-  updateToggleLabel();
-
-  // Update label text when toggle state changes
-  toggle.addEventListener('change', updateToggleLabel);
-
-  // Handle markers visibility
-  toggle.addEventListener('change', () => {
-    const visible = toggle.checked;
-    console.log('Toggle state:', visible); // Debugging line
-
-    // Clear existing markers
-    markers.forEach(marker => marker.setMap(null));
-    markers = [];
-
-    if (visible) {
-      // Recreate and add markers with fixed icon size
-      markers = locations.map(location => {
-        return new google.maps.Marker({
-          map: map,
-          position: { lat: location.lat, lng: location.lng },
-          title: location.city,
-          icon: {
-            url: treeIconUrl, // Use the custom icon
-            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
-          }
-        });
-      });
-    }
+  // Show markers button click event
+  showMarkersButton.addEventListener('click', () => {
+    markers.forEach(marker => marker.setMap(map)); // Show all markers
   });
-}
 
-function setupOverlayToggle() {
-  const overlayToggle = document.getElementById('toggleOverlay');
-  if (!overlayToggle) {
-    console.error('Overlay toggle not found!');
-    return;
-  }
+  // Hide markers button click event
+  hideMarkersButton.addEventListener('click', () => {
+    markers.forEach(marker => marker.setMap(null)); // Hide all markers
+  });
 
-  // Initially set overlay to the map if the toggle is checked
-  overlayToggle.addEventListener('change', () => {
-    if (overlayToggle.checked) {
-      overlay.setMap(map); // Show overlay
-    } else {
-      overlay.setMap(null); // Hide overlay
-    }
+  // Show overlay button click event
+  showOverlayButton.addEventListener('click', () => {
+    overlay.setMap(map); // Show overlay
+  });
+
+  // Hide overlay button click event
+  hideOverlayButton.addEventListener('click', () => {
+    overlay.setMap(null); // Hide overlay
+  });
+
+  // Initially create markers but don't display them until the user clicks the show button
+  markers = locations.map(location => {
+    return new google.maps.Marker({
+      position: { lat: location.lat, lng: location.lng },
+      title: location.city,
+      icon: {
+        url: treeIconUrl, // Use the custom icon
+        scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+      }
+    });
   });
 }
 
