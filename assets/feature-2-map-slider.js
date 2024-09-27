@@ -49,12 +49,12 @@ function setupToggle() {
   const sourceText = document.querySelector('.source-text'); // Select the source text element
 
   // Initialize label text for forests
-  toggleLabelForest.textContent = toggleForest.checked ? 'Hide Greenfleet Impact' : 'Show Greenfleet Impact';
+  toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
   // Forest toggle functionality
   toggleForest.addEventListener('change', () => {
     // Update forest toggle label text
-    toggleLabelForest.textContent = toggleForest.checked ? 'Hide Greenfleet Impact' : 'Show Greenfleet Impact';
+    toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
@@ -78,7 +78,7 @@ function setupToggle() {
 
   toggleAboriginal.addEventListener('change', () => {
 
-    sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020' : '';
+    sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020.' : '';
 
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
