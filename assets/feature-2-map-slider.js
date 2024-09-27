@@ -82,10 +82,8 @@ function setupToggle() {
 
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
-      sourceText.classList.add('visible'); // Add class to show the source text
     } else {
       overlay.setMap(null); // Hide the overlay
-      sourceText.classList.remove('visible'); // Remove class to hide the source text
     }
   });
 
