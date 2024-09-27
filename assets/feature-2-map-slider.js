@@ -55,49 +55,53 @@ function setupToggle() {
     return;
   }
 
-  // Update the toggle label text based on the toggle state
+  // Update label for markers toggle
   function updateToggleLabelMarkers() {
     toggleLabelMarkers.textContent = toggleMarkers.checked ? 'Hide Forests' : 'Show Forests';
   }
 
+  // Update label for aboriginal overlay toggle
   function updateToggleLabelAboriginal() {
     toggleLabelAboriginal.textContent = toggleAboriginalOverlay.checked ? 'Hide Aboriginal Overlay' : 'Show Aboriginal Overlay';
     overlay.setMap(toggleAboriginalOverlay.checked ? map : null); // Show or hide overlay
   }
 
-  // Initialize label text
+  // Initialize label texts
   updateToggleLabelMarkers();
   updateToggleLabelAboriginal();
 
-  // Update label text when toggle state changes
+  // Update markers toggle
   toggleMarkers.addEventListener('change', () => {
     updateToggleLabelMarkers();
     const visible = toggleMarkers.checked;
     console.log('Toggle state (Forests):', visible); // Debugging line
 
-    // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
     if (visible) {
-      // Recreate and add markers with fixed icon size
       markers = locations.map(location => {
         return new google.maps.Marker({
           map: map,
           position: { lat: location.lat, lng: location.lng },
           title: location.city,
           icon: {
-            url: treeIconUrl, // Use the custom icon
-            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
+            url: treeIconUrl,
+            scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize)
           }
         });
       });
     }
   });
 
-  // Handle Aboriginal overlay visibility
-  toggleAboriginalOverlay.addEventListener('change', updateToggleLabelAboriginal);
+  // Update for Aboriginal overlay toggle
+  toggleAboriginalOverlay.addEventListener('change', () => {
+    updateToggleLabelAboriginal();
+    overlay.setMap(toggleAboriginalOverlay.checked ? map : null); // Show or hide overlay
+    console.log('Toggle state (Aboriginal Overlay):', toggleAboriginalOverlay.checked); // Debugging line
+  });
 }
+
 
 // Initialize the map when the window loads
 window.initMap = initMap;
