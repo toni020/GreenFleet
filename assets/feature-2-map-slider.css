@@ -25,10 +25,12 @@
 }
 
 .toggle-container {
-  display: flex; /* Set display to flex */
-  flex-direction: row; /* Ensure items are aligned in a row */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; /* Distribute space evenly */
+  width: 100%; /* Make sure it takes full width */
+  max-width: 600px; /* Optional: Limit maximum width */
   margin-bottom: 10px; /* Space between the toggle and the map */
-  justify-content: center; /* Center the toggle items horizontally */
 }
 
 
@@ -47,8 +49,7 @@
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
   align-items: center; /* Center the toggle and label vertically */
-  margin-bottom: 10px; /* Space between the toggle items */
-  margin-right: 20px; /* Space between the toggle items */
+  /* Removed margin-right to prevent trailing space */
 }
 
 .toggle-switch {
