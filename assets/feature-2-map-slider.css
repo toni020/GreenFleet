@@ -50,6 +50,7 @@
   display: inline-block;
   width: 60px;
   height: 34px;
+  margin-right: 10px; /* Space between the toggle switches */
 }
 
 .toggle-switch input {
