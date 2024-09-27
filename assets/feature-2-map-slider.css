@@ -33,6 +33,18 @@
   margin-bottom: 10px; /* Space between the toggle and the map */
 }
 
+.source-text {
+  display: none; /* Hidden by default */
+  font-size: 0.9em;
+  color: #444;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.source-text.visible {
+  display: block; /* Show the source text when the class is added */
+}
+
 
 #map {
   width: 100%;
