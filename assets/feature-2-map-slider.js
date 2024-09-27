@@ -1,6 +1,8 @@
 let map;
-let markers = [];
+let forestMarkers = []; // Array for forest markers
+let aboriginalMarkers = []; // Array for Aboriginal markers
 let overlay; // Declare overlay variable
+
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
   { lat: -35.282, lng: 149.128, city: 'Canberra' },
@@ -76,11 +78,12 @@ function setupToggle() {
     const visible = toggleMarkers.checked;
     console.log('Toggle state (Forests):', visible); // Debugging line
 
-    markers.forEach(marker => marker.setMap(null));
-    markers = [];
+    // Clear previous forest markers
+    forestMarkers.forEach(marker => marker.setMap(null));
+    forestMarkers = [];
 
     if (visible) {
-      markers = locations.map(location => {
+      forestMarkers = locations.map(location => {
         return new google.maps.Marker({
           map: map,
           position: { lat: location.lat, lng: location.lng },
@@ -101,7 +104,6 @@ function setupToggle() {
     console.log('Toggle state (Aboriginal Overlay):', toggleAboriginalOverlay.checked); // Debugging line
   });
 }
-
 
 // Initialize the map when the window loads
 window.initMap = initMap;
