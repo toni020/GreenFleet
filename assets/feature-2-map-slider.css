@@ -26,6 +26,7 @@
 
 .toggle-container {
   margin-bottom: 10px; /* Space between the toggle and the map */
+  flex-direction: row; /* Stack elements vertically */
 }
 
 #map {
