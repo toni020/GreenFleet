@@ -25,9 +25,12 @@
 }
 
 .toggle-container {
+  display: flex; /* Set display to flex */
+  flex-direction: row; /* Ensure items are aligned in a row */
   margin-bottom: 10px; /* Space between the toggle and the map */
-  flex-direction: row; /* Stack elements vertically */
+  justify-content: center; /* Center the toggle items horizontally */
 }
+
 
 #map {
   width: 100%;
