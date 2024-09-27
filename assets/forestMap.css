@@ -113,5 +113,8 @@
 }
 .forest.active .linkedin{
   background: #0077b5;
+}
 
+.forest.active .facebook:hover, .instagram:hover, .linkedin:hover{
+  opacity: 0.5;
 }
