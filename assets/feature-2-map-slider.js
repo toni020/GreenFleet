@@ -76,17 +76,18 @@ function setupToggle() {
     }
   });
 
-toggleAboriginal.addEventListener('change', () => {
-  if (toggleAboriginal.checked) {
-    overlay.setMap(map); // Show the overlay
-    toggleLabelAboriginal.textContent = 'Hide Indigenous Forest Estate';
-    sourceText.classList.remove('hidden'); // Show the source text
-  } else {
-    overlay.setMap(null); // Hide the overlay
-    toggleLabelAboriginal.textContent = 'Show Indigenous Forest Estate';
-    sourceText.classList.add('hidden'); // Hide the source text
-  }
-});
+  toggleAboriginal.addEventListener('change', () => {
+    if (toggleAboriginal.checked) {
+      overlay.setMap(map); // Show the overlay
+      toggleLabelAboriginal.textContent = 'Hide Indigenous Forest Estate';
+      sourceText.style.visibility = 'visible'; // Show the source text
+    } else {
+      overlay.setMap(null); // Hide the overlay
+      toggleLabelAboriginal.textContent = 'Show Indigenous Forest Estate';
+      sourceText.style.visibility = 'hidden'; // Hide the source text
+    }
+  });
+
 
 }
 
