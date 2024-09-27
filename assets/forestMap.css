@@ -97,7 +97,7 @@
 .media1 img{
   width:30px;
   height:30px;
-
+  margin-left:5px;
 }
 .forest.active .facebook{
   background: #1976d2;
