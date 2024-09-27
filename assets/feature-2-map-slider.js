@@ -48,12 +48,12 @@ function setupToggle() {
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
 
   // Initialize label text for forests
-  toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
+  toggleLabelForest.textContent = toggleForest.checked ? 'Our Impact' : 'Our Impact';
 
   // Forest toggle functionality
   toggleForest.addEventListener('change', () => {
     // Update forest toggle label text
-    toggleLabelForest.textContent = toggleForest.checked ? 'Hide Forests' : 'Show Forests';
+    toggleLabelForest.textContent = toggleForest.checked ? 'Our Impact' : 'Our Impact';
 
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
