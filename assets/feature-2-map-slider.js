@@ -11,8 +11,7 @@ const locations = [
   { lat: -12.4634, lng: 130.8456, city: 'Darwin' }
 ];
 
-const treeIconUrl = 'https://cdn-icons-png.flaticon.com/512/489/489969.png';
-const fixedIconSize = 40;
+const fixedIconSize = 40; // Adjusted icon size
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -68,7 +67,7 @@ function setupToggle() {
           position: { lat: location.lat, lng: location.lng },
           title: location.city,
           icon: {
-            url: treeIconUrl,
+            url: 'tree.png', // Use the local tree image
             scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize)
           }
         });
@@ -77,7 +76,6 @@ function setupToggle() {
   });
 
   toggleAboriginal.addEventListener('change', () => {
-
     sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020.' : '';
 
     if (toggleAboriginal.checked) {
@@ -86,7 +84,6 @@ function setupToggle() {
       overlay.setMap(null); // Hide the overlay
     }
   });
-
 }
 
 // Initialize the map when the window loads
