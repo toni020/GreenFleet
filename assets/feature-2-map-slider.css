@@ -27,7 +27,7 @@
 .toggle-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-between; /* Distribute space evenly */
+  justify-content: space-around; /* Distribute space evenly */
   width: 100%; /* Make sure it takes full width */
   max-width: 600px; /* Optional: Limit maximum width */
   margin-bottom: 10px; /* Space between the toggle and the map */
