@@ -80,11 +80,11 @@ function setupToggle() {
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
       toggleLabelAboriginal.textContent = 'Hide Indigenous Forest Estate';
-      sourceText.style.visibility = 'visible'; // Show the source text
+      sourceText.style.display = 'block'; // Show the source text
     } else {
       overlay.setMap(null); // Hide the overlay
       toggleLabelAboriginal.textContent = 'Show Indigenous Forest Estate';
-      sourceText.style.visibility = 'hidden'; // Hide the source text
+      sourceText.style.display = 'none'; // Hide the source text
     }
   });
 
