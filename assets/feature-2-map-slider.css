@@ -20,8 +20,12 @@
   height: 500px; /* Adjust as needed */
   margin: 0;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Center elements horizontally */
+}
+
+.toggle-container {
+  margin-bottom: 10px; /* Space between the toggle and the map */
 }
 
 #map {
@@ -36,15 +40,6 @@
   box-sizing: border-box;
 }
 
-.toggle-container {
-  position: absolute;
-  bottom: 20px; /* Distance from the bottom */
-  left: 20px; /* Distance from the left */
-  z-index: 1000; /* Ensure it's on top of other elements */
-  display: flex;
-  flex-direction: column; /* Stack the toggle items vertically */
-  align-items: flex-start; /* Align items to the start (left) */
-}
 
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
