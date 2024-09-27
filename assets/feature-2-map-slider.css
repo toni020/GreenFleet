@@ -42,20 +42,22 @@
   left: 20px; /* Distance from the left */
   z-index: 1000; /* Ensure it's on top of other elements */
   display: flex;
-  align-items: center;
+  flex-direction: column; /* Stack the toggle lines vertically */
+  align-items: flex-start; /* Align items to the start (left) */
 }
 
 .toggle-switch {
   position: relative;
-  display: inline-block;
-  width: 60px;
-  height: 34px;
+  display: flex; /* Flex to align toggle and label */
+  align-items: center; /* Center the toggle and label vertically */
+  width: auto; /* Automatic width for content */
+  margin-bottom: 10px; /* Space between toggle lines */
 }
 
 .toggle-switch input {
-  opacity: 0;
-  width: 0;
-  height: 0;
+  opacity: 0; /* Hide the checkbox */
+  width: 0; /* Zero width */
+  height: 0; /* Zero height */
 }
 
 .slider {
