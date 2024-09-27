@@ -38,41 +38,19 @@ async function initMap() {
     aboriginalLandBounds
   );
 
-  setupButtons(); // Initialize buttons after the map is ready
+  setupToggles(); // Initialize toggles after the map is ready
 }
 
-function setupButtons() {
-  const showMarkersButton = document.getElementById('showMarkers');
-  const hideMarkersButton = document.getElementById('hideMarkers');
-  const showOverlayButton = document.getElementById('showOverlay');
-  const hideOverlayButton = document.getElementById('hideOverlay');
+function setupToggles() {
+  const toggleMarkers = document.getElementById('toggleMarkers');
+  const toggleOverlay = document.getElementById('toggleOverlay');
 
-  if (!showMarkersButton || !hideMarkersButton || !showOverlayButton || !hideOverlayButton) {
-    console.error('One or more buttons not found!');
+  if (!toggleMarkers || !toggleOverlay) {
+    console.error('Toggle switches not found!');
     return;
   }
 
-  // Show markers button click event
-  showMarkersButton.addEventListener('click', () => {
-    markers.forEach(marker => marker.setMap(map)); // Show all markers
-  });
-
-  // Hide markers button click event
-  hideMarkersButton.addEventListener('click', () => {
-    markers.forEach(marker => marker.setMap(null)); // Hide all markers
-  });
-
-  // Show overlay button click event
-  showOverlayButton.addEventListener('click', () => {
-    overlay.setMap(map); // Show overlay
-  });
-
-  // Hide overlay button click event
-  hideOverlayButton.addEventListener('click', () => {
-    overlay.setMap(null); // Hide overlay
-  });
-
-  // Initially create markers but don't display them until the user clicks the show button
+  // Create markers but initially don't display them
   markers = locations.map(location => {
     return new google.maps.Marker({
       position: { lat: location.lat, lng: location.lng },
@@ -82,6 +60,24 @@ function setupButtons() {
         scaledSize: new google.maps.Size(fixedIconSize, fixedIconSize) // Fixed size for icons
       }
     });
+  });
+
+  // Handle markers visibility
+  toggleMarkers.addEventListener('change', () => {
+    const visible = toggleMarkers.checked;
+    console.log('Markers toggle state:', visible);
+    
+    markers.forEach(marker => {
+      marker.setMap(visible ? map : null); // Show or hide markers
+    });
+  });
+
+  // Handle overlay visibility
+  toggleOverlay.addEventListener('change', () => {
+    const visible = toggleOverlay.checked;
+    console.log('Overlay toggle state:', visible);
+    
+    overlay.setMap(visible ? map : null); // Show or hide overlay
   });
 }
 
