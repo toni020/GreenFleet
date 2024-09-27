@@ -79,11 +79,9 @@ function setupToggle() {
   toggleAboriginal.addEventListener('change', () => {
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
-      toggleLabelAboriginal.textContent = 'Hide Indigenous Forest Estate';
       sourceText.classList.add('visible'); // Add class to show the source text
     } else {
       overlay.setMap(null); // Hide the overlay
-      toggleLabelAboriginal.textContent = 'Show Indigenous Forest Estate';
       sourceText.classList.remove('visible'); // Remove class to hide the source text
     }
   });
