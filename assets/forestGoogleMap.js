@@ -94,7 +94,7 @@ function buildContent(f){
 function shareMe(){
   const media1=document.getElementsByClassName("media1");
     for(let i=0; i<media1.length; i++){
-      if (media1[i].style.display =="none";) {
+      if (media1[i].style.display ==="none";) {
         media1[i].style.display ="block";
       }else{
         media1[i].style.display ="none";
