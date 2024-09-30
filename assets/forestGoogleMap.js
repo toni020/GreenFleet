@@ -74,7 +74,7 @@ function buildContent(f){
       <div class="media1">
           <li class="facebook">
             <a href="https://www.facebook.com/GreenfleetAustralia/" target="_blank"><img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-            <p>Connect to Facebook</p></li></a>
+            <p>Connect to Facebook</p></a></li>
           <li class="instagram">
             <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
             <p>Connect to Instagram</p></li>
