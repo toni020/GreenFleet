@@ -74,8 +74,7 @@ function buildContent(f){
       <div class="media1">
           <li class="facebook">
             <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-            <p>Connect to Facebook</p>
-          </li>
+            <p>Connect to Facebook</p></li>
           <li class="instagram">
             <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
             <p>Connect to Instagram</p></li>
@@ -94,8 +93,10 @@ function buildContent(f){
 }
 function shareMe(){
   const media1=document.getElementsByClassName("media1");
-  
-    media1[0].style.display ="block";
+    for(let i=0; i<media1.length(); i++){
+      
+      media1[0].style.display ="block";
+    }
 }
 
 
