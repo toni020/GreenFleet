@@ -107,8 +107,42 @@ function setupToggle() {
 
     if (toggleAboriginal.checked) {
       overlay.setMap(map); // Show the overlay
+
+      // Set initial opacity
+      overlay.setOpacity(0);
+
+      // Gradually increase opacity
+      let opacity = 0;
+      const fadeInSpeed = 0.05; // Adjust the speed of the fade-in effect
+
+      function fadeIn() {
+        if (opacity < 1) {
+          opacity += fadeInSpeed;
+          overlay.setOpacity(opacity);
+          setTimeout(fadeIn, 50); // Continue fading in
+        } else {
+          overlay.setOpacity(1); // Ensure it's fully opaque at the end
+        }
+      }
+
+      fadeIn(); // Start the fade-in effect
+
     } else {
-      overlay.setMap(null); // Hide the overlay
+      // Gradually decrease opacity to fade out
+      let opacity = overlay.getOpacity();
+      const fadeOutSpeed = 0.05; // Adjust the speed of the fade-out effect
+
+      function fadeOut() {
+        if (opacity > 0) {
+          opacity -= fadeOutSpeed;
+          overlay.setOpacity(opacity);
+          setTimeout(fadeOut, 50); // Continue fading out
+        } else {
+          overlay.setMap(null); // Remove the overlay when fully faded out
+        }
+      }
+
+      fadeOut(); // Start the fade-out effect
     }
   });
 }
