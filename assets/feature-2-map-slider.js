@@ -60,7 +60,7 @@ function setupToggle() {
     markers = [];
 
     if (toggleForest.checked) {
-      // Recreate and add markers for forests with a grow-up animation
+      // Recreate and add markers for forests with a vertical grow-up animation
       markers = locations.map(location => {
         const marker = new google.maps.Marker({
           map: map,
@@ -68,28 +68,28 @@ function setupToggle() {
           title: location.city,
           icon: {
             url: treeIconUrl,
-            scaledSize: new google.maps.Size(0, 0) // Start with size 0
+            scaledSize: new google.maps.Size(fixedIconSize, 0) // Start with height 0 and fixed width
           }
         });
 
-        // Create the grow-up animation
-        let size = 1; // Initial size
-        const maxSize = fixedIconSize;
+        // Create the vertical grow-up animation
+        let height = 1; // Initial height
+        const maxHeight = fixedIconSize;
         const growSpeed = 2; // Speed of growth (pixels per step)
 
         function grow() {
-          if (size < maxSize) {
-            size += growSpeed;
+          if (height < maxHeight) {
+            height += growSpeed;
             marker.setIcon({
               url: treeIconUrl,
-              scaledSize: new google.maps.Size(size, size)
+              scaledSize: new google.maps.Size(fixedIconSize, height)
             });
             setTimeout(grow, 30); // Continue growing
           } else {
             // Set final size to ensure it's accurate
             marker.setIcon({
               url: treeIconUrl,
-              scaledSize: new google.maps.Size(maxSize, maxSize)
+              scaledSize: new google.maps.Size(fixedIconSize, maxHeight)
             });
           }
         }
