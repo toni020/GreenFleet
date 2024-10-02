@@ -135,29 +135,40 @@ function setupToggle() {
   // Dark Mode Toggle Functionality
   toggleDarkMode.addEventListener('change', () => {
     if (toggleDarkMode.checked) {
+      console.log("Dark mode activated");
       map.setOptions({
         styles: [
           {
             featureType: 'all',
             stylers: [
               { saturation: -100 }, // Desaturate all colors
-              { lightness: 10 }, // Slightly brighten
+              { lightness: -30 }, // Darken overall
             ],
           },
           {
             featureType: 'landscape',
-            stylers: [{ color: '#000000' }], // Black for land
+            stylers: [{ color: '#181818' }], // Dark gray for land
           },
           {
             featureType: 'water',
-            stylers: [{ color: '#7E7E7E' }], // Gray for water
+            stylers: [{ color: '#000000' }], // Black for water
+          },
+          {
+            featureType: 'road',
+            stylers: [{ color: '#444444' }], // Dark gray for roads
+          },
+          {
+            featureType: 'poi',
+            stylers: [{ color: '#303030' }], // Dark gray for points of interest
           }
         ]
       });
     } else {
+      console.log("Dark mode deactivated");
       map.setOptions({ styles: [] }); // Reset to default styles
     }
   });
+
 }
 
 window.initMap = initMap;
