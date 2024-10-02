@@ -13,6 +13,9 @@ const locations = [
 ];
 
 const fixedIconSize = 40; // Adjusted icon size
+const minGrassSize = Math.round(fixedIconSize * (1 / 3)); // Minimum grass height
+const maxGrassSize = Math.round(fixedIconSize * (3 / 5)); // Maximum grass height
+const grassSpacing = 0.0003; // Minimum distance to keep between grasses and trees
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -41,6 +44,63 @@ async function initMap() {
   setupToggle(); // Initialize the toggles after the map is ready
 }
 
+function getRandomPosition(lat, lng) {
+  const latOffset = (Math.random() * grassSpacing) - (grassSpacing / 2);
+  const lngOffset = (Math.random() * grassSpacing) - (grassSpacing / 2);
+  return { lat: lat + latOffset, lng: lng + lngOffset };
+}
+
+function checkOverlap(position, radius) {
+  // Check against tree markers
+  for (const marker of markers) {
+    const distance = google.maps.geometry.spherical.computeDistanceBetween(
+      new google.maps.LatLng(marker.getPosition().lat(), marker.getPosition().lng()),
+      new google.maps.LatLng(position.lat, position.lng)
+    );
+    if (distance < radius) {
+      return true; // Overlap detected
+    }
+  }
+
+  // Check against grass markers
+  for (const grassMarker of grassMarkers) {
+    const distance = google.maps.geometry.spherical.computeDistanceBetween(
+      new google.maps.LatLng(grassMarker.getPosition().lat(), grassMarker.getPosition().lng()),
+      new google.maps.LatLng(position.lat, position.lng)
+    );
+    if (distance < radius) {
+      return true; // Overlap detected
+    }
+  }
+
+  return false; // No overlap
+}
+
+function addGrassNearTree(treeMarker) {
+  const grassCount = Math.floor(Math.random() * (3 - 2 + 1)) + 2; // Random count between 2 and 3
+  for (let i = 0; i < grassCount; i++) {
+    const treePos = treeMarker.getPosition();
+    let grassPos;
+    let grassRadius = Math.round(fixedIconSize / 2);
+
+    // Ensure grass position does not overlap
+    do {
+      grassPos = getRandomPosition(treePos.lat(), treePos.lng());
+    } while (checkOverlap(grassPos, grassRadius));
+
+    const grassMarker = new google.maps.Marker({
+      map: map,
+      position: grassPos,
+      icon: {
+        url: grassIconUrl,
+        scaledSize: new google.maps.Size(Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize, Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize) // Random size for grass
+      }
+    });
+
+    grassMarkers.push(grassMarker); // Store grass marker
+  }
+}
+
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
@@ -59,10 +119,6 @@ function setupToggle() {
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
-
-    // Clear grass markers when toggling forest
-    grassMarkers.forEach(marker => marker.setMap(null));
-    grassMarkers = [];
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
@@ -96,11 +152,11 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            // After tree has grown, create grass markers
-            createGrassMarkers(location);
+            // Add grasses near the tree after it has fully grown
+            addGrassNearTree(marker);
           }
         }
-
+        
         // Start the grow animation
         grow();
 
@@ -151,45 +207,6 @@ function setupToggle() {
 
       fadeOut(); // Start the fade-out effect
     }
-  });
-}
-
-// Function to create grass markers
-function createGrassMarkers(treeLocation) {
-  const grassCount = Math.floor(Math.random() * (3 - 2 + 1)) + 2; // 2 to 3 grasses
-  const grassLocations = [];
-
-  for (let i = 0; i < grassCount; i++) {
-    let latOffset, lngOffset;
-
-    // Generate random offsets until we find valid positions
-    do {
-      latOffset = (Math.random() - 0.5) * 0.01; // Random offset up to 0.01 degrees
-      lngOffset = (Math.random() - 0.5) * 0.01; // Random offset up to 0.01 degrees
-    } while (
-      grassLocations.some(loc => Math.abs(loc.lat - (treeLocation.lat + latOffset)) < 0.001 && 
-                                 Math.abs(loc.lng - (treeLocation.lng + lngOffset)) < 0.001) || 
-      Math.abs(treeLocation.lat + latOffset - treeLocation.lat) < 0.001 || // Avoid overlapping with the tree
-      Math.abs(treeLocation.lng + lngOffset - treeLocation.lng) < 0.001 // Avoid overlapping with the tree
-    );
-
-    grassLocations.push({ lat: treeLocation.lat + latOffset, lng: treeLocation.lng + lngOffset });
-  }
-
-  // Create grass markers with random sizes
-  grassLocations.forEach(loc => {
-    const size = Math.floor(Math.random() * (fixedIconSize * 0.5 - fixedIconSize * 0.33 + 1)) + fixedIconSize * 0.33; // Size between 1/3 and 3/5 of the tree's height
-
-    const grassMarker = new google.maps.Marker({
-      map: map,
-      position: loc,
-      icon: {
-        url: grassIconUrl,
-        scaledSize: new google.maps.Size(size, size)
-      }
-    });
-
-    grassMarkers.push(grassMarker); // Store grass markers
   });
 }
 
