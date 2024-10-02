@@ -1,6 +1,5 @@
 let map;
 let markers = [];
-let grasses = []; // Array to hold grass markers
 let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -13,6 +12,7 @@ const locations = [
 ];
 
 const fixedIconSize = 40; // Adjusted icon size
+const grassSizes = [20, 25, 30, 35, 40]; // Possible grass heights (max 40% of tree height)
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -56,11 +56,9 @@ function setupToggle() {
     // Update forest toggle label text
     toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
-    // Clear existing markers and grasses
+    // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
-    grasses.forEach(grass => grass.setMap(null));
-    grasses = [];
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
@@ -75,7 +73,7 @@ function setupToggle() {
           }
         });
 
-        // Create the grow-up animation
+        // Create the grow-up animation for trees
         let size = 1; // Initial size
         const maxSize = fixedIconSize;
         const growSpeed = 2; // Speed of growth (pixels per step)
@@ -94,8 +92,8 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            // After the tree has grown, add grass around it
-            addGrass(location);
+            // Start grass animation after tree has fully grown
+            spawnGrass(location);
           }
         }
 
@@ -152,24 +150,40 @@ function setupToggle() {
   });
 }
 
-// Function to add grass markers around the trees
-function addGrass(location) {
-  const grassCount = Math.floor(Math.random() * 2) + 2; // Randomize number of grasses (2-3)
-  
+// Function to spawn grass around trees
+function spawnGrass(location) {
+  const grassCount = Math.floor(Math.random() * (3 - 2 + 1)) + 2; // Randomize 2-3 grasses
   for (let i = 0; i < grassCount; i++) {
     const grassMarker = new google.maps.Marker({
-      position: {
-        lat: location.lat + (Math.random() * 0.001 - 0.0005), // Slightly randomize position
-        lng: location.lng + (Math.random() * 0.001 - 0.0005),
-      },
       map: map,
+      position: {
+        lat: location.lat + (Math.random() - 0.5) * 0.01, // Randomize position slightly
+        lng: location.lng + (Math.random() - 0.5) * 0.01
+      },
       icon: {
         url: grassIconUrl,
-        scaledSize: new google.maps.Size(Math.random() * (fixedIconSize / 5), Math.random() * (fixedIconSize / 5)), // Randomize size
-      },
+        scaledSize: new google.maps.Size(
+          grassSizes[Math.floor(Math.random() * grassSizes.length)], 
+          grassSizes[Math.floor(Math.random() * grassSizes.length)]
+        ) // Random size from grassSizes
+      }
     });
 
-    grasses.push(grassMarker); // Add the grass marker to the grasses array
+    // Optionally, animate the grass markers with a fade-in effect
+    let opacity = 0;
+    grassMarker.setOpacity(opacity);
+
+    function fadeInGrass() {
+      if (opacity < 1) {
+        opacity += 0.05; // Adjust fade-in speed
+        grassMarker.setOpacity(opacity);
+        setTimeout(fadeInGrass, 50); // Continue fading in
+      } else {
+        grassMarker.setOpacity(1); // Ensure it's fully opaque at the end
+      }
+    }
+
+    fadeInGrass(); // Start the grass fade-in effect
   }
 }
 
