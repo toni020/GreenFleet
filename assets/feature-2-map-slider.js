@@ -1,6 +1,6 @@
 let map;
 let markers = [];
-let grassMarkers = []; // New array to hold grass markers
+let grassMarkers = []; // Array to hold grass markers
 let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -93,7 +93,10 @@ function addGrassNearTree(treeMarker) {
       position: grassPos,
       icon: {
         url: grassIconUrl,
-        scaledSize: new google.maps.Size(Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize, Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize) // Random size for grass
+        scaledSize: new google.maps.Size(
+          Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize, 
+          Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize // Random size for grass
+        )
       }
     });
 
@@ -119,6 +122,8 @@ function setupToggle() {
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
+    grassMarkers.forEach(marker => marker.setMap(null)); // Clear existing grass markers
+    grassMarkers = []; // Reset grass markers
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
