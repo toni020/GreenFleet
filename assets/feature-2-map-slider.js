@@ -17,7 +17,6 @@ const fixedIconSize = 40;
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
-
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
@@ -42,15 +41,13 @@ async function initMap() {
 function growGrass(location) {
   const grassCount = Math.floor(Math.random() * 3) + 4;
   const grasses = [];
-  const pixelDistance = map.getDiv().clientWidth / 100; // Distance based on a portion of the map's pixels
+  const pixelDistance = 0.0005; // Set pixel distance to control spacing
 
   for (let i = 0; i < grassCount; i++) {
-    const distance = (Math.random() * pixelDistance) + (pixelDistance * 0.5);
     const angle = Math.random() * 2 * Math.PI;
-
     const grassLocation = {
-      lat: location.lat + (distance * Math.sin(angle)),
-      lng: location.lng + (distance * Math.cos(angle))
+      lat: location.lat + (pixelDistance * Math.sin(angle)),
+      lng: location.lng + (pixelDistance * Math.cos(angle))
     };
 
     const grassSize = Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33));
@@ -102,7 +99,6 @@ function setupToggle() {
 
   toggleForest.addEventListener('change', () => {
     toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
-
     markers.forEach(marker => marker.setMap(null));
     markers = [];
     
@@ -154,7 +150,6 @@ function setupToggle() {
     if (toggleAboriginal.checked) {
       overlay.setMap(map);
       overlay.setOpacity(0);
-
       let opacity = 0;
       const fadeInSpeed = 0.05;
 
@@ -169,7 +164,6 @@ function setupToggle() {
       }
 
       fadeIn();
-
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
