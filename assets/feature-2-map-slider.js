@@ -91,6 +91,8 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
+            // Start adding grass after trees have sprouted
+            addGrassAroundTree(marker.getPosition());
           }
         }
         
@@ -145,6 +147,38 @@ function setupToggle() {
       fadeOut(); // Start the fade-out effect
     }
   });
+}
+
+function addGrassAroundTree(treePosition) {
+  const grassTypes = ['grass1.png', 'grass2.png', 'grass3.png', 'grass4.png', 'grass5.png']; // Add your grass icon URLs here
+  const grassCount = Math.floor(Math.random() * 2) + 2; // Randomize between 2 and 3 grasses
+  const grassMarkers = [];
+
+  for (let i = 0; i < grassCount; i++) {
+    // Randomize size (max size a fifth of the tree)
+    const grassSize = Math.floor(Math.random() * (fixedIconSize / 5)) + 10; // Minimum size of 10
+
+    // Randomize position slightly around the tree's roots
+    const offsetLat = (Math.random() - 0.5) * 0.0005; // Adjust for a small area around the tree
+    const offsetLng = (Math.random() - 0.5) * 0.0005;
+
+    const grassMarker = new google.maps.Marker({
+      map: map,
+      position: {
+        lat: treePosition.lat() + offsetLat,
+        lng: treePosition.lng() + offsetLng
+      },
+      icon: {
+        url: grassTypes[Math.floor(Math.random() * grassTypes.length)], // Random grass icon
+        scaledSize: new google.maps.Size(grassSize, grassSize)
+      }
+    });
+
+    grassMarkers.push(grassMarker);
+  }
+
+  // Optional: Store grass markers if needed later
+  markers.push(...grassMarkers);
 }
 
 // Initialize the map when the window loads
