@@ -1,6 +1,5 @@
 let map;
 let markers = [];
-let grassMarkers = []; // Array to hold grass markers
 let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -41,6 +40,15 @@ async function initMap() {
   setupToggle(); // Initialize the toggles after the map is ready
 }
 
+function getRandomOffset() {
+  // Randomize an offset between -0.05 and 0.05 for latitude and longitude
+  const offset = 0.05; // Adjust this value for more or less spread
+  return {
+    lat: (Math.random() * offset * 2) - offset,
+    lng: (Math.random() * offset * 2) - offset
+  };
+}
+
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
@@ -59,10 +67,6 @@ function setupToggle() {
     // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
-
-    // Clear existing grass markers
-    grassMarkers.forEach(marker => marker.setMap(null));
-    grassMarkers = [];
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
@@ -96,12 +100,13 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            // After trees have grown, add grass markers
+
+            // Add grass markers after the tree has fully grown
             addGrassMarkers(location);
           }
         }
-        
-        // Start the grow animation
+
+        // Start the grow animation for trees
         growTree();
 
         return marker;
@@ -154,38 +159,38 @@ function setupToggle() {
   });
 }
 
-// Function to add grass markers
 function addGrassMarkers(location) {
-  const numGrasses = Math.floor(Math.random() * 3) + 4; // Random number between 4 and 6
-  const grassSizeRange = [fixedIconSize * (1/3), fixedIconSize * (3/5)]; // Size range
+  const grassCount = Math.floor(Math.random() * 3) + 4; // Randomize number of grass markers (4-6)
+  const treeHeight = fixedIconSize; // Use tree height to define grass height
 
-  for (let i = 0; i < numGrasses; i++) {
-    const latOffset = (Math.random() - 0.5) * 0.05; // Random offset for latitude
-    const lngOffset = (Math.random() - 0.5) * 0.05; // Random offset for longitude
+  for (let i = 0; i < grassCount; i++) {
+    const randomOffset = getRandomOffset();
+    const grassMarkerPosition = {
+      lat: location.lat + randomOffset.lat,
+      lng: location.lng + randomOffset.lng
+    };
+
+    const grassSize = Math.floor(Math.random() * (treeHeight * (3/5 - 1/3)) + treeHeight * (1/3));
 
     const grassMarker = new google.maps.Marker({
       map: map,
-      position: {
-        lat: location.lat + latOffset,
-        lng: location.lng + lngOffset
-      },
+      position: grassMarkerPosition,
       icon: {
         url: grassIconUrl,
-        scaledSize: new google.maps.Size(0, 0) // Start with size 0
+        scaledSize: new google.maps.Size(grassSize, grassSize)
       }
     });
 
-    // Randomize the size of the grass
-    const grassSize = Math.random() * (grassSizeRange[1] - grassSizeRange[0]) + grassSizeRange[0];
-    let size = 1; // Initial size for grass
+    // Create the grow-up animation for grasses
+    let grassSizeCurrent = 1; // Initial size for grass
+    const growSpeed = 2; // Speed of growth (pixels per step)
 
-    // Create the grow-up animation for grass
     function growGrass() {
-      if (size < grassSize) {
-        size += 2; // Growth speed
+      if (grassSizeCurrent < grassSize) {
+        grassSizeCurrent += growSpeed;
         grassMarker.setIcon({
           url: grassIconUrl,
-          scaledSize: new google.maps.Size(size, size)
+          scaledSize: new google.maps.Size(grassSizeCurrent, grassSizeCurrent)
         });
         setTimeout(growGrass, 30); // Continue growing
       } else {
@@ -197,10 +202,8 @@ function addGrassMarkers(location) {
       }
     }
 
-    // Start the grow animation for grass
+    // Start the grow animation for grasses
     growGrass();
-
-    grassMarkers.push(grassMarker); // Store the grass marker
   }
 }
 
