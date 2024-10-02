@@ -23,6 +23,35 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
 
+    // Set dark mode styles directly after map initialization
+  map.setOptions({
+    styles: [
+      {
+        featureType: 'all',
+        stylers: [
+          { saturation: -100 }, // Desaturate all colors
+          { lightness: -30 }, // Darken overall
+        ],
+      },
+      {
+        featureType: 'landscape',
+        stylers: [{ color: '#181818' }], // Dark gray for land
+      },
+      {
+        featureType: 'water',
+        stylers: [{ color: '#000000' }], // Black for water
+      },
+      {
+        featureType: 'road',
+        stylers: [{ color: '#444444' }], // Dark gray for roads
+      },
+      {
+        featureType: 'poi',
+        stylers: [{ color: '#303030' }], // Dark gray for points of interest
+      }
+    ]
+  });
+  
   const aboriginalLandBounds = {
     north: -11,
     south: -44.0,
