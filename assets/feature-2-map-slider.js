@@ -1,5 +1,6 @@
 let map;
 let markers = [];
+let grasses = []; // Array to hold grass markers
 let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -55,9 +56,11 @@ function setupToggle() {
     // Update forest toggle label text
     toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
-    // Clear existing markers
+    // Clear existing markers and grasses
     markers.forEach(marker => marker.setMap(null));
     markers = [];
+    grasses.forEach(grass => grass.setMap(null));
+    grasses = [];
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
@@ -91,11 +94,11 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            // Start adding grass after trees have sprouted
-            addGrassAroundTree(marker.getPosition());
+            // After the tree has grown, add grass around it
+            addGrass(location);
           }
         }
-        
+
         // Start the grow animation
         grow();
 
@@ -149,36 +152,25 @@ function setupToggle() {
   });
 }
 
-function addGrassAroundTree(treePosition) {
-  const grassTypes = ['grass1.png', 'grass2.png', 'grass3.png', 'grass4.png', 'grass5.png']; // Add your grass icon URLs here
-  const grassCount = Math.floor(Math.random() * 2) + 2; // Randomize between 2 and 3 grasses
-  const grassMarkers = [];
-
+// Function to add grass markers around the trees
+function addGrass(location) {
+  const grassCount = Math.floor(Math.random() * 2) + 2; // Randomize number of grasses (2-3)
+  
   for (let i = 0; i < grassCount; i++) {
-    // Randomize size (max size a fifth of the tree)
-    const grassSize = Math.floor(Math.random() * (fixedIconSize / 5)) + 10; // Minimum size of 10
-
-    // Randomize position slightly around the tree's roots
-    const offsetLat = (Math.random() - 0.5) * 0.0005; // Adjust for a small area around the tree
-    const offsetLng = (Math.random() - 0.5) * 0.0005;
-
     const grassMarker = new google.maps.Marker({
-      map: map,
       position: {
-        lat: treePosition.lat() + offsetLat,
-        lng: treePosition.lng() + offsetLng
+        lat: location.lat + (Math.random() * 0.001 - 0.0005), // Slightly randomize position
+        lng: location.lng + (Math.random() * 0.001 - 0.0005),
       },
+      map: map,
       icon: {
-        url: grassTypes[Math.floor(Math.random() * grassTypes.length)], // Random grass icon
-        scaledSize: new google.maps.Size(grassSize, grassSize)
-      }
+        url: grassIconUrl,
+        scaledSize: new google.maps.Size(Math.random() * (fixedIconSize / 5), Math.random() * (fixedIconSize / 5)), // Randomize size
+      },
     });
 
-    grassMarkers.push(grassMarker);
+    grasses.push(grassMarker); // Add the grass marker to the grasses array
   }
-
-  // Optional: Store grass markers if needed later
-  markers.push(...grassMarkers);
 }
 
 // Initialize the map when the window loads
