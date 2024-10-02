@@ -42,9 +42,10 @@ async function initMap() {
 function growGrass(location) {
   const grassCount = Math.floor(Math.random() * 3) + 4;
   const grasses = [];
-  const distance = fixedIconSize * 2;
+  const pixelDistance = (map.getDiv().offsetWidth / 10) * (1 / 100000); 
 
   for (let i = 0; i < grassCount; i++) {
+    const distance = pixelDistance * (Math.random() + 0.5);
     const angle = Math.random() * 2 * Math.PI;
 
     const grassLocation = {
@@ -104,7 +105,7 @@ function setupToggle() {
 
     markers.forEach(marker => marker.setMap(null));
     markers = [];
-    
+
     grassMarkers.forEach(marker => marker.setMap(null));
     grassMarkers = [];
 
@@ -168,6 +169,7 @@ function setupToggle() {
       }
 
       fadeIn();
+
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
