@@ -41,6 +41,7 @@ async function initMap() {
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
+  const toggleDarkMode = document.getElementById('toggleDarkMode'); // Added Dark Mode toggle
   const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
@@ -113,7 +114,6 @@ function setupToggle() {
       }
 
       fadeIn();
-
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
@@ -129,6 +129,33 @@ function setupToggle() {
       }
 
       fadeOut();
+    }
+  });
+
+  // Dark Mode Toggle Functionality
+  toggleDarkMode.addEventListener('change', () => {
+    if (toggleDarkMode.checked) {
+      map.setOptions({
+        styles: [
+          {
+            featureType: 'all',
+            stylers: [
+              { saturation: -100 }, // Desaturate all colors
+              { lightness: 10 }, // Slightly brighten
+            ],
+          },
+          {
+            featureType: 'landscape',
+            stylers: [{ color: '#000000' }], // Black for land
+          },
+          {
+            featureType: 'water',
+            stylers: [{ color: '#7E7E7E' }], // Gray for water
+          }
+        ]
+      });
+    } else {
+      map.setOptions({ styles: [] }); // Reset to default styles
     }
   });
 }
