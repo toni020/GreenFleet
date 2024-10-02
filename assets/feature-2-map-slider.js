@@ -1,6 +1,5 @@
 let map;
 let markers = [];
-let grassMarkers = [];
 let overlay;
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -39,54 +38,6 @@ async function initMap() {
   setupToggle();
 }
 
-function growGrass(location) {
-  const grassCount = Math.floor(Math.random() * 3) + 4;
-  const grasses = [];
-  const pixelDistance = (map.getDiv().offsetWidth / 10) * (1 / 100000); 
-
-  for (let i = 0; i < grassCount; i++) {
-    const angle = Math.random() * 2 * Math.PI;
-    const distance = pixelDistance * (Math.random() + 0.5);
-
-    const grassMarker = new google.maps.Marker({
-      map: map,
-      position: {
-        lat: location.lat + (distance * Math.sin(angle)),
-        lng: location.lng + (distance * Math.cos(angle))
-      },
-      icon: {
-        url: grassIconUrl,
-        scaledSize: new google.maps.Size(Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33)), Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33)))
-      }
-    });
-
-    let grassSizeCurrent = 1;
-    const maxGrassSize = Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33));
-    const grassGrowSpeed = 2;
-
-    function growGrassAnimation() {
-      if (grassSizeCurrent < maxGrassSize) {
-        grassSizeCurrent += grassGrowSpeed;
-        grassMarker.setIcon({
-          url: grassIconUrl,
-          scaledSize: new google.maps.Size(grassSizeCurrent, grassSizeCurrent)
-        });
-        setTimeout(growGrassAnimation, 30);
-      } else {
-        grassMarker.setIcon({
-          url: grassIconUrl,
-          scaledSize: new google.maps.Size(maxGrassSize, maxGrassSize)
-        });
-      }
-    }
-
-    growGrassAnimation();
-    grasses.push(grassMarker);
-  }
-
-  return grasses;
-}
-
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
@@ -101,9 +52,6 @@ function setupToggle() {
 
     markers.forEach(marker => marker.setMap(null));
     markers = [];
-
-    grassMarkers.forEach(marker => marker.setMap(null));
-    grassMarkers = [];
 
     if (toggleForest.checked) {
       markers = locations.map(location => {
@@ -134,11 +82,11 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            grassMarkers = grassMarkers.concat(growGrass(marker.getPosition()));
           }
         }
-
+        
         grow();
+
         return marker;
       });
     }
@@ -165,6 +113,7 @@ function setupToggle() {
       }
 
       fadeIn();
+
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
