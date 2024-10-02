@@ -1,6 +1,6 @@
 let map;
 let markers = [];
-let grassMarkers = []; // Array to hold grass markers
+let grassMarkers = []; // New array for grass markers
 let overlay; // Define overlay variable in global scope
 const locations = [
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
@@ -13,9 +13,6 @@ const locations = [
 ];
 
 const fixedIconSize = 40; // Adjusted icon size
-const minGrassSize = Math.round(fixedIconSize * (1 / 3)); // Minimum grass height
-const maxGrassSize = Math.round(fixedIconSize * (3 / 5)); // Maximum grass height
-const grassSpacing = 0.0003; // Minimum distance to keep between grasses and trees
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 }; // Central Australia
@@ -44,66 +41,6 @@ async function initMap() {
   setupToggle(); // Initialize the toggles after the map is ready
 }
 
-function getRandomPosition(lat, lng) {
-  const latOffset = (Math.random() * grassSpacing) - (grassSpacing / 2);
-  const lngOffset = (Math.random() * grassSpacing) - (grassSpacing / 2);
-  return { lat: lat + latOffset, lng: lng + lngOffset };
-}
-
-function checkOverlap(position, radius) {
-  // Check against tree markers
-  for (const marker of markers) {
-    const distance = google.maps.geometry.spherical.computeDistanceBetween(
-      new google.maps.LatLng(marker.getPosition().lat(), marker.getPosition().lng()),
-      new google.maps.LatLng(position.lat, position.lng)
-    );
-    if (distance < radius) {
-      return true; // Overlap detected
-    }
-  }
-
-  // Check against grass markers
-  for (const grassMarker of grassMarkers) {
-    const distance = google.maps.geometry.spherical.computeDistanceBetween(
-      new google.maps.LatLng(grassMarker.getPosition().lat(), grassMarker.getPosition().lng()),
-      new google.maps.LatLng(position.lat, position.lng)
-    );
-    if (distance < radius) {
-      return true; // Overlap detected
-    }
-  }
-
-  return false; // No overlap
-}
-
-function addGrassNearTree(treeMarker) {
-  const grassCount = Math.floor(Math.random() * (3 - 2 + 1)) + 2; // Random count between 2 and 3
-  for (let i = 0; i < grassCount; i++) {
-    const treePos = treeMarker.getPosition();
-    let grassPos;
-    let grassRadius = Math.round(fixedIconSize / 2);
-
-    // Ensure grass position does not overlap
-    do {
-      grassPos = getRandomPosition(treePos.lat(), treePos.lng());
-    } while (checkOverlap(grassPos, grassRadius));
-
-    const grassMarker = new google.maps.Marker({
-      map: map,
-      position: grassPos,
-      icon: {
-        url: grassIconUrl,
-        scaledSize: new google.maps.Size(
-          Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize, 
-          Math.floor(Math.random() * (maxGrassSize - minGrassSize + 1)) + minGrassSize // Random size for grass
-        )
-      }
-    });
-
-    grassMarkers.push(grassMarker); // Store grass marker
-  }
-}
-
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
@@ -123,7 +60,7 @@ function setupToggle() {
     markers.forEach(marker => marker.setMap(null));
     markers = [];
     grassMarkers.forEach(marker => marker.setMap(null)); // Clear existing grass markers
-    grassMarkers = []; // Reset grass markers
+    grassMarkers = []; // Reset grass markers array
 
     if (toggleForest.checked) {
       // Recreate and add markers for forests with a grow-up animation
@@ -157,11 +94,11 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            // Add grasses near the tree after it has fully grown
-            addGrassNearTree(marker);
+            // Start adding grass after the tree has fully grown
+            addGrassAroundMarker(marker.getPosition(), size);
           }
         }
-        
+
         // Start the grow animation
         grow();
 
@@ -213,6 +150,26 @@ function setupToggle() {
       fadeOut(); // Start the fade-out effect
     }
   });
+}
+
+// Function to add grass around a specific position
+function addGrassAroundMarker(position, treeSize) {
+  const grassCount = Math.floor(Math.random() * 3) + 2; // Randomized count (2-3)
+  
+  for (let i = 0; i < grassCount; i++) {
+    const grassMarker = new google.maps.Marker({
+      map: map,
+      position: {
+        lat: position.lat() + (Math.random() - 0.5) * 0.01, // Random latitude offset
+        lng: position.lng() + (Math.random() - 0.5) * 0.01 // Random longitude offset
+      },
+      icon: {
+        url: grassIconUrl,
+        scaledSize: new google.maps.Size(treeSize * (Math.random() * (2/3) + 1/3), treeSize * (Math.random() * (2/3) + 1/3)) // Random size (1/3 to 3/5 of tree size)
+      }
+    });
+    grassMarkers.push(grassMarker); // Add to grass markers array
+  }
 }
 
 // Initialize the map when the window loads
