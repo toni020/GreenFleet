@@ -45,27 +45,23 @@ function growGrass(location) {
   const pixelDistance = (map.getDiv().offsetWidth / 10) * (1 / 100000); 
 
   for (let i = 0; i < grassCount; i++) {
-    const distance = pixelDistance * (Math.random() + 0.5);
     const angle = Math.random() * 2 * Math.PI;
-
-    const grassLocation = {
-      lat: location.lat + (distance * Math.sin(angle)),
-      lng: location.lng + (distance * Math.cos(angle))
-    };
-
-    const grassSize = Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33));
+    const distance = pixelDistance * (Math.random() + 0.5);
 
     const grassMarker = new google.maps.Marker({
       map: map,
-      position: grassLocation,
+      position: {
+        lat: location.lat + (distance * Math.sin(angle)),
+        lng: location.lng + (distance * Math.cos(angle))
+      },
       icon: {
         url: grassIconUrl,
-        scaledSize: new google.maps.Size(grassSize, grassSize)
+        scaledSize: new google.maps.Size(Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33)), Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33)))
       }
     });
 
     let grassSizeCurrent = 1;
-    const maxGrassSize = grassSize;
+    const maxGrassSize = Math.floor(fixedIconSize * (Math.random() * 0.2 + 0.33));
     const grassGrowSpeed = 2;
 
     function growGrassAnimation() {
@@ -138,7 +134,7 @@ function setupToggle() {
               url: treeIconUrl,
               scaledSize: new google.maps.Size(maxSize, maxSize)
             });
-            grassMarkers = grassMarkers.concat(growGrass(location));
+            grassMarkers = grassMarkers.concat(growGrass(marker.getPosition()));
           }
         }
 
@@ -169,7 +165,6 @@ function setupToggle() {
       }
 
       fadeIn();
-
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
