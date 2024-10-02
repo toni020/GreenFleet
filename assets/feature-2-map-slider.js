@@ -24,6 +24,25 @@ async function initMap() {
   });
 
   // Set dark mode styles directly after map initialization
+  applyDarkModeStyles();
+
+  const aboriginalLandBounds = {
+    north: -11,
+    south: -44.0,
+    east: 154.0,
+    west: 112.8,
+  };
+
+  overlay = new google.maps.GroundOverlay(
+    aboriginalLandImageUrl,
+    aboriginalLandBounds
+  );
+
+  setupToggle();
+}
+
+// Function to apply dark mode styles
+function applyDarkModeStyles() {
   map.setOptions({
     styles: [
       {
@@ -51,20 +70,6 @@ async function initMap() {
       }
     ]
   });
-
-  const aboriginalLandBounds = {
-    north: -11,
-    south: -44.0,
-    east: 154.0,
-    west: 112.8,
-  };
-
-  overlay = new google.maps.GroundOverlay(
-    aboriginalLandImageUrl,
-    aboriginalLandBounds
-  );
-
-  setupToggle();
 }
 
 function setupToggle() {
