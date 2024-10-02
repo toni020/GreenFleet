@@ -23,7 +23,7 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
 
-    // Set dark mode styles directly after map initialization
+  // Set dark mode styles directly after map initialization
   map.setOptions({
     styles: [
       {
@@ -51,7 +51,7 @@ async function initMap() {
       }
     ]
   });
-  
+
   const aboriginalLandBounds = {
     north: -11,
     south: -44.0,
@@ -70,7 +70,6 @@ async function initMap() {
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
-  const toggleDarkMode = document.getElementById('toggleDarkMode'); // Added Dark Mode toggle
   const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
@@ -160,44 +159,6 @@ function setupToggle() {
       fadeOut();
     }
   });
-
-  // Dark Mode Toggle Functionality
-  toggleDarkMode.addEventListener('change', () => {
-    if (toggleDarkMode.checked) {
-      console.log("Dark mode activated");
-      map.setOptions({
-        styles: [
-          {
-            featureType: 'all',
-            stylers: [
-              { saturation: -100 }, // Desaturate all colors
-              { lightness: -30 }, // Darken overall
-            ],
-          },
-          {
-            featureType: 'landscape',
-            stylers: [{ color: '#181818' }], // Dark gray for land
-          },
-          {
-            featureType: 'water',
-            stylers: [{ color: '#000000' }], // Black for water
-          },
-          {
-            featureType: 'road',
-            stylers: [{ color: '#444444' }], // Dark gray for roads
-          },
-          {
-            featureType: 'poi',
-            stylers: [{ color: '#303030' }], // Dark gray for points of interest
-          }
-        ]
-      });
-    } else {
-      console.log("Dark mode deactivated");
-      map.setOptions({ styles: [] }); // Reset to default styles
-    }
-  });
-
 }
 
 window.initMap = initMap;
