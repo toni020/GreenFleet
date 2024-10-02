@@ -141,7 +141,7 @@ function setupToggle() {
             featureType: 'all',
             stylers: [
               { saturation: -100 }, // Desaturate all colors
-              { lightness: -20 }, // Darken slightly
+              { lightness: 10 }, // Slightly brighten
             ],
           },
           {
@@ -150,15 +150,7 @@ function setupToggle() {
           },
           {
             featureType: 'water',
-            stylers: [{ color: '#1E1E1E' }], // Dark gray for water
-          },
-          {
-            featureType: 'poi',
-            stylers: [{ visibility: 'off' }], // Hide points of interest
-          },
-          {
-            featureType: 'transit',
-            stylers: [{ visibility: 'off' }] // Hide transit routes
+            stylers: [{ color: '#7E7E7E' }], // Gray for water
           }
         ]
       });
