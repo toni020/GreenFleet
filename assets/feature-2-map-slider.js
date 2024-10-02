@@ -13,29 +13,6 @@ const locations = [
 
 const fixedIconSize = 40;
 
-// Define custom map styles
-const mapStyles = [
-  {
-    featureType: 'all',
-    stylers: [
-      { saturation: -100 }, // Desaturate all colors
-      { lightness: 20 } // Lighten overall
-    ]
-  },
-  {
-    featureType: 'water',
-    stylers: [{ color: '#3B8CDA' }] // Custom color for water
-  },
-  {
-    featureType: 'landscape',
-    stylers: [{ color: '#F3F3F3' }] // Custom color for landscape
-  },
-  {
-    featureType: 'road',
-    stylers: [{ color: '#FFFFFF' }] // Custom color for roads
-  }
-];
-
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
@@ -43,8 +20,7 @@ async function initMap() {
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    mapId: "DEMO_MAP_ID", // Change this to your actual Map ID
-    styles: mapStyles, // Apply custom styles
+    mapId: "DEMO_MAP_ID",
   });
 
   const aboriginalLandBounds = {
