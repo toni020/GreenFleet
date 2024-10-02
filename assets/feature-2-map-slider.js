@@ -13,6 +13,29 @@ const locations = [
 
 const fixedIconSize = 40;
 
+// Define custom map styles
+const mapStyles = [
+  {
+    featureType: 'all',
+    stylers: [
+      { saturation: -100 }, // Desaturate all colors
+      { lightness: 20 } // Lighten overall
+    ]
+  },
+  {
+    featureType: 'water',
+    stylers: [{ color: '#3B8CDA' }] // Custom color for water
+  },
+  {
+    featureType: 'landscape',
+    stylers: [{ color: '#F3F3F3' }] // Custom color for landscape
+  },
+  {
+    featureType: 'road',
+    stylers: [{ color: '#FFFFFF' }] // Custom color for roads
+  }
+];
+
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
@@ -20,11 +43,9 @@ async function initMap() {
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    mapId: "DEMO_MAP_ID",
+    mapId: "DEMO_MAP_ID", // Change this to your actual Map ID
+    styles: mapStyles, // Apply custom styles
   });
-
-  // Set dark mode styles directly after map initialization
-  applyDarkModeStyles();
 
   const aboriginalLandBounds = {
     north: -11,
@@ -39,37 +60,6 @@ async function initMap() {
   );
 
   setupToggle();
-}
-
-// Function to apply dark mode styles
-function applyDarkModeStyles() {
-  map.setOptions({
-    styles: [
-      {
-        featureType: 'all',
-        stylers: [
-          { saturation: -100 }, // Desaturate all colors
-          { lightness: -30 }, // Darken overall
-        ],
-      },
-      {
-        featureType: 'landscape',
-        stylers: [{ color: '#181818' }], // Dark gray for land
-      },
-      {
-        featureType: 'water',
-        stylers: [{ color: '#000000' }], // Black for water
-      },
-      {
-        featureType: 'road',
-        stylers: [{ color: '#444444' }], // Dark gray for roads
-      },
-      {
-        featureType: 'poi',
-        stylers: [{ color: '#303030' }], // Dark gray for points of interest
-      }
-    ]
-  });
 }
 
 function setupToggle() {
@@ -147,6 +137,7 @@ function setupToggle() {
       }
 
       fadeIn();
+
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
