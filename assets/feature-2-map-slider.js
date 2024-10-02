@@ -42,9 +42,9 @@ async function initMap() {
 function growGrass(location) {
   const grassCount = Math.floor(Math.random() * 3) + 4;
   const grasses = [];
-  
+  const distance = fixedIconSize * 2;
+
   for (let i = 0; i < grassCount; i++) {
-    const distance = Math.random() * 0.02 + 0.02; 
     const angle = Math.random() * 2 * Math.PI;
 
     const grassLocation = {
@@ -84,7 +84,6 @@ function growGrass(location) {
     }
 
     growGrassAnimation();
-
     grasses.push(grassMarker);
   }
 
@@ -143,7 +142,6 @@ function setupToggle() {
         }
 
         grow();
-
         return marker;
       });
     }
