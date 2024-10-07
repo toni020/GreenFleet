@@ -6,11 +6,12 @@
   <title>Feature 2 - Map Slider</title>
   <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
 
-  <!-- Google Maps JavaScript API -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key={{ metaobjects['GoogleMapSettings'].api_key }}&callback=initMap">
-  </script>
+  {% assign google_map_settings = shop.metaobjects['GoogleMapSettings'].first %}
   
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key={{ google_map_settings.api_key }}&callback=initMap">
+  </script>
+
 </head>
 <body>
 
