@@ -10,15 +10,14 @@ async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
-  // Wait until the styles are fetched
-  while (!mapStyles) {
-    await new Promise(resolve => setTimeout(resolve, 100)); // Wait for styles to be fetched
+  while (!mapStyles_retro) {
+    await new Promise(resolve => setTimeout(resolve, 100)); 
   }
 
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    styles: mapStyles // Use the fetched styles
+    styles: mapStyles_retro 
   });
 
 
