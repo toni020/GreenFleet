@@ -8,7 +8,7 @@
 
   <!-- Google Maps JavaScript API -->
   <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap">
+    src="https://maps.googleapis.com/maps/api/js?key={{ app.metafields.google_map_settings.api_key }}&callback=initMap">
   </script>
 </head>
 <body>
@@ -47,7 +47,5 @@
   </script>
   
   <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
-
-  <script src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
 </body>
 </html>
