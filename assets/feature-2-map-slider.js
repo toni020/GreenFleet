@@ -10,26 +10,53 @@ async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
+  const darkModeStyle = [
+    { elementType: "geometry", stylers: [{ color: "#212121" }] },
+    { elementType: "labels.icon", stylers: [{ visibility: "off" }] },
+    { elementType: "labels.text.fill", stylers: [{ color: "#757575" }] },
+    { elementType: "labels.text.stroke", stylers: [{ color: "#212121" }] },
+    {
+      featureType: "administrative",
+      elementType: "geometry",
+      stylers: [{ color: "#757575" }],
+    },
+    {
+      featureType: "administrative.country",
+      elementType: "labels.text.fill",
+      stylers: [{ color: "#9e9e9e" }],
+    },
+    {
+      featureType: "landscape",
+      elementType: "geometry",
+      stylers: [{ color: "#1e1e1e" }],
+    },
+    {
+      featureType: "poi",
+      elementType: "geometry",
+      stylers: [{ color: "#2c2c2c" }],
+    },
+    {
+      featureType: "road",
+      elementType: "geometry.fill",
+      stylers: [{ color: "#2c2c2c" }],
+    },
+    {
+      featureType: "water",
+      elementType: "geometry",
+      stylers: [{ color: "#000000" }],
+    }
+  ];
+
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
+    styles: darkModeStyle,
     mapId: "DEMO_MAP_ID",
   });
 
-  const aboriginalLandBounds = {
-    north: -11,
-    south: -44.0,
-    east: 154.0,
-    west: 112.8,
-  };
-
-  overlay = new google.maps.GroundOverlay(
-    aboriginalLandImageUrl,
-    aboriginalLandBounds
-  );
-
   setupToggle();
 }
+
 
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
