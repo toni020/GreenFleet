@@ -5,11 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Feature 2 - Map Slider</title>
   <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
-
-  <!-- Google Maps JavaScript API -->
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap">
-  </script>
 </head>
 <body>
 
@@ -44,10 +39,23 @@
     const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
     const treeIconUrl = '{{ "tree2.png" | asset_url }}';
     const grassIconUrl = '{{ "grass.png" | asset_url }}';
+
+    // Retrieve the API key from the metaobject
+    const googleMapApiKey = '{{ shop.metaobjects.google_map_settings.first.api_key }}';
+    
+    // Load the Google Maps JavaScript API
+    const loadGoogleMapsAPI = () => {
+      const script = document.createElement('script');
+      script.src = `https://maps.googleapis.com/maps/api/js?key=${googleMapApiKey}&callback=initMap`;
+      script.async = true;
+      script.defer = true;
+      document.body.appendChild(script);
+    };
+
+    // Call the function to load the Google Maps API
+    loadGoogleMapsAPI();
   </script>
   
   <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
-
-  <script src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
 </body>
 </html>
