@@ -45,6 +45,19 @@
     const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
     const treeIconUrl = '{{ "tree2.png" | asset_url }}';
     const grassIconUrl = '{{ "grass.png" | asset_url }}';
+
+     // Fetch the JSON styles
+    const jsonStylesUrl = '{{ "map_custom_theme_retro.json" | asset_url }}'; // Reference to the JSON file
+
+    // Store the fetched styles in a variable
+    let mapStyles;
+
+    fetch(jsonStylesUrl)
+      .then(response => response.json())
+      .then(data => {
+        mapStyles = data; // Store the styles for later use
+      })
+      .catch(error => console.error('Error fetching map styles:', error));
   </script>
   
   <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
