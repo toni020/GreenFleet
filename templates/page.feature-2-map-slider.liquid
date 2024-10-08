@@ -10,6 +10,7 @@
     src="https://maps.googleapis.com/maps/api/js?key={{ page.metafields.custom.google_maps_api_key }}&callback=initMap">
   </script>
 
+
 </head>
 <body>
 
@@ -35,13 +36,6 @@
         </label>
         <span class="toggle-label">Indigenous Forest Area</span>
       </div>
-      <div class="toggle-item">
-        <label class="toggle-switch">
-          <input type="checkbox" id="toggleDarkMode">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-label">Dark Mode</span>
-      </div>
     </div>
     <div id="map"></div> 
     <p class="source-text"></p> 
@@ -52,26 +46,16 @@
     const treeIconUrl = '{{ "tree.png" | asset_url }}';
     const grassIconUrl = '{{ "grass.png" | asset_url }}';
 
-    const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}'; // JSON for dark mode styles
-    const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}'; // JSON for light mode styles
+    const jsonStylesUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
 
-    let mapStylesDark, mapStylesLight;
+    let mapStyles_dark;
 
-    // Fetch dark mode styles
-    fetch(jsonStylesDarkUrl)
+    fetch(jsonStylesUrl)
       .then(response => response.json())
       .then(data => {
-        mapStylesDark = data; // Store the styles for later use
+        mapStyles_dark = data; // Store the styles for later use
       })
-      .catch(error => console.error('Error fetching dark mode styles:', error));
-
-    // Fetch light mode styles
-    fetch(jsonStylesLightUrl)
-      .then(response => response.json())
-      .then(data => {
-        mapStylesLight = data; // Store the styles for later use
-      })
-      .catch(error => console.error('Error fetching light mode styles:', error));
+      .catch(error => console.error('Error fetching map styles:', error));
   </script>
   
   <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
