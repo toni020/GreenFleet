@@ -1,41 +1,25 @@
 let map;
 let markers = [];
 let overlay;
-let mapStylesDark;
-let mapStylesLight;
+import { locations } from './forest-locations.js';
+
+
 const fixedIconSize = 40;
-
-// Fetch map styles for dark mode and light mode
-async function fetchStyles() {
-  const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}'; // Adjust the URL as needed
-  const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}'; // Adjust the URL as needed
-
-  try {
-    const darkResponse = await fetch(jsonStylesDarkUrl);
-    mapStylesDark = await darkResponse.json();
-
-    const lightResponse = await fetch(jsonStylesLightUrl);
-    mapStylesLight = await lightResponse.json();
-  } catch (error) {
-    console.error('Error fetching map styles:', error);
-  }
-}
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
-  // Wait for styles to be fetched
-  while (!mapStylesDark || !mapStylesLight) {
-    await new Promise(resolve => setTimeout(resolve, 100));
+  while (!mapStyles_dark) {
+    await new Promise(resolve => setTimeout(resolve, 100)); 
   }
 
-  // Initialize the map with light mode styles
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    styles: mapStylesLight // Default to light mode
+    styles: mapStyles_dark 
   });
+
 
   const aboriginalLandBounds = {
     north: -11,
@@ -55,7 +39,6 @@ async function initMap() {
 function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
-  const toggleDarkMode = document.getElementById('toggleDarkMode');
   const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
@@ -146,17 +129,7 @@ function setupToggle() {
       fadeOut();
     }
   });
-
-  toggleDarkMode.addEventListener('change', () => {
-    if (toggleDarkMode.checked) {
-      map.setOptions({ styles: mapStylesDark });
-    } else {
-      map.setOptions({ styles: mapStylesLight });
-    }
-  });
 }
 
-// Fetch styles and then initialize the map
-fetchStyles().then(initMap);
 window.initMap = initMap;
 window.addEventListener('load', initMap);
