@@ -17,7 +17,7 @@ async function initMap() {
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    styles: mapStyles_dark 
+    styles: mapStyles_light
   });
 
 
