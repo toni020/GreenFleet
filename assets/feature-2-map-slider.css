@@ -1,3 +1,4 @@
+/* Title Style */
 .feature-2-map-slider-title {
   font-size: 2em;
   color: #333;
@@ -6,6 +7,7 @@
   margin: 0;
 }
 
+/* Description Style */
 .feature-2-map-slider-description {
   font-size: 1.2em;
   color: #113300;
@@ -14,6 +16,7 @@
   margin: 0 0 20px 0;
 }
 
+/* Map Container */
 #map-container {
   position: relative;
   width: 100%;
@@ -24,6 +27,7 @@
   align-items: center; /* Center elements horizontally */
 }
 
+/* Toggle Container */
 .toggle-container {
   display: flex;
   flex-direction: row;
@@ -33,6 +37,7 @@
   margin-bottom: 10px; /* Space between the toggle and the map */
 }
 
+/* Source Text */
 .source-text {
   font-size: 0.9em;
   color: #444;
@@ -40,7 +45,7 @@
   margin-top: 10px;
 }
 
-
+/* Map */
 #map {
   width: 100%;
   max-width: 900px;
@@ -53,12 +58,14 @@
   box-sizing: border-box;
 }
 
+/* Toggle Item */
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
   align-items: center; /* Center the toggle and label vertically */
   margin: 0 10px; /* Space on the left and right of each toggle item */
 }
 
+/* Toggle Switch */
 .toggle-switch {
   position: relative;
   display: inline-block;
@@ -66,13 +73,14 @@
   height: 34px; /* Height of the toggle switch */
 }
 
+/* Toggle Label */
 .toggle-label {
   margin-left: 10px; /* Space between the toggle and the label */
   font-size: 1em; /* Font size for the label */
   color: #666; /* Color for the label */
 }
 
-
+/* Slider Styles */
 .slider {
   position: absolute;
   cursor: pointer;
@@ -80,11 +88,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc;
+  background-color: #ccc; /* Light grey background for the slider */
   transition: .4s;
   border-radius: 34px;
 }
 
+/* Slider Circle */
 .slider:before {
   position: absolute;
   content: "";
@@ -93,20 +102,36 @@
   border-radius: 50%;
   left: 4px;
   bottom: 4px;
-  background-color: white;
+  background-color: white; /* White circle */
   transition: .4s;
 }
 
+/* Checked State of Slider */
 input:checked + .slider {
-  background-color: #008113;
+  background-color: #008113; /* Green background when checked */
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px);
+  transform: translateX(26px); /* Move the circle */
 }
 
-.toggle-label {
-  margin-left: 10px;
-  font-size: 1em;
-  color: #666;
+/* Dark Mode Styles */
+body.dark-mode .feature-2-map-slider-title {
+  color: #e0e0e0; /* Lighter text color for dark mode */
+}
+
+body.dark-mode .feature-2-map-slider-description {
+  color: #a0d6a0; /* Lighter description for dark mode */
+}
+
+body.dark-mode #map {
+  border: 2px solid #444; /* Darker border for map */
+}
+
+body.dark-mode .source-text {
+  color: #bbb; /* Lighter source text for dark mode */
+}
+
+body.dark-mode .toggle-label {
+  color: #ccc; /* Lighter label color for dark mode */
 }
