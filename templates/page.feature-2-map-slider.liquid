@@ -47,21 +47,21 @@
     const grassIconUrl = '{{ "grass.png" | asset_url }}';
 
     const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
-    const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}';
+    const jsonStylesLightUrl = '{{ "map_custom_theme_retro.json" | asset_url }}';
 
     let mapStyles_dark, mapStyles_light;
 
     fetch(jsonStylesDarkUrl)
       .then(response => response.json())
       .then(data => {
-        mapStyles_dark = data; // Store the styles for later use
+        mapStyles_dark = data; 
       })
       .catch(error => console.error('Error fetching map styles:', error));
 
     fetch(jsonStylesLightUrl)
       .then(response => response.json())
       .then(data => {
-        mapStyles_light = data; // Store the styles for later use
+        mapStyles_light = data; 
       })
       .catch(error => console.error('Error fetching map styles:', error));
   </script>
