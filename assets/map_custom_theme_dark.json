@@ -33,6 +33,15 @@
     ]
   },
   {
+    "featureType": "administrative.country",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#008cb4"
+      }
+    ]
+  },
+  {
     "featureType": "administrative.land_parcel",
     "elementType": "labels.text.fill",
     "stylers": [
@@ -91,7 +100,7 @@
     "elementType": "geometry.fill",
     "stylers": [
       {
-        "color": "#002540"
+        "color": "#002a4a"
       }
     ]
   },
