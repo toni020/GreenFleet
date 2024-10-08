@@ -10,14 +10,14 @@ async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
-  while (!mapStyles_retro) {
+  while (!mapStyles_dark) {
     await new Promise(resolve => setTimeout(resolve, 100)); 
   }
 
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
-    styles: mapStyles_retro 
+    styles: mapStyles_dark 
   });
 
 
