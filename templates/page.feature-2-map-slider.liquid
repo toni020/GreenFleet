@@ -48,12 +48,12 @@
 
     const jsonStylesUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
 
-    let mapStyles_retro;
+    let mapStyles_dark;
 
     fetch(jsonStylesUrl)
       .then(response => response.json())
       .then(data => {
-        mapStyles_retro = data; // Store the styles for later use
+        mapStyles_dark = data; // Store the styles for later use
       })
       .catch(error => console.error('Error fetching map styles:', error));
   </script>
