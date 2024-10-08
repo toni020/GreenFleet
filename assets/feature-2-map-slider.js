@@ -1,18 +1,36 @@
 let map;
 let markers = [];
 let overlay;
-import { locations } from './forest-locations.js';
-
+let mapStylesDark;
+let mapStylesLight;
 const fixedIconSize = 40;
+
+// Fetch map styles for dark mode and light mode
+async function fetchStyles() {
+  const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}'; // Adjust the URL as needed
+  const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}'; // Adjust the URL as needed
+
+  try {
+    const darkResponse = await fetch(jsonStylesDarkUrl);
+    mapStylesDark = await darkResponse.json();
+
+    const lightResponse = await fetch(jsonStylesLightUrl);
+    mapStylesLight = await lightResponse.json();
+  } catch (error) {
+    console.error('Error fetching map styles:', error);
+  }
+}
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
+  // Wait for styles to be fetched
   while (!mapStylesDark || !mapStylesLight) {
     await new Promise(resolve => setTimeout(resolve, 100));
   }
 
+  // Initialize the map with light mode styles
   map = new Map(document.getElementById("map"), {
     zoom: 4,
     center: position,
@@ -138,5 +156,7 @@ function setupToggle() {
   });
 }
 
+// Fetch styles and then initialize the map
+fetchStyles().then(initMap);
 window.initMap = initMap;
 window.addEventListener('load', initMap);
