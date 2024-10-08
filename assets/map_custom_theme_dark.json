@@ -1,7 +1,3 @@
-Use JSON styling
-
-Copy and paste this JSON into your app or website code
-
 [
   {
     "elementType": "geometry",
@@ -235,4 +231,3 @@ Copy and paste this JSON into your app or website code
     ]
   }
 ]
- 
