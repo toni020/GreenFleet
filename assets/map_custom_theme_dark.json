@@ -42,11 +42,29 @@
     ]
   },
   {
+    "featureType": "administrative.locality",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#006d8f"
+      }
+    ]
+  },
+  {
     "featureType": "administrative.province",
     "elementType": "geometry.stroke",
     "stylers": [
       {
         "color": "#4b6878"
+      }
+    ]
+  },
+  {
+    "featureType": "administrative.province",
+    "elementType": "labels.text.fill",
+    "stylers": [
+      {
+        "color": "#006d8f"
       }
     ]
   },
@@ -65,6 +83,15 @@
     "stylers": [
       {
         "color": "#023e58"
+      }
+    ]
+  },
+  {
+    "featureType": "landscape.natural.landcover",
+    "elementType": "geometry.fill",
+    "stylers": [
+      {
+        "color": "#002540"
       }
     ]
   },
