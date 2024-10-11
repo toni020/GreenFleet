@@ -64,8 +64,8 @@ function buildContent(f){
   const content = document.createElement("div");
   content.classList.add("forest");
   content.innerHTML = `
-    <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
     <div class="menu">
+    <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
       <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
       <div class="aboutMe");">More about me</div>
@@ -73,10 +73,8 @@ function buildContent(f){
       <div class="shareMe">Make me famous</div>
       <div class="media1">
           <li class="facebook">
-            
               <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
               <p>Connect to Facebook</p>
-            
           </li>
           <li class="instagram">
             <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
