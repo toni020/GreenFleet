@@ -60,7 +60,7 @@
 }
 
 .forest.active .menu{
-  width: 2000px;
+  width: 750px;
   height:200px;
   display: flex;
   flex-direction: column;
