@@ -64,8 +64,7 @@
   width: 450px;
   display: flex;
   border-radius:5px;
-  background:red;
-  z-index:1;
+  background:red
 }
 
 /* .container.active .slider-wrapper{
@@ -99,9 +98,7 @@
   position:relative;
   top: 80%;
   right: 0;
-  width: 450px;
-  height: 300px;
-  z-index:2;
+  z-index:1;
 
   
 }
