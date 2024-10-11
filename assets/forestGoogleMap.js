@@ -64,8 +64,8 @@ function buildContent(f){
   const content = document.createElement("div");
   content.classList.add("forest");
   content.innerHTML = `
-    <div class="menu">
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
+    <div class="menu">
       <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
       <div class="aboutMe");">More about me</div>
