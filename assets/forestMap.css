@@ -56,10 +56,10 @@
 /*
  * Forest styles in active state.
  */
-.icon.active{
+.forest.active .icon{
   display:none;
 }
-.container.active{
+.forest.active .container{
   height: 350px;
   width: 450px;
   display: flex;
