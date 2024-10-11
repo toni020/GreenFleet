@@ -62,7 +62,12 @@
 /*
  * Forest styles in active state.
  */
-
+.container.active{
+  height: 350px;
+  width: 450px;
+  display: flex;
+  border-radius:5px;
+}
 .forest.active {
   background-color: #FFFFFF;
   border-radius: 8px;
@@ -70,6 +75,8 @@
   padding: 8px 10px;
   height: 350px;
   width: 450px;
+  z-index:1;
+  
 }
 
 .forest.active .menu{
