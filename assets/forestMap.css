@@ -33,7 +33,9 @@
   height: 30px;
 
 }
-
+.menu{
+  display:none;
+}
 .menu .address {
   color: #9E9E9E;
   font-size: 9px;
