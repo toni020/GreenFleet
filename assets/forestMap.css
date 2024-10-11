@@ -50,12 +50,14 @@
 }
 .slider-wrapper{
   position: relative;
-  max-width: 47rem;
+  max-width: 450px;
   margin: 0 auto;
 }
 .slider{
   position: flex;
-  
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
 }
 /*
  * Forest styles in active state.
