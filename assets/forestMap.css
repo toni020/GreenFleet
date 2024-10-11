@@ -38,10 +38,7 @@
   display: none;
 }
 .slider-wrapper{
-  display: none;
-}
-.slider{
-  display:none;
+  display: none
 }
 .menu .address {
   color: #9E9E9E;
@@ -56,37 +53,33 @@
 /*
  * Forest styles in active state.
  */
-.forest.active .icon{
-  display:none;
-}
-.forest.active .container{
+.container.active{
   height: 350px;
   width: 450px;
   display: flex;
   border-radius:5px;
 }
 
-/* .container.active .slider-wrapper{
+.container.active .slider-wrapper{
   position: relative;
   max-width: 450px;
   margin: 0 auto;
-  
 }
 .container.active .slider{
   position: flex;
   aspect-ratio: 16/9;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;
+  scroll-snap-type: x mandatory;++
   
-} */
+}
 
 .forest.active {
   background-color: #FFFFFF;
   border-radius: 8px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   padding: 8px 10px;
-  height: auto;
-  width: auto;
+  height: 350px;
+  width: 450px;
   z-index:1;
   
 }
@@ -95,8 +88,6 @@
   display: flex;
   flex-direction: column;
   position:relative;
-  top: 80%;
-  right: 0;
   z-index:1;
 
   
