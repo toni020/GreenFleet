@@ -46,32 +46,11 @@
   margin-bottom: 10px;
   margin-top: 5px;
 }
-.container{
-  display:none;
-}
+
 
 /*
  * Forest styles in active state.
  */
-.container.active{
-  height: 350px;
-  width: 450px;
-  display: flex;
-  border-radius:5px;
-}
-
-.container.active .slider-wrapper{
-  position: relative;
-  max-width: 450px;
-  margin: 0 auto;
-}
-.container.active .slider{
-  position: flex;
-  aspect-ratio: 16/9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;++
-  
-}
 
 .forest.active {
   background-color: #FFFFFF;
