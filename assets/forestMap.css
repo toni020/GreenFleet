@@ -84,7 +84,7 @@
 }
 
 
-.forest.active .media1 li{
+.media1 li{
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -92,11 +92,11 @@
   border-radius: 5px;
 }
 
-.forest.active .media1 p{
+.media1 p{
   color: white;
   margin-left: 10px;
 }
-.forest.active .media1 img{
+.media1 img{
   width:30px;
   height:30px;
   margin-left:5px;
