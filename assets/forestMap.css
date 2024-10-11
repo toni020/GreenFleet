@@ -56,6 +56,9 @@
 /*
  * Forest styles in active state.
  */
+.icon.active{
+  display:none;
+}
 .container.active{
   height: 350px;
   width: 450px;
