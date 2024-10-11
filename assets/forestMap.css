@@ -47,18 +47,7 @@
 .container{
   display:none;
 }
-.slider-wrapper{
-  position: relative;
-  max-width: 450px;
-  margin: 0 auto;
-}
-.slider{
-  position: flex;
-  aspect-ratio: 16/9;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;++
-  
-}
+
 /*
  * Forest styles in active state.
  */
@@ -68,6 +57,20 @@
   display: flex;
   border-radius:5px;
 }
+
+.active .slider-wrapper{
+  position: relative;
+  max-width: 450px;
+  margin: 0 auto;
+}
+.active .slider{
+  position: flex;
+  aspect-ratio: 16/9;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;++
+  
+}
+
 .forest.active {
   background-color: #FFFFFF;
   border-radius: 8px;
@@ -104,6 +107,8 @@
   top: 100%;
   width: 200px;
 }
+
+
 .media1 li{
   display: flex;
   justify-content: flex-start;
