@@ -37,7 +37,12 @@
 .forest .menu{
   display: none;
 }
-
+.slider-wrapper{
+  display: none;
+}
+.slider{
+  display:none;
+}
 .menu .address {
   color: #9E9E9E;
   font-size: 9px;
@@ -62,12 +67,13 @@
   position: relative;
   max-width: 450px;
   margin: 0 auto;
+  
 }
 .container.active .slider{
   position: flex;
   aspect-ratio: 16/9;
   overflow-x: auto;
-  scroll-snap-type: x mandatory;++
+  scroll-snap-type: x mandatory;
   
 }
 
