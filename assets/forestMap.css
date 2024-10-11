@@ -58,12 +58,12 @@
   border-radius:5px;
 }
 
-.active .slider-wrapper{
+.container.active .slider-wrapper{
   position: relative;
   max-width: 450px;
   margin: 0 auto;
 }
-.active .slider{
+.container.active .slider{
   position: flex;
   aspect-ratio: 16/9;
   overflow-x: auto;
