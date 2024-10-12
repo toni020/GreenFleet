@@ -71,8 +71,8 @@
   z-index: 1;
 }
 .forest.active.container img{
-  max-width:450px;
-  max-height: 350px;
+  width:450px;
+  height: 350px;
 }
 
 .forest.active .menu{
