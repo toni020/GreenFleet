@@ -101,8 +101,8 @@ function buildContent(f){
     content.querySelector(".slider").addEventListener("load", ()=>{
       const imgs = document.getElementsByTagName("img");
       for (img in imgs) {
-        img.style.height = 350px;
-        img.style.width = 450px;
+        img.style.height = '350px';
+        img.style.width = '450px';
       }
     });
     return content;
