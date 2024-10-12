@@ -68,7 +68,8 @@ function buildContent(f){
     <section class="container">
       <div class="slider-wrapper">
         <div class="slider">
-          
+          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459">
+          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789"> 
         </div>
       </div>
     </section>
