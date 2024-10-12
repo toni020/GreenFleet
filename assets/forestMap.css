@@ -64,7 +64,7 @@
 }
 
 .forest.active .container{
-  display:flex;
+  display:inline;
   width: 450px;
   height: 350px;
   position: absolute;
