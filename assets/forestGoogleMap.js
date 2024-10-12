@@ -99,9 +99,11 @@ function buildContent(f){
       shareMe();
     });
     content.querySelector(".slider").addEventListener("load", ()=>{
-      const img = document.getElementsByTagName("img");
-      img.style.height = 350px;
-      img.style.width = 450px;
+      const imgs = document.getElementsByTagName("img");
+      for (img in imgs) {
+        img.style.height = 350px;
+        img.style.width = 450px;
+      }
     });
     return content;
 }
