@@ -63,11 +63,6 @@
   position:relative;
 }
 
-.forest.active .container{
-  display:flex;
-  position: relative;
-}
-
 .forest.active .menu{
   display: flex;
   flex-direction: column;
