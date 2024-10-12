@@ -65,6 +65,14 @@ function buildContent(f){
   content.classList.add("forest");
   content.innerHTML = `
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
+    <section class="container">
+      <div class="slider-wrapper">
+        <div class="slider">
+          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459">
+          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789"> 
+        </div>
+      </div>
+    </section>
     <div class="menu">
       <div class="name">${f?.name}</div>
       <div class="address">${f?.address}</div>
