@@ -32,7 +32,7 @@
   width: 30px;
   height: 30px;
 
-.forest .container, .slider-wrapper{
+.forest .container, .slider-wrapper, .slider{
   display: none;
 }
 
