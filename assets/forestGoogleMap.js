@@ -99,7 +99,7 @@ function buildContent(f){
       shareMe();
     });
     content.querySelector(".slider").addEventListener("load", ()=>{
-      const img = document.getElementByTag(img);
+      const img = document.getElementByTagName("img");
       img.style.height = 350px;
       img.style.width = 450px;
     });
