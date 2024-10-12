@@ -71,7 +71,8 @@
   z-index: 1;
 }
 .forest.active.container img{
-object-fit: fill;
+  width:400px;
+  height: 350px;
 }
 
 .forest.active .menu{
