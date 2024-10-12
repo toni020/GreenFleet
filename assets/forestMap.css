@@ -57,19 +57,23 @@
   border-radius: 8px;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   padding: 8px 10px;
-  height: auto;
-  width: auto;
+  height: 350;
+  width: 450;
   z-index:1;
   position:relative;
 }
+
+.forest.active .container{
+  display:flex;
+}
+
 
 .forest.active .menu{
   display: flex;
   flex-direction: column;
   position:relative;
   z-index:1;
-
-  
+ 
 }
 .forest.active .aboutMe, .feedMe, .shareMe {
   display: block;
