@@ -51,7 +51,7 @@ function myFunction(markerView){
 });
 }
 
-function demo(forest){
+function aboutMe(forest){
   if (forest?.link === "") {
     alert("Sorry, the forest isn't available now.")
   }else{
@@ -68,8 +68,8 @@ function buildContent(f){
     <section class="container">
       <div class="slider-wrapper">
         <div class="slider">
-          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459">
-          <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789"> 
+          <img class="image" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459">
+          <img class="image" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789"> 
         </div>
       </div>
     </section>
@@ -93,10 +93,15 @@ function buildContent(f){
       </div>
     </div> `;
     content.querySelector(".aboutMe").addEventListener("click", () => {
-      demo(f);
+      aboutMe(f);
     });
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
+    });
+    content.querySelector(".slider").addEventListener("load", ()=>{
+      const img = document.getElementByTag(img);
+      img.style.height = 350px;
+      img.style.width = 450px;
     });
     return content;
 }
