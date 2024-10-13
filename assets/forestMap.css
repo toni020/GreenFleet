@@ -80,7 +80,9 @@
   flex-direction: column;
   position:relative;
   z-index:2;
-  background: #FFFFFFp;
+  background: #FFFFFF;
+  width: 450px;
+  top: 80%;
  
 }
 .forest.active .aboutMe, .feedMe, .shareMe {
