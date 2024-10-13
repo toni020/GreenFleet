@@ -120,8 +120,6 @@ function imageSlider(forest, content){
       img.src = url;
       docFrag.appendChild(img);
     });
-  }else if (forest?.images ==="") {
-    alert("Sorry, the forest isn't available now.");
   }
 
   container.appendChild(docFrag);
@@ -150,7 +148,7 @@ const forests = [
       lng: 149.7985828,
     },
     link: "https://www.greenfleet.com.au/blogs/forest/back-oslaters",
-    images:[],
+    
   },
   {
     name: "Kosciuszko National Park",
