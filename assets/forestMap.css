@@ -72,6 +72,7 @@
 }
 .forest.active icon{
   display: none;
+  background: red;
 }
 
 .container img{
