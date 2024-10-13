@@ -110,15 +110,17 @@ function aboutMe(forest){
   }
 }
 
-function imageSlider(forest){
-  var container = document.getElementsByClass("slider");
+function imageSlider(forest, content){
+  var container = content.querySelector(".slider");
   var docFrag = document.createDocumentFragment();
 
-  ${forest?.images}.forEach(function(url, index, originalArray) {
-    var img = document.createElement('img');
-    img.src = url;
-    docFrag.appendChild(img);
-  },);
+  if (forest?.images) {
+    forest.images.forEach(function(url) {
+      var img = document.createElement('img');
+      img.src = url;
+      docFrag.appendChild(img);
+    });
+  }
 
   container.appendChild(docFrag);
 }
