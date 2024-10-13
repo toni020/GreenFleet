@@ -31,7 +31,7 @@
 .forest .icon {
   width: 30px;
   height: 30px;
-  z-index:1;
+  z-index:0;
 }
 .forest .container{
   display: none;
