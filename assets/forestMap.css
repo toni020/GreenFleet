@@ -70,7 +70,7 @@
   position: absolute;
   z-index: 2;
 }
-.forest.active icon{
+.forest.active .icon{
   display: none;
   background: red;
 }
