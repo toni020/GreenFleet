@@ -117,8 +117,7 @@ function buildContent(f){
           img.appendChild(new_image);
           
         }
-      });
-      
+      }
     });
     return content;
 }
