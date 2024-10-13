@@ -129,7 +129,7 @@ function imageSlider(forest, content){
 
 function initializeSlider(container) {
   let slideIndex = 0;
-  const slides = container.querySelectorAll(".slide"); // Access slider images within the container
+  const slides = container.querySelectorAll(".slider img"); // Access slider images within the container
 
   function showSlide(index) {
     if (index >= slides.length) {
