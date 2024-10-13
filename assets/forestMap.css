@@ -70,6 +70,10 @@
   position: absolute;
   z-index: 2;
 }
+.forest.active icon{
+  display: none;
+}
+
 .container img{
   width: 450px;
   height: 350px;
