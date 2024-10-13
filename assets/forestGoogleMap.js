@@ -89,7 +89,7 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
-    
+    imageSlider(f);
     return content;
 }
 function shareMe(){
@@ -110,11 +110,11 @@ function aboutMe(forest){
   }
 }
 
-function imageSlider(f){
+function imageSlider(forest){
   var container = document.getElementsByClass("slider");
   var docFrag = document.createDocumentFragment();
 
-  ${f?.images}.forEach(function(url, index, originalArray) {
+  ${forest?.images}.forEach(function(url, index, originalArray) {
     var img = document.createElement('img');
     img.src = url;
     docFrag.appendChild(img);
