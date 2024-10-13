@@ -114,6 +114,7 @@ function imageSlider(forest, content){
   var container = content.querySelector(".slider");
   var docFrag = document.createDocumentFragment();
 
+  
   if (forest?.images) {
     forest.images.forEach(function(url) {
       var img = document.createElement('img');
@@ -123,9 +124,36 @@ function imageSlider(forest, content){
   }
 
   container.appendChild(docFrag);
+  initializeSlider(container);
 }
 
+function initializeSlider(container) {
+  let slideIndex = 0;
+  const slides = container.querySelectorAll(".slide"); // Access slider images within the container
 
+  function showSlide(index) {
+    if (index >= slides.length) {
+      slideIndex = 0;
+    } else if (index < 0) {
+      slideIndex = slides.length - 1;
+    }
+
+    slides.forEach((slide) => {
+      slide.style.display = "none"; // Hide all slides
+    });
+
+    slides[slideIndex].style.display = "block"; // Show current slide
+  }
+
+  // Initialize first slide
+  showSlide(slideIndex);
+
+  // Automatically switch slides every 5 seconds
+  setInterval(() => {
+    slideIndex++;
+    showSlide(slideIndex);
+  }, 5000);
+}
 const forests = [
   {
     name: "River Bend",
