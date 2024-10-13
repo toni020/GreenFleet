@@ -51,14 +51,6 @@ function myFunction(markerView){
 });
 }
 
-function aboutMe(forest){
-  if (forest?.link === "") {
-    alert("Sorry, the forest isn't available now.")
-  }else{
-    window.open(forest?.link, "_blank");
-  }
-}
-
 function buildContent(f){
   const WIDTH = 450;
   const content = document.createElement("div");
@@ -99,7 +91,6 @@ function buildContent(f){
       shareMe();
     });
     
-    
     return content;
 }
 function shareMe(){
@@ -112,6 +103,13 @@ function shareMe(){
       }
     }
 }
+function aboutMe(forest){
+  if (forest?.link === "") {
+    alert("Sorry, the forest isn't available now.")
+  }else{
+    window.open(forest?.link, "_blank");
+  }
+}
 
 
 const forests = [
@@ -123,9 +121,10 @@ const forests = [
       lng: 148.9246943,
     },
     link:"",
-    facebook: "https://www.facebook.com/GreenfleetAustralia/",
-    instagram: "https://www.instagram.com/greenfleetaustralia/",
-    Linkedin: "https://www.linkedin.com/company/greenfleet",
+    Images: [
+        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
+        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
+    ],
   },
   {
     name: "Back O'Slaters",
