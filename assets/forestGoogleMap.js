@@ -131,6 +131,12 @@ function initializeSlider(container) {
   let slideIndex = 0;
   const slides = container.querySelectorAll(".slider img"); // Access slider images within the container
 
+  if (!slides || slides.length === 0) {
+    // Handle case when no slides (images) are found
+    console.log("No images found in the slider");
+    return; // Exit the function if no slides are present
+  }
+
   function showSlide(index) {
     if (index >= slides.length) {
       slideIndex = 0;
