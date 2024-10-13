@@ -104,7 +104,7 @@ function shareMe(){
 }
 function aboutMe(forest){
   if (forest?.link === "") {
-    alert("Sorry, the forest isn't available now.")
+    alert("Sorry, the forest isn't available now.");
   }else{
     window.open(forest?.link, "_blank");
   }
@@ -120,6 +120,8 @@ function imageSlider(forest, content){
       img.src = url;
       docFrag.appendChild(img);
     });
+  }else if (forest?.images ==="") {
+    alert("Sorry, the forest isn't available now.");
   }
 
   container.appendChild(docFrag);
