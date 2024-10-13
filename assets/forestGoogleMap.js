@@ -89,7 +89,7 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
-    imageSlider(f);
+    imageSlider(f, content);
     return content;
 }
 function shareMe(){
