@@ -98,25 +98,7 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
-    const images = content.querySelectorAll(".slider img");
-    images.forEach((img) => {
-        img.onload = function (e) {
-          let canvas = document.createElement("canvas");
-          let ratio = WIDTH/ e.target.width;
-          canvas.width = WIDTH;
-          canvas.height = e.target.height * ratio;
-
-          const context = canvas.getContext("2d");
-          context.drawImage(e.target, 0, 0 ,canvas.width, canvas.height);
-
-          let new_image_url = context.canvas.toDataURL("image/jpeg", 0.9);
-
-          let new_image = document.createElement("img");
-          new_image.src = new_image_url;
-          img.appendChild(new_image);
-          
-        };
-      });
+    
     
     return content;
 }
