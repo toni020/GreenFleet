@@ -118,7 +118,7 @@ function imageSlider(forest){
     var img = document.createElement('img');
     img.src = url;
     docFrag.appendChild(img);
-  });
+  },);
 
   container.appendChild(docFrag);
 }
