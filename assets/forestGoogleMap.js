@@ -60,7 +60,7 @@ function aboutMe(forest){
 }
 
 function buildContent(f){
-
+  WIDTH = 450px;
   const content = document.createElement("div");
   content.classList.add("forest");
   content.innerHTML = `
