@@ -60,8 +60,7 @@ function buildContent(f){
     <section class="container">
       <div class="slider-wrapper">
         <div class="slider">
-          <img class="image" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459">
-          <img class="image" src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789"> 
+
         </div>
       </div>
     </section>
@@ -111,6 +110,19 @@ function aboutMe(forest){
   }
 }
 
+function imageSlider(f){
+  var container = document.getElementsByClass("slider");
+  var docFrag = document.createDocumentFragment();
+
+  ${f?.images}.forEach(function(url, index, originalArray) {
+    var img = document.createElement('img');
+    img.src = url;
+    docFrag.appendChild(img);
+  });
+
+  container.appendChild(docFrag);
+}
+
 
 const forests = [
   {
@@ -121,7 +133,7 @@ const forests = [
       lng: 148.9246943,
     },
     link:"",
-    Images: [
+    images: [
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
     ],
