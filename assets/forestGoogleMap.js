@@ -100,7 +100,7 @@ function buildContent(f){
     });
     const images = content.querySelectorAll(".slider img");
     images.forEach((img) => {
-        img.onload = function (e) =>{
+        img.onload = function (e) {
           let canvas = document.createElement("canvas");
           let ratio = WIDTH/ e.target.width;
           canvas.width = WIDTH;
