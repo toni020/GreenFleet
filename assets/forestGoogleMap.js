@@ -109,7 +109,7 @@ function buildContent(f){
           const context = canvas.getContext("2d");
           context.drawImage(e.target, 0, 0 ,canvas.width, canvas.height);
 
-          let new_image_url = context.canvas.toDataURL("image/jpeg"", 0.9);
+          let new_image_url = context.canvas.toDataURL("image/jpeg", 0.9);
 
           let new_image = document.createElement("img");
           new_image.src = new_image_url;
