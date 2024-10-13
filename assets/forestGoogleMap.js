@@ -100,24 +100,24 @@ function buildContent(f){
     });
     content.querySelector(".slider").addEventListener("change", (event)=>{
       const imgs = document.getElementsByTagName("img");
-      for(img in imgs{
+      for(img in imgs){
         img.onload = (e) =>{
-          let canvas = document.createElement("canvas")
-          let ratio = WIDTH/ e.target.width
-          canvas.width = WIDTH
-          canvas.height = e.target.height * ratio
+          let canvas = document.createElement("canvas");
+          let ratio = WIDTH/ e.target.width;
+          canvas.width = WIDTH;
+          canvas.height = e.target.height * ratio;
 
-          const context = canvas.getContext("2d")
-          context.drawImage(img, 0, 0 ,canvas.width, canvas.height)
+          const context = canvas.getContext("2d");
+          context.drawImage(img, 0, 0 ,canvas.width, canvas.height);
 
-          let new_image_url = context.canvas.toDataURL("image/jqeg", 90)
+          let new_image_url = context.canvas.toDataURL("image/jqeg", 90);
 
-          let new_image = document.createElement("img")
-          new_image.src = new_image_url
-          img.appendChild(new_image)
+          let new_image = document.createElement("img");
+          new_image.src = new_image_url;
+          img.appendChild(new_image);
           
         }
-      })
+      });
       
     });
     return content;
