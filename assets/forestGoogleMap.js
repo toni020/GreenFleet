@@ -100,14 +100,14 @@ function buildContent(f){
     });
     const images = content.querySelectorAll(".slider img");
     images.forEach((img) => {
-        img.onload = (e) =>{
+        img.onload = function (e) =>{
           let canvas = document.createElement("canvas");
           let ratio = WIDTH/ e.target.width;
           canvas.width = WIDTH;
           canvas.height = e.target.height * ratio;
 
           const context = canvas.getContext("2d");
-          context.drawImage(img, 0, 0 ,canvas.width, canvas.height);
+          context.drawImage(e.target, 0, 0 ,canvas.width, canvas.height);
 
           let new_image_url = context.canvas.toDataURL("image/jpeg"", 90);
 
