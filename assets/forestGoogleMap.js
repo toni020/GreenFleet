@@ -133,10 +133,10 @@ const forests = [
       lng: 148.9246943,
     },
     link:"",
-    images: {
+    images: [
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
-    },
+    ],
   },
   {
     name: "Back O'Slaters",
@@ -146,10 +146,6 @@ const forests = [
       lng: 149.7985828,
     },
     link: "https://www.greenfleet.com.au/blogs/forest/back-oslaters",
-    images: {
-        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
-        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
-    },
   },
   {
     name: "Kosciuszko National Park",
@@ -159,10 +155,7 @@ const forests = [
       lng: 148.5915313,
     },
     link: "https://www.greenfleet.com.au/blogs/forest/kosciuszko-national-park",
-    images: {
-        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
-        "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
-    },
+
   },
 ];
 
