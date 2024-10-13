@@ -116,7 +116,7 @@ function imageSlider(forest, content){
 
   if (forest?.images ==="") {
     alert("Sorry, the forest isn't available now.");
-  } else if (!forest?.image ===""){
+  } else{
     forest.images.forEach(function(url) {
       var img = document.createElement('img');
       img.src = url;
