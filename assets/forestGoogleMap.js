@@ -98,7 +98,7 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
-    content.querySelector(".slider").addEventListener("change", (event)=>{
+    content.querySelector(".slider").onload = (event) =>{
       const imgs = document.getElementsByTagName("img");
       for(img in imgs){
         img.onload = (e) =>{
@@ -118,7 +118,7 @@ function buildContent(f){
           
         }
       }
-    });
+    }
     return content;
 }
 function shareMe(){
