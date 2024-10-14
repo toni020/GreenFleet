@@ -61,7 +61,7 @@
 /* Big Number Container */
 .big-number-container {
   display: flex;
-  align-items: flex-end; /* Align the number and the icon vertically */
+  align-items: center; /* Align the number and the icon vertically */
   justify-content: center; /* Center them horizontally */
 }
 
@@ -74,7 +74,7 @@
   margin-right: 20px; /* Add some space between the number and the icon */
   overflow: hidden; /* Hide overflow if the number is too large */
   display: flex; /* Allow for centering */
-  align-items: flex-end; /* Center the text vertically */
+  align-items: center; /* Center the text vertically */
 }
 
 /* For larger screens (like PCs) */
