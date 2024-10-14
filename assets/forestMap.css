@@ -98,6 +98,7 @@
   background: #FFFFFF;
   width: 100%;
   min-height: 60%;
+  bottom:0;
  
 }
 .forest.active .aboutMe, .feedMe, .shareMe {
