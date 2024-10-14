@@ -83,8 +83,8 @@
 }
 .forest.active .menu{
   position: relative;
+  display:flex;
   width: 100%;
-  top: 70%;
   background: red;
 }
 
