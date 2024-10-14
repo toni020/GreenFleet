@@ -53,6 +53,8 @@
   display: flex;
   flex-direction: column; /* Align elements vertically */
   align-items: center; /* Center them horizontally */
+  color: #01470e;
+  font-weight: bold;
 }
 
 /* Big Number Container */
