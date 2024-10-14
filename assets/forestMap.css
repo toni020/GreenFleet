@@ -109,7 +109,7 @@
 
 }
 
-.forest.active.menu .aboutMe, .shareMe{
+.forest.active.menu .aboutMe, .aboutMe, .shareMe{
   display: none;
 }
 
