@@ -108,13 +108,13 @@
   background: ghostwhite;
 
 }
-
-.active.menu .aboutMe, .feedMe, .shareMe{
-  display: none;
+.aboutMe{
+  display:none;
 }
-.active.menu:hover .aboutMe, .feedMe, .shareMe{
+menu:hover .aboutMe{
   display: block;
 }
+
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
   box-shadow: 0px 1px 1px 1px lightblue;
   border-radius: 0px 5px 5px 0px;
