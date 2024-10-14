@@ -118,7 +118,7 @@
 }
 menu:hover .drop-up{
   display: block;
-  
+  background: black;
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
