@@ -108,10 +108,7 @@
 
   /* Big Text */
   .big-text {
-    font-size: 2rem;
     font-size: 20px;
-    color: #01470e;
-    font-weight: bold;
     max-width: 300px; /* Limit text width for better layout control */
   }
 }
