@@ -75,7 +75,6 @@
 }
 
 /* For larger screens (like PCs) */
-/* For larger screens (like PCs) */
 @media (min-width: 768px) {
   #map-container {
     flex-direction: row; /* Side-by-side layout for larger screens */
@@ -96,8 +95,8 @@
   }
 
   .big-number {
-    font-size: 7rem; /* Increase size even more on larger screens */
-    /* max-height: none; */ /* Optional: allow full growth */
+    font-size: 100px; /* Increase size even more on larger screens */
+    max-height: none; */ /* Optional: allow full growth */
   }
 
   /* Tree Icon */
