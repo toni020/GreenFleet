@@ -89,8 +89,18 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
+    content.querySelector(".menu").addEventListener("")
+  
     imageSlider(f, content);
     return content;
+}
+function hover(content){
+  content.querySelector(".menu").addEventListener("moveover", () =>{
+    this.classList.add('.aboutMe', '.feedMe', '.shareMe');
+  });
+  content.querySelector(".menu").addEventListener("moveout", () =>{
+    this.classList.remove('.aboutMe', '.feedMe', '.shareMe');
+  });
 }
 function shareMe(){
   const media1=document.getElementsByClassName("media1");
