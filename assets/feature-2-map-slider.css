@@ -25,12 +25,21 @@
   flex-wrap: wrap;
 }
 
+/* Map */
 #map {
   flex-grow: 1;
-  height: 500px;
-  width: 100%; /* Default width on small screens */
+  width: 100%; /* Default full width on small screens */
+  max-width: 900px;
+  min-width: 300px;
+  height: 500px; /* Set consistent height */
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
+/* Big Text */
 .big-text {
   font-size: 2rem; /* Adjust size as needed */
   font-weight: bold;
@@ -48,7 +57,7 @@
 
   #map {
     width: 70%; /* Adjust to allow space for the text */
-    height: 500px;
+    height: 500px; /* Ensure a consistent height */
   }
 
   .big-text {
@@ -61,15 +70,14 @@
   }
 }
 
-
 /* Toggle Container */
 .toggle-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; /* Change to space-around or flex-start to reduce space */
-  width: 100%; /* Ensure full width */
+  justify-content: space-around; /* Adjust to space-around or flex-start */
+  width: 100%;
   max-width: 800px; /* Optional: Limit max width */
-  margin-bottom: 10px; /* Space between the toggle and the map */
+  margin-bottom: 10px;
 }
 
 /* Source Text */
@@ -80,24 +88,11 @@
   margin-top: 10px;
 }
 
-/* Map */
-#map {
-  width: 100%;
-  max-width: 900px;
-  min-width: 300px;
-  height: 100%;
-  position: relative;
-  border: 2px solid #ccc;
-  border-radius: 10px;
-  overflow: hidden;
-  box-sizing: border-box;
-}
-
 /* Toggle Item */
 .toggle-item {
   display: flex; /* Align the toggle and label on the same line */
-  align-items: center; /* Center the toggle and label vertically */
-  margin: 0 10px; /* Space on the left and right of each toggle item */
+  align-items: center;
+  margin: 0 10px;
 }
 
 /* Toggle Switch */
@@ -111,8 +106,8 @@
 /* Toggle Label */
 .toggle-label {
   margin-left: 10px; /* Space between the toggle and the label */
-  font-size: 1em; /* Font size for the label */
-  color: #666; /* Color for the label */
+  font-size: 1em;
+  color: #666;
 }
 
 /* Slider Styles */
