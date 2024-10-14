@@ -109,7 +109,7 @@
 
 }
 
-active.menu .feedMe, .aboutMe, .shareMe{
+.feedMe, .aboutMe, .shareMe{
   display: none;
 }
 .active.menu:hover .aboutMe{
