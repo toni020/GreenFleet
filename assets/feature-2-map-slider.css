@@ -61,7 +61,7 @@
 /* Big Number Container */
 .big-number-container {
   display: flex;
-  align-items: center; /* Align the number and the icon vertically */
+  align-items: flex-end; /* Align the number and the icon vertically */
   justify-content: center; /* Center them horizontally */
 }
 
