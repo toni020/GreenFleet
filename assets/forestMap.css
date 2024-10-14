@@ -85,6 +85,7 @@
   position: relative;
   width: 100%;
   top: 70%;
+  background: red;
 }
 
 .forest.active .menu:hover{
