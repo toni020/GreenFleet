@@ -81,8 +81,13 @@
   height: 125%;
   border-radius: 5%;
 }
-
 .forest.active .menu{
+  position: relative;
+  width: 100%;
+  top: 70%;
+}
+
+.forest.active .menu:hover{
   display: flex;
   flex-direction: column;
   position:relative;
