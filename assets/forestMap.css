@@ -113,6 +113,9 @@
   position: absolute;
   z-index:1;
 }
+.drop-up div{
+  display: block;
+}
 menu:hover .drop-up{
   display: block;
   
