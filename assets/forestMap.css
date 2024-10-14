@@ -103,7 +103,7 @@
   bottom:0;
   border-radius: 10px;
 }
-.forest.active.menu .name{
+.active.menu .name{
   margin: 5px 10px 0 0;
   background: ghostwhite;
 
