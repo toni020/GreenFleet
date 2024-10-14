@@ -49,16 +49,22 @@
 }
 
 /* Big Text Container */
+.big-text-container {
+  display: flex;
+  flex-direction: column; /* Align elements vertically */
+  align-items: center; /* Center them horizontally */
+}
+
+/* Big Number Container */
 .big-number-container {
   display: flex;
   align-items: center; /* Align the number and the icon vertically */
   justify-content: center; /* Center them horizontally */
-  position: relative; /* Ensure control over child elements */
 }
 
 /* Big Number Style */
 .big-number {
-  font-size: 50rem; 
+  font-size: calc(500px / 3); /* Set the font size dynamically */
   font-weight: bold;
   color: #00a61e; /* Customize color */
   line-height: 1;
@@ -67,7 +73,7 @@
 
 /* Tree Icon Style */
 .tree-icon {
-  width: 10rem; /* Adjust icon size to fit well with the number */
+  width: calc(500px / 12); /* Adjust icon size relative to the map height */
   height: auto;
 }
 
@@ -78,6 +84,26 @@
   max-width: 100%;
   font-weight: bold;
 }
+
+/* For larger screens (like PCs) */
+@media (min-width: 768px) {
+  /* Big Number */
+  .big-number {
+    font-size: calc(500px / 3); /* Adjust based on map height */
+  }
+
+  /* Tree Icon */
+  .tree-icon {
+    width: calc(500px / 12); /* Adjust icon size on larger screens */
+  }
+
+  /* Big Text */
+  .big-text {
+    font-size: 2rem;
+    max-width: 300px; /* Limit text width for better layout control */
+  }
+}
+
 
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
