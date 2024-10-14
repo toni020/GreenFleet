@@ -19,19 +19,26 @@
 /* Map Container */
 #map-container {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  flex-direction: column; /* Default column layout for smaller screens */
+  justify-content: center;
+  align-items: center;
   position: relative;
-  flex-wrap: wrap;
+  width: 100%;
+}
+
+/* Map and Toggles Wrapper */
+.map-toggle-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 900px; /* Adjust max width for larger screens */
 }
 
 /* Map */
 #map {
   flex-grow: 1;
-  width: 100%; /* Default full width on small screens */
-  max-width: 900px;
-  min-width: 300px;
-  height: 500px; /* Set consistent height */
+  width: 100%;
+  height: 500px;
   position: relative;
   border: 2px solid #ccc;
   border-radius: 10px;
@@ -52,21 +59,25 @@
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
   #map-container {
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-direction: row; /* Side-by-side layout for larger screens */
+    justify-content: flex-start;
+    align-items: center; /* Align map and text vertically */
   }
 
-  #map {
-    width: 70%; /* Adjust to allow space for the text */
-    height: 500px; /* Ensure a consistent height */
+  /* Map and Toggles in one block on the left */
+  .map-toggle-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 70%; /* Adjust width of the map and toggle block */
   }
 
+  /* Big Text to the right */
   .big-text {
     font-size: 2rem;
-    margin-right: 20px;
+    margin-left: 20px; /* Space between the map block and the text */
     margin-top: 0;
     text-align: left;
-    max-width: 300px; /* Limit text width for better layout control */
-    align-self: center;
+    max-width: 30%; /* Limit text width for better layout control */
   }
 }
 
@@ -74,9 +85,9 @@
 .toggle-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around; /* Adjust to space-around or flex-start */
+  justify-content: space-around;
   width: 100%;
-  max-width: 800px; /* Optional: Limit max width */
+  max-width: 900px;
   margin-bottom: 10px;
 }
 
@@ -90,7 +101,7 @@
 
 /* Toggle Item */
 .toggle-item {
-  display: flex; /* Align the toggle and label on the same line */
+  display: flex;
   align-items: center;
   margin: 0 10px;
 }
@@ -99,13 +110,13 @@
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 60px; /* Width of the toggle switch */
-  height: 34px; /* Height of the toggle switch */
+  width: 60px;
+  height: 34px;
 }
 
 /* Toggle Label */
 .toggle-label {
-  margin-left: 10px; /* Space between the toggle and the label */
+  margin-left: 10px;
   font-size: 1em;
   color: #666;
 }
@@ -118,7 +129,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #ccc; /* Light grey background for the slider */
+  background-color: #ccc;
   transition: .4s;
   border-radius: 34px;
 }
@@ -132,36 +143,36 @@
   border-radius: 50%;
   left: 4px;
   bottom: 4px;
-  background-color: white; /* White circle */
+  background-color: white;
   transition: .4s;
 }
 
 /* Checked State of Slider */
 input:checked + .slider {
-  background-color: #008113; /* Green background when checked */
+  background-color: #008113;
 }
 
 input:checked + .slider:before {
-  transform: translateX(26px); /* Move the circle */
+  transform: translateX(26px);
 }
 
 /* Dark Mode Styles */
 body.dark-mode .feature-2-map-slider-title {
-  color: #e0e0e0; /* Lighter text color for dark mode */
+  color: #e0e0e0;
 }
 
 body.dark-mode .feature-2-map-slider-description {
-  color: #a0d6a0; /* Lighter description for dark mode */
+  color: #a0d6a0;
 }
 
 body.dark-mode #map {
-  border: 2px solid #444; /* Darker border for map */
+  border: 2px solid #444;
 }
 
 body.dark-mode .source-text {
-  color: #bbb; /* Lighter source text for dark mode */
+  color: #bbb;
 }
 
 body.dark-mode .toggle-label {
-  color: #ccc; /* Lighter label color for dark mode */
+  color: #ccc;
 }
