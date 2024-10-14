@@ -84,9 +84,10 @@
 .forest.active .menu{
   position: relative;
   display:flex;
-  width: 100%;
+  width: 450px;
   background: red;
   z-index: 2;
+  top: 80%;
 }
 
 .forest.active .menu:hover{
