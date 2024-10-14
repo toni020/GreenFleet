@@ -42,6 +42,7 @@
   position: relative;
   border: 2px solid #ccc;
   border-radius: 10px;
+  margin-left: 100px;
   overflow: hidden;
   box-sizing: border-box;
 }
