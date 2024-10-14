@@ -60,7 +60,7 @@
 
 /* Big Number Style */
 .big-number {
-  font-size: 10rem; /* Much bigger size for the number */
+  font-size: 20rem; /* Much bigger size for the number */
   font-weight: bold;
   color: #0eed37; /* Customize color */
   line-height: 1;
@@ -68,7 +68,7 @@
 
 /* Big Text Style */
 .big-text {
-  font-size: 2rem; /* Smaller text for the descriptive part */
+  font-size: 5rem; /* Smaller text for the descriptive part */
   color: #068f1f;
   font-weight: normal;
   max-width: 100%;
