@@ -92,7 +92,7 @@
 
   /* Big Text container to the right */
   .big-text-container {
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-end; /* Align text to the left */
     text-align: left;
     margin-left: 20px;
   }
