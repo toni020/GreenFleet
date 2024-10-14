@@ -82,12 +82,12 @@
   border-radius: 5%;
 }
 .forest.active .menu{
-  position: relative;
+  position: absolute;
   display:flex;
   width: 450px;
   background: red;
   z-index: 2;
-  top: 80%;
+  bottom: o;
 }
 
 .forest.active .menu:hover{
