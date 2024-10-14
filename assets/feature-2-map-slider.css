@@ -48,15 +48,30 @@
   box-sizing: border-box;
 }
 
-/* Big Text */
-.big-text {
-  font-size: 2rem; /* Adjust size as needed */
-  font-weight: bold;
-  color: #333; /* Change as per your design */
+/* Big Text Container */
+.big-text-container {
+  display: flex;
+  flex-direction: column; /* Stack the number on top of the text */
+  align-items: center; /* Center the text in the middle */
+  justify-content: center;
+  text-align: center; /* Center align the text for small screens */
   margin-top: 20px;
-  text-align: center; /* Default center alignment on small screens */
-  max-width: 100%;
+}
 
+/* Big Number Style */
+.big-number {
+  font-size: 5rem; /* Much bigger size for the number */
+  font-weight: bold;
+  color: #333; /* Customize color */
+  line-height: 1;
+}
+
+/* Big Text Style */
+.big-text {
+  font-size: 1.5rem; /* Smaller text for the descriptive part */
+  color: #333;
+  font-weight: normal;
+  max-width: 100%;
 }
 
 /* For larger screens (like PCs) */
@@ -64,25 +79,31 @@
   #map-container {
     flex-direction: row; /* Side-by-side layout for larger screens */
     justify-content: flex-start;
-    align-items: center; /* Align map and text vertically */
+    align-items: center;
   }
 
   /* Map and Toggles in one block on the left */
   .map-toggle-wrapper {
-    display: flex;
-    flex-direction: column;
-    width: 70%; /* Adjust width of the map and toggle block */
+    width: 70%;
   }
 
-  /* Big Text to the right */
+  /* Big Text container to the right */
+  .big-text-container {
+    align-items: flex-start; /* Align text to the left */
+    text-align: left;
+    margin-left: 20px;
+  }
+
+  .big-number {
+    font-size: 7rem; /* Increase size even more on larger screens */
+  }
+
   .big-text {
     font-size: 2rem;
-    margin-left: 20px; /* Space between the map block and the text */
-    margin-top: 0;
-    text-align: left;
-    max-width: 30%; /* Limit text width for better layout control */
+    max-width: 300px; /* Limit text width for better layout control */
   }
 }
+
 
 /* Toggle Container */
 .toggle-container {
