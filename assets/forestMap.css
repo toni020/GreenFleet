@@ -95,8 +95,6 @@
 .forest.active .menu:hover{
   display: flex;
   flex-direction: column;
-  position:absolute;
-  z-index:2;
   background: #FFFFFF;
   width: 100%;
   min-height: 60%;
@@ -108,18 +106,16 @@
   background: ghostwhite;
 
 }
-.drop-up{
-  display:none;
-  position: absolute;
-  z-index:2;
-  background: black;
+.forest.active .menu:hover {
+  display: flex;
+  flex-direction: column;
+  background: #FFFFFF;
+  width: 100%;
+  min-height: 60%;
+  bottom: 0;
 }
-.drop-up div{
+.forest.active .menu:hover .drop-up {
   display: block;
-}
-menu:hover .drop-up{
-  display: block;
-  
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
