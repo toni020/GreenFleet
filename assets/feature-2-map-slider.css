@@ -95,13 +95,13 @@
   }
 
   .big-number {
-    font-size: 130px; /* Increase size even more on larger screens */
+    font-size: 140px; /* Increase size even more on larger screens */
     max-height: none; */ /* Optional: allow full growth */
   }
 
   /* Tree Icon */
   .tree-icon {
-    width: 60px; /* Adjust icon size on larger screens */
+    width: 80px; /* Adjust icon size on larger screens */
   }
 
   /* Big Text */
