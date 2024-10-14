@@ -49,22 +49,26 @@
 }
 
 /* Big Text Container */
-.big-text-container {
+.big-number-container {
   display: flex;
-  flex-direction: column; /* Stack the number on top of the text */
-  align-items: center; /* Center the text in the middle */
-  justify-content: center;
-  text-align: center; /* Center align the text for small screens */
-  margin-top: 20px;
+  align-items: center; /* Align the number and the icon vertically */
+  justify-content: center; /* Center them horizontally */
+  position: relative; /* Ensure control over child elements */
 }
 
 /* Big Number Style */
 .big-number {
-  font-size: 50vw; 
-  max-height: 100%;
+  font-size: 50rem; 
   font-weight: bold;
   color: #00a61e; /* Customize color */
   line-height: 1;
+  margin-right: 20px; /* Add some space between the number and the icon */
+}
+
+/* Tree Icon Style */
+.tree-icon {
+  width: 10rem; /* Adjust icon size to fit well with the number */
+  height: auto;
 }
 
 /* Big Text Style */
