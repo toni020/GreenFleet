@@ -87,7 +87,7 @@
   background: red;
   z-index: 2;
   top:100%;
-  transform: translateY(-100%)
+  transform: translateY(-99%)
 }
 
 .forest.active .menu:hover{
@@ -99,7 +99,7 @@
   width: 100%;
   min-height: 60%;
   bottom:0;
-  border-radius: 
+  border-radius: 10px;
 }
 .forest.active .aboutMe, .feedMe, .shareMe {
   display: block;
