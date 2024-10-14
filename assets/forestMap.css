@@ -86,6 +86,7 @@
   display:flex;
   width: 100%;
   background: red;
+  z-index: 2;
 }
 
 .forest.active .menu:hover{
