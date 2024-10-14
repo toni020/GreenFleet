@@ -111,8 +111,10 @@
 .drop-up{
   display:none;
 }
-menu:hover .aboutMe{
+menu:hover .drop-up{
   display: block;
+  position: absolute;
+  z-index:1;
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
