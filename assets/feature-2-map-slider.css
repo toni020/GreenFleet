@@ -75,24 +75,6 @@
 }
 
 /* For larger screens (like PCs) */
-@media (min-width: 768px) {
-  .big-number {
-    font-size: 20rem; /* Set a specific size for larger screens */
-    max-height: none; /* Remove max height restriction for larger screens */
-  }
-
-  /* Tree Icon */
-  .tree-icon {
-    width: calc(500px / 12); /* Adjust icon size on larger screens */
-  }
-
-  /* Big Text */
-  .big-text {
-    font-size: 2rem;
-    max-width: 300px; /* Limit text width for better layout control */
-  }
-}
-
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
   #map-container {
@@ -115,8 +97,15 @@
 
   .big-number {
     font-size: 7rem; /* Increase size even more on larger screens */
+    /* max-height: none; */ /* Optional: allow full growth */
   }
 
+  /* Tree Icon */
+  .tree-icon {
+    width: calc(500px / 12); /* Adjust icon size on larger screens */
+  }
+
+  /* Big Text */
   .big-text {
     font-size: 2rem;
     max-width: 300px; /* Limit text width for better layout control */
