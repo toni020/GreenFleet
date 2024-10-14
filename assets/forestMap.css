@@ -112,13 +112,14 @@
   display:none;
   position: absolute;
   z-index:2;
+  background: black;
 }
 .drop-up div{
   display: block;
 }
 menu:hover .drop-up{
   display: block;
-  background: black;
+  
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
