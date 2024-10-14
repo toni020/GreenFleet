@@ -68,8 +68,8 @@
 
 /* Big Text Style */
 .big-text {
-  font-size: 1.5rem; /* Smaller text for the descriptive part */
-  color: #333;
+  font-size: 2rem; /* Smaller text for the descriptive part */
+  color: #068f1f;
   font-weight: normal;
   max-width: 100%;
 }
