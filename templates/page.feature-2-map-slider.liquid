@@ -37,6 +37,13 @@
         <span class="toggle-label">Indigenous Forest Area</span>
       </div>
     </div>
+    <div class="toggle-item">
+      <label class="toggle-switch">
+        <input type="checkbox" id="toggleDarkMode">
+        <span class="slider"></span>
+      </label>
+      <span class="toggle-label">Dark Mode</span>
+    </div>
     <div id="map"></div> 
     <p class="source-text"></p> 
   </div>
@@ -47,7 +54,7 @@
     const grassIconUrl = '{{ "grass.png" | asset_url }}';
 
     const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
-    const jsonStylesLightUrl = '{{ "map_custom_theme_retro.json" | asset_url }}';
+    const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}';
 
     let mapStyles_dark, mapStyles_light;
 
