@@ -55,6 +55,7 @@
   align-items: center; /* Center them horizontally */
   color: #01470e;
   font-weight: bold;
+  text-align: justify;
 }
 
 /* Big Number Container */
