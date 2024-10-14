@@ -21,35 +21,39 @@
   </p>
 
   <div id="map-container">
-    <div class="toggle-container">
-      <div class="toggle-item">
-        <label class="toggle-switch">
-          <input type="checkbox" id="toggleMarkers">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-label">Before Greenfleet Impact</span>
+    <!-- Map and toggle buttons as one block -->
+    <div class="map-toggle-wrapper">
+      <div class="toggle-container">
+        <div class="toggle-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleMarkers">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">Before Greenfleet Impact</span>
+        </div>
+        <div class="toggle-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleAboriginalOverlay">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">Indigenous Forest Area</span>
+        </div>
+        <div class="toggle-item">
+          <label class="toggle-switch">
+            <input type="checkbox" id="toggleDarkMode">
+            <span class="slider"></span>
+          </label>
+          <span class="toggle-label">Dark Mode</span>
+        </div>
       </div>
-      <div class="toggle-item">
-        <label class="toggle-switch">
-          <input type="checkbox" id="toggleAboriginalOverlay">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-label">Indigenous Forest Area</span>
-      </div>
-      <div class="toggle-item">
-        <label class="toggle-switch">
-          <input type="checkbox" id="toggleDarkMode">
-          <span class="slider"></span>
-        </label>
-        <span class="toggle-label">Dark Mode</span>
-      </div>
+      <div id="map"></div> 
+      <p class="source-text"></p> 
     </div>
-    <div id="map"></div> 
-    <p class="source-text"></p> 
-  </div>
 
-  <div class="big-text">
-    10.8 million trees planted across Australia and New Zealand
+    <!-- Big text next to the map on larger screens -->
+    <div class="big-text">
+      10.8 million trees planted across Australia and New Zealand
+    </div>
   </div>
 
   <script>
