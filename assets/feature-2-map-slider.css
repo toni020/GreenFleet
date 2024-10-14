@@ -78,7 +78,7 @@
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
   .big-number {
-    font-size: 7rem; /* Set a specific size for larger screens */
+    font-size: 20rem; /* Set a specific size for larger screens */
     max-height: none; /* Remove max height restriction for larger screens */
   }
 
