@@ -69,7 +69,6 @@
   color: #00a61e; /* Customize color */
   line-height: 1;
   margin-right: 20px; /* Add some space between the number and the icon */
-  max-height: 150px; /* Set a max height to control size */
   overflow: hidden; /* Hide overflow if the number is too large */
   display: flex; /* Allow for centering */
   align-items: center; /* Center the text vertically */
