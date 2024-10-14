@@ -54,10 +54,9 @@
  */
 
 .forest.active {
-  background-color: #FFFFFF;
+  background-color: yellow;
   border-radius: 5%;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
-  
   height: 350px;
   width: 450px;
   z-index:1;
@@ -87,7 +86,6 @@
   width: 450px;
   background: red;
   z-index: 2;
-  border-collapse: collapse;
 }
 
 .forest.active .menu:hover{
