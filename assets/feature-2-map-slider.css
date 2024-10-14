@@ -60,9 +60,9 @@
 
 /* Big Number Style */
 .big-number {
-  font-size: 5rem; /* Much bigger size for the number */
+  font-size: 10rem; /* Much bigger size for the number */
   font-weight: bold;
-  color: #333; /* Customize color */
+  color: #0eed37; /* Customize color */
   line-height: 1;
 }
 
