@@ -64,32 +64,22 @@
 
 /* Big Number Style */
 .big-number {
-  font-size: calc(500px / 3); /* Set the font size dynamically */
+  font-size: 20vh; /* Use viewport height for responsive scaling */
   font-weight: bold;
   color: #00a61e; /* Customize color */
   line-height: 1;
   margin-right: 20px; /* Add some space between the number and the icon */
-}
-
-/* Tree Icon Style */
-.tree-icon {
-  width: calc(500px / 12); /* Adjust icon size relative to the map height */
-  height: auto;
-}
-
-/* Big Text Style */
-.big-text {
-  font-size: 5vw; /* Smaller text for the descriptive part */
-  color: #01470e;
-  max-width: 100%;
-  font-weight: bold;
+  max-height: 150px; /* Set a max height to control size */
+  overflow: hidden; /* Hide overflow if the number is too large */
+  display: flex; /* Allow for centering */
+  align-items: center; /* Center the text vertically */
 }
 
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
-  /* Big Number */
   .big-number {
-    font-size: calc(500px / 3); /* Adjust based on map height */
+    font-size: 7rem; /* Set a specific size for larger screens */
+    max-height: none; /* Remove max height restriction for larger screens */
   }
 
   /* Tree Icon */
@@ -103,7 +93,6 @@
     max-width: 300px; /* Limit text width for better layout control */
   }
 }
-
 
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
