@@ -108,7 +108,7 @@
   background: ghostwhite;
 
 }
- .active.menu .aboutMe{
+ .active.menu:hover .aboutMe{
    display: block;
  }
 
