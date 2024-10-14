@@ -76,6 +76,10 @@
   display: flex; /* Allow for centering */
   align-items: center; /* Center the text vertically */
 }
+  /* Tree Icon */
+.tree-icon {
+  width: 70px; /* Adjust icon size on larger screens */
+}
 
 /* For larger screens (like PCs) */
 @media (min-width: 768px) {
@@ -95,16 +99,6 @@
     align-items: flex-start; /* Align text to the left */
     text-align: left;
     margin-left: 20px;
-  }
-
-  .big-number {
-    font-size: 150px; /* Increase size even more on larger screens */
-    max-height: none; */ /* Optional: allow full growth */
-  }
-
-  /* Tree Icon */
-  .tree-icon {
-    width: 70px; /* Adjust icon size on larger screens */
   }
 
   /* Big Text */
