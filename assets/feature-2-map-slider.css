@@ -95,7 +95,7 @@
   }
 
   .big-number {
-    font-size: 150px; /* Increase size even more on larger screens */
+    font-size: 130px; /* Increase size even more on larger screens */
     max-height: none; */ /* Optional: allow full growth */
   }
 
