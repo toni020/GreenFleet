@@ -111,7 +111,7 @@
   display:none;
 }
 
- .active.menu:hover .aboutMe{
+.active.menu:hover .aboutMe{
    display: block;
  }
 
