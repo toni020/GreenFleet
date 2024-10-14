@@ -74,7 +74,7 @@
   margin-right: 20px; /* Add some space between the number and the icon */
   overflow: hidden; /* Hide overflow if the number is too large */
   display: flex; /* Allow for centering */
-  align-items: center; /* Center the text vertically */
+  align-items: flex-end; /* Center the text vertically */
 }
 
 /* For larger screens (like PCs) */
