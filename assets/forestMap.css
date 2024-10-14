@@ -109,10 +109,10 @@
 
 }
 
-.forest.active.menu .aboutMe, .feedMe, .shareMe{
+.active.menu .aboutMe, .feedMe, .shareMe{
   display: none;
 }
-.forest.active.menu:hover .aboutMe, .feedMe, .shareMe{
+.active.menu:hover .aboutMe, .feedMe, .shareMe{
   display: block;
 }
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
