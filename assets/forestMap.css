@@ -112,6 +112,9 @@
 .feedMe, .aboutMe, .shareMe{
   display: none;
 }
+.active.menu:hover .aboutMe{
+  display:block;
+}
 
 .forest.active.menu .aboutMe:hover, .feedMe:hover, .shareMe:hover{
   box-shadow: 0px 1px 1px 1px lightblue;
