@@ -89,7 +89,7 @@ function buildContent(f){
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
     });
-    content.querySelector(".menu").addEventListener("")
+    hover(content);
   
     imageSlider(f, content);
     return content;
