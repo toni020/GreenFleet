@@ -60,7 +60,7 @@
 
 /* Big Number Style */
 .big-number {
-  font-size: 50rem; 
+  font-size: 50vw; 
   font-weight: bold;
   color: #00a61e; /* Customize color */
   line-height: 1;
