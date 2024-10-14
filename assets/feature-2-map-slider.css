@@ -62,14 +62,14 @@
 .big-number {
   font-size: 20rem; /* Much bigger size for the number */
   font-weight: bold;
-  color: #00d126; /* Customize color */
+  color: #00a61e; /* Customize color */
   line-height: 1;
 }
 
 /* Big Text Style */
 .big-text {
   font-size: 5rem; /* Smaller text for the descriptive part */
-  color: #068f1f;
+  color: #01470e;
   font-weight: normal;
   max-width: 100%;
   font-weight: bold;
