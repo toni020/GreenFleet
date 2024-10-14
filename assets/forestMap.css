@@ -103,14 +103,14 @@
   bottom:0;
   border-radius: 10px;
 }
-.forest.active.menu name{
+.forest.active.menu .name{
   margin: 5px 10px 0 0;
+  background: ghostwhite;
 
 }
 
-.forest.active.menu:hover .aboutMe, .feedMe, .shareMe{
-  display: block;
-  padding: 5px;
+.forest.active.menu .aboutMe, .feedMe, .shareMe{
+  display: none;
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
