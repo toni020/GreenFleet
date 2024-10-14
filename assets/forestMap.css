@@ -100,22 +100,28 @@
   min-height: 60%;
   bottom:0;
   border-radius: 10px;
+  transition: all 0.3s ease-in-out;
 }
 .active.menu .name{
   margin: 5px 10px 0 0;
   background: ghostwhite;
 
 }
-.forest.active .menu:hover {
-  display: flex;
-  flex-direction: column;
-  background: #FFFFFF;
-  width: 100%;
-  min-height: 60%;
-  bottom: 0;
-}
 .forest.active .menu:hover .drop-up {
   display: block;
+}
+
+.forest.active .menu .aboutMe, 
+.forest.active .menu .feedMe, 
+.forest.active .menu .shareMe {
+  display: block;
+  margin: 5px 0;
+  padding: 5px;
+  background-color: #fff;
+  color: #000;
+  text-align: center;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out;
 }
 
 .forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
@@ -123,6 +129,19 @@
   border-radius: 0px 5px 5px 0px;
 }
 
+.forest.active .menu .drop-up {
+  display: none;
+  position: absolute;
+  top: -50px;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  text-align: center;
+  z-index: 2;
+  border-radius: 10px;
+}
 
 .forest.active .media1{
   display: none;
