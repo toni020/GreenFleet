@@ -27,6 +27,14 @@
   align-items: center; /* Center elements horizontally */
 }
 
+.big-text {
+  font-size: 2rem; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* You can change this color depending on your design */
+  margin-right: 20px;
+  max-width: 300px; /* You can adjust this for better layout control */
+}
+
 /* Toggle Container */
 .toggle-container {
   display: flex;
