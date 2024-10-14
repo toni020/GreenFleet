@@ -18,22 +18,49 @@
 
 /* Map Container */
 #map-container {
-  position: relative;
-  width: 100%;
-  height: 600px; /* Adjust as needed */
-  margin: 0;
   display: flex;
-  flex-direction: column; /* Stack elements vertically */
-  align-items: center; /* Center elements horizontally */
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+#map {
+  flex-grow: 1;
+  height: 500px;
+  width: 100%; /* Default width on small screens */
 }
 
 .big-text {
   font-size: 2rem; /* Adjust size as needed */
   font-weight: bold;
-  color: #333; /* You can change this color depending on your design */
-  margin-right: 20px;
-  max-width: 300px; /* You can adjust this for better layout control */
+  color: #333; /* Change as per your design */
+  margin-top: 20px;
+  text-align: center; /* Default center alignment on small screens */
+  max-width: 100%;
 }
+
+/* For larger screens (like PCs) */
+@media (min-width: 768px) {
+  #map-container {
+    flex-wrap: nowrap; /* Prevent wrapping */
+  }
+
+  #map {
+    width: 70%; /* Adjust to allow space for the text */
+    height: 500px;
+  }
+
+  .big-text {
+    font-size: 2rem;
+    margin-right: 20px;
+    margin-top: 0;
+    text-align: left;
+    max-width: 300px; /* Limit text width for better layout control */
+    align-self: center;
+  }
+}
+
 
 /* Toggle Container */
 .toggle-container {
