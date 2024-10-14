@@ -87,7 +87,7 @@
   width: 450px;
   background: red;
   z-index: 2;
-  bottom: o;
+  border-collapse: collapse;
 }
 
 .forest.active .menu:hover{
