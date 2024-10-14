@@ -55,6 +55,8 @@
   margin-top: 20px;
   text-align: center; /* Default center alignment on small screens */
   max-width: 100%;
+  margin-left: 100px;
+  margin-right: 100px;
 }
 
 /* For larger screens (like PCs) */
