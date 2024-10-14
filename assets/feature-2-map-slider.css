@@ -63,6 +63,7 @@
   font-size: 50vw; 
   font-weight: bold;
   color: #00a61e; /* Customize color */
+  line-height: 1;
 }
 
 /* Big Text Style */
