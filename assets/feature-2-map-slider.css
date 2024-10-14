@@ -33,7 +33,7 @@
   flex-direction: row;
   justify-content: space-around; /* Change to space-around or flex-start to reduce space */
   width: 100%; /* Ensure full width */
-  max-width: 900px; /* Optional: Limit max width */
+  max-width: 800px; /* Optional: Limit max width */
   margin-bottom: 10px; /* Space between the toggle and the map */
 }
 
