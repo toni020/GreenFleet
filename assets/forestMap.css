@@ -85,7 +85,8 @@
   display:flex;
   width: 450px;
   height:100px;
-  background: #f0f8ff;
+  /* background: #f0f8ff;*/
+  background: red;
   z-index: 2;
   top:100%;
   transform: translateY(-99%);
@@ -156,9 +157,7 @@
 .menu .drop-up:hover ~ .name {
   color: #228B22; /* Change color of .name on hover */
 }
-.menu .drop-up:hover {
-  background-color: #e0e0e0;
-}
+
 .forest.active .menu:hover .drop-up {
   display: block;
   background: #FFFFFF;
