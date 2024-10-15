@@ -48,6 +48,11 @@
   box-sizing: border-box;
 }
 
+#map-container {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
 /* Big Text Container */
 .big-text-container {
   display: flex;
@@ -87,8 +92,6 @@
     flex-direction: row; /* Side-by-side layout for larger screens */
     justify-content: flex-start;
     align-items: center;
-    margin-left: 10px;
-    margin-left: 10px;
   }
 
   /* Map and Toggles in one block on the left */
