@@ -44,10 +44,7 @@ function setupToggle() {
   const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
 
-  toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
-
   toggleForest.addEventListener('change', () => {
-    toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
     markers.forEach(marker => marker.setMap(null));
     markers = [];
