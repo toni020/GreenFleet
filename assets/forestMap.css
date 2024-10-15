@@ -107,10 +107,12 @@
   margin: 5px 10px 0 0;
   background: ghostwhite;
   text-align:center;
-  font-size: 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
   font-family:Georgia, serif;
   color: rebeccapurple;
-
+  display:block;
+  transition: color 0.3s ease; 
 }
 
 .forest.active .menu .drop-up {
@@ -125,6 +127,7 @@
   text-align: center;
   z-index: 2;
   border-radius: 10px;
+  transition: background-color 0.3s ease;
 }
 
 .forest.active .menu .address {
