@@ -53,8 +53,8 @@
   align-items: center;
   position: relative;
   width: 100%;
-  padding-left: 10px; /* Add padding for smaller screens */
-  padding-right: 10px; /* Add padding for smaller screens */
+  padding-left: 15px; /* Add padding for smaller screens */
+  padding-right: 15px; /* Add padding for smaller screens */
 }
 
 
