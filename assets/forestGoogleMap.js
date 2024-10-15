@@ -75,7 +75,9 @@ function buildContent(f){
             <a class="more" href="${moreLink}" target="_blank">${isLinkAvailable ? 'More' : 'Not Available'}</a>
           </p></div>
         <div class="bottom">
-          <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
+          <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">
+            <p>Feed Me</p>
+          </div>
           <div class="test1">
             <div class="socailMedia">
               <li class="facebook">
