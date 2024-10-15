@@ -24,6 +24,8 @@
   align-items: center;
   position: relative;
   width: 100%;
+  padding-left: 15px; /* Add padding for smaller screens */
+  padding-right: 15px; /* Add padding for smaller screens */
 }
 
 /* Map and Toggles Wrapper for phonescreen*/
@@ -45,18 +47,6 @@
   overflow: hidden;
   box-sizing: border-box;
 }
-
-#map-container {
-  display: flex;
-  flex-direction: column; /* Default column layout for smaller screens */
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  width: 100%;
-  padding-left: 15px; /* Add padding for smaller screens */
-  padding-right: 15px; /* Add padding for smaller screens */
-}
-
 
 /* Big Text Container */
 .big-text-container {
