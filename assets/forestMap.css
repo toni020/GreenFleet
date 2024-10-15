@@ -131,7 +131,12 @@
   background: #FFFFFF;
 }
 
-.forest.active .menu .address, 
+.forest.active .menu .drop-up .address {
+  font-size: 10px;
+  color: #9E9E9E;
+  margin-bottom: 5px;
+}
+
 .forest.active .menu .aboutMe, 
 .forest.active .menu .feedMe, 
 .forest.active .menu .shareMe {
