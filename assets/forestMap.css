@@ -176,7 +176,7 @@
 
 
 .socailMedia li{
-  display: flex;
+  display: inline-block;
   justify-content: flex-start;
   align-items: center;
   list-style: none;
