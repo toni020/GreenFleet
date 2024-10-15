@@ -39,7 +39,7 @@
 /* Toggle Container */
 .toggle-container {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-around;
   width: 90%;
   max-width: 900px;
