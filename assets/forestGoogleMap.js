@@ -32,7 +32,7 @@ async function initMap() {
       
     mapMarker.addListener("click", () => {
       map.setCenter(mapMarker.position);
-      map.setZoom(10);
+      map.setZoom(4);
       myFunction(mapMarker);
     });
   }
@@ -52,7 +52,6 @@ function myFunction(markerView){
 }
 
 function buildContent(f){
-  const WIDTH = 450;
   const content = document.createElement("div");
   content.classList.add("forest");
   content.innerHTML = `
