@@ -46,6 +46,14 @@
   margin-bottom: 10px;
 }
 
+/* Toggle Item */
+.toggle-item {
+  display: flex;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px;
+}
+
 /* Map */
 #map {
   flex-grow: 1;
@@ -142,12 +150,7 @@
   margin-top: 10px;
 }
 
-/* Toggle Item */
-.toggle-item {
-  display: flex;
-  align-items: center;
-  margin: 0 10px;
-}
+
 
 /* Toggle Switch */
 .toggle-switch {
