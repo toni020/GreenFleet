@@ -166,7 +166,7 @@
   border-radius: 0px 5px 5px 0px;
 }
 
-.forest.active .media1{
+.forest.active .socailMedia{
   display: none;
   position: absolute;
   margin-top: 20px;
@@ -175,7 +175,7 @@
 }
 
 
-.media1 li{
+.socailMedia li{
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -183,11 +183,11 @@
   border-radius: 5px;
 }
 
-.media1 p{
+.socailMedia p{
   color: white;
   margin-left: 10px;
 }
-.media1 img{
+.socailMedia img{
   width:30px;
   height:30px;
   margin-left:5px;
