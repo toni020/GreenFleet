@@ -76,19 +76,19 @@ function buildContent(f){
           </p></div>
         <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
         <div class="shareMe">Make me famous</div>
-      </div>
-      <div class="media1">
-          <li class="facebook">
+        <div class="test1">
+          <div class="socailMedia">
+            <li class="facebook">
               <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-              <p>Connect to Facebook</p>
-          </li>
-          <li class="instagram">
-            <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
-            <p>Connect to Instagram</p></li>
-          <li class="linkedin">
-            <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
-            <p>Connect to linkedin</p></li>
+            </li>
+            <li class="instagram">
+              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
+            <li class="linkedin">
+              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+          </div>
+        </div>
       </div>
+      
     </div> `;
     content.querySelector(".shareMe").addEventListener("click", () =>{
       shareMe();
@@ -100,12 +100,12 @@ function buildContent(f){
 }
 
 function shareMe(){
-  const media1=document.getElementsByClassName("media1");
-    for(let i=0; i<media1.length; i++){
-      if (media1[i].style.display =="none") {
-        media1[i].style.display ="block";
+  const socailMedia=document.getElementsByClassName("socailMedia");
+    for(let i=0; i<socailMedia.length; i++){
+      if (socailMedia[i].style.display =="none") {
+        socailMedia[i].style.display ="block";
       }else{
-        media1[i].style.display ="none";
+        socailMedia[i].style.display ="none";
       }
     }
 }
