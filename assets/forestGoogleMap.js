@@ -31,8 +31,8 @@ async function initMap() {
     });
       
     mapMarker.addListener("click", () => {
-      map.setCenter(mapMarker.position);
-      map.setZoom(4);
+      // map.setCenter(mapMarker.position);
+      // map.setZoom(8);
       myFunction(mapMarker);
     });
   }
