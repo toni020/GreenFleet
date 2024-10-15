@@ -127,11 +127,11 @@
   border-radius: 10px;
 }
 
-.forest.active .menu .drop-up .address {
+.forest.active .menu .address {
   font-size: 10px;
   color: #9E9E9E;
   margin-bottom: 5px;
-  display:none;
+
 }
 
 .forest.active .menu .aboutMe, 
