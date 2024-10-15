@@ -85,8 +85,7 @@
   display:flex;
   width: 450px;
   height:100px;
-  /* background: #f0f8ff;*/
-  background: red;
+  background: #f0f8ff;
   z-index: 2;
   top:100%;
   transform: translateY(-99%);
@@ -107,13 +106,13 @@
 .active .menu .name{
   width: 100%;
   height: auto;
-  background: blue;
+  background: f0f8ff;
   position: absolute;
 
   
 }
 .active .menu .name p{
-  color: blue;
+  color: black;
 }
 
 .forest.active .menu .drop-up {
