@@ -105,12 +105,13 @@
   transition: all 0.3s ease-in-out;
 }
 .active.menu .name{
-
+  width: 100%;
+  height: auto;
   background: blue;
   position: absolute;
   top: 50%;
   left: 50%;
-  margin: -50px 0 0 -50px;
+  
 }
 .active.menu .name p{
   color: blue;
