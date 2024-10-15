@@ -92,7 +92,7 @@
   transform: translateY(-99%);
   border-radius:10px;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  
 }
 
 .forest.active .menu:hover{
@@ -109,7 +109,7 @@
   width: 100%;
   height: auto;
   position: absolute;
-
+  transition: all 0.3s ease-in-out;
 }
 .active .menu .name p{
   color: black;
