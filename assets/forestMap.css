@@ -92,6 +92,7 @@
   transform: translateY(-99%);
   border-radius:10px;
   text-align: center;
+  transition: all 0.3s ease-in-out;
 }
 
 .forest.active .menu:hover{
