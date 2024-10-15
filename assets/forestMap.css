@@ -108,7 +108,7 @@
   height: auto;
   background: f0f8ff;
   position: absolute;
-
+  font-size: 10rem;
   
 }
 .active .menu .name p{
