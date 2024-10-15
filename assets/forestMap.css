@@ -168,6 +168,8 @@
 
 .forest.active .bottom{
   display:inline;
+  text-align: justify;
+  background:yellow;
 }
 
 .forest.active .socailMedia{
