@@ -54,7 +54,7 @@
  */
 
 .forest.active {
-  background-color: yellow;
+  background-color: #FFFFFF;
   border-radius: 5%;
   box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
   height: 350px;
@@ -85,7 +85,7 @@
   display:flex;
   width: 450px;
   height:100px;
-  background: red;
+  background: #FFFFFF;
   z-index: 2;
   top:100%;
   transform: translateY(-99%);
