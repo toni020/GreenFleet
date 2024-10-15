@@ -90,7 +90,7 @@
   top:100%;
   transform: translateY(-99%);
   border-radius:10px;
-
+  text-align: center;
 }
 
 .forest.active .menu:hover{
@@ -153,7 +153,7 @@
   display: block;
   background: #FFFFFF;
 }
-.forest.active .aboutMe:hover, .feedMe:hover, .shareMe:hover{
+.forest.active .feedMe:hover{
   box-shadow: 0px 1px 1px 1px lightblue;
   border-radius: 0px 5px 5px 0px;
 }
