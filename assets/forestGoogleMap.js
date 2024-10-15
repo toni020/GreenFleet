@@ -198,7 +198,7 @@ const forests = [
     },
     link: "https://www.greenfleet.com.au/blogs/forest/kosciuszko-national-park",
     images:[],
-    intro:"Greenfleet has been working with the NSW National Parks and Wildlife Service (NPWS) since 2008 to revegetate a number of sites within Kosciuszko National Park. Five separate sites are undergoing a Greenfleet transformation, with a total area of approximately 442.5 hectares. Primarily used for grazing prior to being incorporated into Kosciuszko National Park in1967, natural regeneration at these sites has been slow and sporadic because of weed infestation, kangaroo and pest animal populations, and compacted soils.",
+    intro:"Greenfleet has been working with the NSW National Parks and Wildlife Service (NPWS) since 2008 to revegetate a number of sites within Kosciuszko National Park. Five separate sites are undergoing a Greenfleet transformation, with a total area of approximately 442.5 hectares.<br> Primarily used for grazing prior to being incorporated into Kosciuszko National Park in1967, natural regeneration at these sites has been slow and sporadic because of weed infestation, kangaroo and pest animal populations, and compacted soils.",
   },
 ];
 
