@@ -131,6 +131,7 @@
   font-size: 10px;
   color: #9E9E9E;
   margin-bottom: 5px;
+  display:none;
 }
 
 .forest.active .menu .aboutMe, 
