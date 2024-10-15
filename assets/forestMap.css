@@ -104,7 +104,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-.active.menu .name{
+.active.menu .name p{
   color: blue;
 }
 

@@ -65,7 +65,9 @@ function buildContent(f){
       </div>
     </section>
     <div class="menu">
-      <div class="name">${f?.name}</div>
+      <div class="name">
+        <p>${f?.name}</p>
+      </div>
       <div class="drop-up">
         <div class="address">${f?.address}</div>
         <div class="aboutMe">
