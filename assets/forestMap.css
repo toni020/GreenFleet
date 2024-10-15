@@ -85,17 +85,18 @@
   display:flex;
   width: 450px;
   height:100px;
-  background: #FFFFFF;
+  background: #f0f8ff;
   z-index: 2;
   top:100%;
   transform: translateY(-99%);
   border-radius:10px;
+
 }
 
 .forest.active .menu:hover{
   display: flex;
   flex-direction: column;
-  background: #FFFFFF;
+  background: #f0f8ff;
   width: 100%;
   min-height: 60%;
   bottom:0;
