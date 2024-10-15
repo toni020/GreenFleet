@@ -134,7 +134,11 @@
 
 }
 
-.forest.active .menu .aboutMe, 
+.forest.active .menu .aboutMe{
+  display:block;
+  text-align: left;
+} 
+
 .forest.active .menu .feedMe, 
 .forest.active .menu .shareMe {
   display: block;
