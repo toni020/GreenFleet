@@ -129,7 +129,7 @@
   transition: background-color 0.3s ease;
 }
 
-.forest.active .menu .address {
+.forest.active .menu:hover .address {
   font-size: 10px;
   color: #FFFFFF;
   margin-bottom: 5px;
