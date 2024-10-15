@@ -111,10 +111,7 @@
   position: absolute;
   transition: all 0.3s ease-in-out;
 }
-.active .menu .name p{
-  color: black;
-  
-}
+
 
 .forest.active .menu .drop-up {
   display: none;
