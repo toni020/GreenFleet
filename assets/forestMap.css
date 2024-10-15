@@ -170,7 +170,8 @@
   position: absolute;
 }
 
-.feedMe{
+.forest.active .feedMe{
+  background:red;
   position: absolute;
   width: 30%;
   height: auto;
@@ -180,14 +181,6 @@
 .feedMe p{
   color: black;
 }
-.test1{
-  position: absolute;
-  width: 70%;
-  height: auto;
-  text-align: center;
-  background: red;
-}
-
 .forest.active .socailMedia{
   display: inline;
   position: absolute;

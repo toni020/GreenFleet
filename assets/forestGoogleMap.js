@@ -78,7 +78,6 @@ function buildContent(f){
           <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">
             <p>Feed Me</p>
           </div>
-          <div class="test1">
             <div class="socailMedia">
               <li class="facebook">
                 <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
@@ -88,7 +87,7 @@ function buildContent(f){
               <li class="linkedin">
                 <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
             </div>
-          </div>
+
         </div>
       </div>
       
