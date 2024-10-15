@@ -109,6 +109,7 @@
 }
 .forest.active .menu:hover .drop-up {
   display: block;
+  background: #FFFFFF;
 }
 
 .forest.active .menu .aboutMe, 
