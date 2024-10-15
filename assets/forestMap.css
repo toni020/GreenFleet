@@ -163,7 +163,7 @@
 
 .forest.active .bottom{
   display:inline;
-  text-align: justify;
+  text-align: center;
   background:yellow;
   width:100%;
   height: 50px;
