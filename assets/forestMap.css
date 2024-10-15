@@ -116,6 +116,7 @@
   background: #FFFFFF;
 }
 
+.forest.active .menu .address,
 .forest.active .menu .aboutMe, 
 .forest.active .menu .feedMe, 
 .forest.active .menu .shareMe {
