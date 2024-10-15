@@ -32,6 +32,8 @@
   flex-direction: column;
   width: 100%;
   max-width: 900px; /* Adjust max width for larger screens */
+  padding-left: 15px; /* Add padding for smaller screens */
+  padding-right: 15px; /* Add padding for smaller screens */
 }
 
 /* Map */
