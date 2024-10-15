@@ -146,7 +146,9 @@
   cursor: pointer;
   transition: box-shadow 0.3s ease-in-out;
 }
-
+.forest.active .menu .aboutMe{
+  text-align: left;
+}
 .forest.active .menu:hover .drop-up {
   display: block;
   background: #FFFFFF;
