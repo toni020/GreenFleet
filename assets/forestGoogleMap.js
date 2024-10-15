@@ -74,17 +74,18 @@ function buildContent(f){
           <p>${f?.intro}
             <a class="more" href="${moreLink}" target="_blank">${isLinkAvailable ? 'More' : 'Not Available'}</a>
           </p></div>
-        <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
-        <div class="shareMe">Make me famous</div>
-        <div class="test1">
-          <div class="socailMedia">
-            <li class="facebook">
-              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
-            </li>
-            <li class="instagram">
-              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
-            <li class="linkedin">
-              <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+        <div class="bottom">
+          <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
+          <div class="test1">
+            <div class="socailMedia">
+              <li class="facebook">
+                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+              </li>
+              <li class="instagram">
+                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
+              <li class="linkedin">
+                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+            </div>
           </div>
         </div>
       </div>
