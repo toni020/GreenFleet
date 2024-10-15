@@ -33,7 +33,17 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 900px; /* Adjust max width for larger screens */
+  max-width: 900px; 
+}
+
+/* Toggle Container */
+.toggle-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 50%;
+  max-width: 60px;
+  margin-bottom: 10px;
 }
 
 /* Map */
@@ -117,15 +127,7 @@
 }
 
 
-/* Toggle Container */
-.toggle-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  width: 100%;
-  max-width: 900px;
-  margin-bottom: 10px;
-}
+
 
 /* Source Text */
 .source-text {
