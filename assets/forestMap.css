@@ -167,9 +167,11 @@
   background:yellow;
   width:100%;
   height: auto;
+  position: absolute;
 }
 
 .feedMe{
+  position: absolute;
   width: 30%;
   height: auto;
   margin-left: 10px 0 10px 0;
@@ -179,6 +181,7 @@
   color: black;
 }
 .test1{
+  position: absolute;
   width: 70%;
   height: auto;
   text-align: center;
