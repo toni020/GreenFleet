@@ -149,6 +149,11 @@
 .forest.active .menu .aboutMe{
   text-align: left;
 }
+
+.menu .drop-up:hover ~ .name {
+  color: #228B22; /* Change color of .name on hover */
+}
+
 .forest.active .menu:hover .drop-up {
   display: block;
   background: #FFFFFF;
