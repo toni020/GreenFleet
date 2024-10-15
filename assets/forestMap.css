@@ -104,16 +104,10 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-.menu .name{
-  width: 100%;
-  height: auto;
-  background: blue;
-  position: absolute;
 
-  
-}
 .active .menu .name p{
   color: black;
+  
 }
 
 .forest.active .menu .drop-up {
