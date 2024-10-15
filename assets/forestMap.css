@@ -138,7 +138,6 @@
 }
 
 .forest.active .menu .aboutMe,
-.forest.active .menu .feedMe, 
 .forest.active .menu .shareMe {
   display: block;
   margin: 5px 0;
@@ -153,10 +152,6 @@
   text-align: left;
 }
 
-.menu .drop-up:hover ~ .name {
-  color: #228B22; /* Change color of .name on hover */
-}
-
 .forest.active .menu:hover .drop-up {
   display: block;
   background: #FFFFFF;
@@ -166,11 +161,16 @@
   border-radius: 0px 5px 5px 0px;
 }
 
-.forest.active .bottom{
+.forest.active .menu:hover .bottom{
   display:inline;
   text-align: justify;
   background:yellow;
   width:100%;
+  height: auto;
+}
+
+.feedMe{
+  width: 30%;
   height: auto;
 }
 
