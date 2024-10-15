@@ -66,7 +66,7 @@ function buildContent(f){
       <div class="name">${f?.name}</div>
       <div class="drop-up">
         <div class="address">${f?.address}</div>
-        <div class="aboutMe"><p>${f?.intro}<a class="more" href="{f?.link || '#'}">More</a></p></div>
+        <div class="aboutMe"><p>${f?.intro}<a class="more" href="{f?.link || '#'}" target="_blank">More</a></p></div>
         <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
         <div class="shareMe">Make me famous</div>
       </div>
