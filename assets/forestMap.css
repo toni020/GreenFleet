@@ -181,32 +181,19 @@
   align-items: center;
   list-style: none;
   border-radius: 5px;
+  margin-right: 10px;
 }
 
-.socailMedia p{
-  color: white;
-  margin-left: 10px;
-}
 .socailMedia img{
   width:30px;
   height:30px;
   margin-left:5px;
 }
 .forest.active .facebook{
-  background: #1976d2;
-
 }
 .forest.active .instagram{
-  background: #f09433; 
-  background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
-  background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
-
 }
 .forest.active .linkedin{
-  background: #0077b5;
+
 }
-.forest.active .facebook:hover, .instagram:hover, .linkedin:hover{
-  filter: brightness(1.25);
-}
+
