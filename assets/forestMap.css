@@ -105,14 +105,10 @@
   transition: all 0.3s ease-in-out;
 }
 .active.menu .name{
-  margin: 5px 10px 0 0;
-  background: ghostwhite;
-  text-align:center;
-  font-size: 1.5rem;
-  font-weight: bold;
-  font-family:Georgia, serif;
-  color: rebeccapurple;
-  display:block;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
   transition: color 0.3s ease; 
 }
 
