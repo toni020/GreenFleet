@@ -166,7 +166,7 @@
   border-radius: 0px 5px 5px 0px;
 }
 
-.forest.active .menu:hover .bottom{
+.forest.active .bottom{
   display:inline;
 }
 
