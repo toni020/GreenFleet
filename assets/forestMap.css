@@ -85,14 +85,13 @@
   display:flex;
   width: 450px;
   height:100px;
-  background: #f0f8ff;
-  background: red
+  /* background: #f0f8ff;*/
+  background: red;
   z-index: 2;
   top:100%;
   transform: translateY(-99%);
   border-radius:10px;
   text-align: center;
-  
 }
 
 .forest.active .menu:hover{
@@ -105,8 +104,18 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
-
-
+.active .menu .name{
+  width: 100%;
+  height: auto;
+  background: blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  
+}
+.active .menu .name p{
+  color: blue;
+}
 
 .forest.active .menu .drop-up {
   display: none;
