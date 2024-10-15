@@ -104,7 +104,7 @@
   transition: all 0.3s ease-in-out;
 }
 .menu .name{
-  width: 100%;
+  width: auto;
   height: auto;
   position: absolute;
 
