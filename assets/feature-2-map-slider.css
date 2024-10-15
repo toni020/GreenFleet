@@ -26,14 +26,12 @@
   width: 100%;
 }
 
-/* Map and Toggles Wrapper */
+/* Map and Toggles Wrapper for phonescreen*/
 .map-toggle-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 900px; /* Adjust max width for larger screens */
-  margin-left: 100px;
-  margin-right: 20px;
 }
 
 /* Map */
