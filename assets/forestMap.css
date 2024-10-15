@@ -104,7 +104,7 @@
   border-radius: 10px;
   transition: all 0.3s ease-in-out;
 }
- .name{
+.menu .name{
   width: 100%;
   height: auto;
   background: blue;
@@ -112,7 +112,7 @@
 
   
 }
-.active.menu .name p{
+.active .menu .name p{
   color: blue;
 }
 
