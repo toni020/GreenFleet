@@ -105,7 +105,7 @@
   transition: all 0.3s ease-in-out;
 }
 .active.menu .name{
-  color: yellow;
+  color: blue;
 }
 
 .forest.active .menu .drop-up {
