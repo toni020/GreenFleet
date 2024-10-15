@@ -66,7 +66,7 @@ function buildContent(f){
       <div class="name">${f?.name}</div>
       <div class="drop-up">
         <div class="address">${f?.address}</div>
-        <div class="aboutMe"><p>${f?.intro}</p></div>
+        <div class="aboutMe"><p>${f?.intro}<a class="more" href="#">More</a></p></div>
         <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
         <div class="shareMe">Make me famous</div>
       </div>
@@ -83,7 +83,7 @@ function buildContent(f){
             <p>Connect to linkedin</p></li>
       </div>
     </div> `;
-    content.querySelector(".aboutMe").addEventListener("click", () => {
+    content.querySelector(".more").addEventListener("click", () => {
       aboutMe(f);
     });
     content.querySelector(".shareMe").addEventListener("click", () =>{
