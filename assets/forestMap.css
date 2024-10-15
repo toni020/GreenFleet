@@ -167,7 +167,7 @@
 }
 
 .forest.active .socailMedia{
-  display: none;
+  display: inline;
   position: absolute;
   margin-top: 20px;
   top: 100%;

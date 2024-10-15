@@ -90,9 +90,9 @@ function buildContent(f){
       </div>
       
     </div> `;
-    content.querySelector(".shareMe").addEventListener("click", () =>{
-      shareMe();
-    });
+    // content.querySelector(".shareMe").addEventListener("click", () =>{
+    //   shareMe();
+    // });
 
   
     imageSlider(f, content);
