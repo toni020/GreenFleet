@@ -49,9 +49,16 @@
 }
 
 #map-container {
-  margin-left: 10px;
-  margin-right: 10px;
+  display: flex;
+  flex-direction: column; /* Default column layout for smaller screens */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding-left: 10px; /* Add padding for smaller screens */
+  padding-right: 10px; /* Add padding for smaller screens */
 }
+
 
 /* Big Text Container */
 .big-text-container {
