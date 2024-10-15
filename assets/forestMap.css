@@ -170,6 +170,8 @@
   display:inline;
   text-align: justify;
   background:yellow;
+  width:100%;
+  height: auto;
 }
 
 .forest.active .socailMedia{
