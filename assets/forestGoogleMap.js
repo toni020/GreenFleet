@@ -66,7 +66,7 @@ function buildContent(f){
       <div class="name">${f?.name}</div>
       <div class="drop-up">
         <div class="address">${f?.address}</div>
-        <div class="aboutMe">More about me</div>
+        <div class="aboutMe"><p>${f?.intro}</p></div>
         <div class="feedMe" onclick="window.open('https://www.greenfleet.com.au/pages/donate');">Feed Me</div>
         <div class="shareMe">Make me famous</div>
       </div>
@@ -176,6 +176,7 @@ const forests = [
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/fall-vegetable-box.jpg?v=1724300459",
         "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/rack-of-womens-clothing.jpg?v=1724299789",
     ],
+    intro:"",
   },
   {
     name: "Back O'Slaters",
@@ -185,7 +186,8 @@ const forests = [
       lng: 149.7985828,
     },
     link: "https://www.greenfleet.com.au/blogs/forest/back-oslaters",
-    
+    images:[],
+    intro:"",
   },
   {
     name: "Kosciuszko National Park",
@@ -195,7 +197,10 @@ const forests = [
       lng: 148.5915313,
     },
     link: "https://www.greenfleet.com.au/blogs/forest/kosciuszko-national-park",
+    images:[],
+    intro:"Greenfleet has been working with the NSW National Parks and Wildlife Service (NPWS) since 2008 to revegetate a number of sites within Kosciuszko National Park. Five separate sites are undergoing a Greenfleet transformation, with a total area of approximately 442.5 hectares. 
 
+Primarily used for grazing prior to being incorporated into Kosciuszko National Park in1967, natural regeneration at these sites has been slow and sporadic because of weed infestation, kangaroo and pest animal populations, and compacted soils.",
   },
 ];
 
