@@ -1,12 +1,22 @@
 let map;
 let markers = [];
 let overlay;
-import { locations } from './forest-locations.js';
-
+let locations = []; // Declare an empty array to store the locations
 
 const fixedIconSize = 40;
 
+async function fetchLocations() {
+  const response = await fetch('path/to/forest-locations.json'); // Update the path as needed
+  if (!response.ok) {
+    throw new Error('Failed to fetch locations: ' + response.statusText);
+  }
+  locations = await response.json(); // Parse the JSON response and assign to locations
+}
+
 async function initMap() {
+  // Fetch locations before initializing the map
+  await fetchLocations();
+
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
@@ -19,7 +29,6 @@ async function initMap() {
     center: position,
     styles: mapStyles_light
   });
-
 
   const aboriginalLandBounds = {
     north: -11,
@@ -45,7 +54,6 @@ function setupToggle() {
   const sourceText = document.querySelector('.source-text');
 
   toggleForest.addEventListener('change', () => {
-
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
@@ -109,7 +117,6 @@ function setupToggle() {
       }
 
       fadeIn();
-
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
@@ -137,7 +144,6 @@ function setupToggle() {
     }
   });
 }
-
 
 window.initMap = initMap;
 window.addEventListener('load', initMap);
