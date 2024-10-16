@@ -1,105 +1,28 @@
 {{ "forestMap.css" | asset_url | stylesheet_tag }}
 {{ "forestGoogleMap.js" | asset_url | script_tag }}
-{{ 'feature-2-map-slider.css' | asset_url | stylesheet_tag }}
 
 <div>
-  <!-- Feature 2 Content Starts Here -->
-  <h1 class="feature-2-map-slider-title">Feature 2 - Map Filters</h1>
-
-  <div id="map-container">
-    <!-- Map and toggle buttons as one block -->
-    <div class="map-toggle-wrapper">
-      <div class="toggle-container">
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleMarkers">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Greenfleet Impact</span>
-        </div>
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleAboriginalOverlay">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Indigenous Forest Area</span>
-        </div>
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleDarkMode">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Dark Mode</span>
-        </div>
-      </div>
-      <div id="map"></div> 
-      <p class="source-text"></p> 
-    </div>
-
-    <!-- Big Text Container, Removed Picture -->
-    <div class="big-text-container">
-      <div class="big-number-container">
-        <span class="big-number">10.8</span>
-        <!-- Removed the tree image here -->
-      </div>
-      <div class="big-text">MILLION TREES PLANTED ACROSS AUSTRALIA & NEW ZEALAND</div>
-    </div>
-
-  </div>
-  <!-- Feature 2 Content Ends Here -->
-
-  <!-- Original homepage content -->
   <h1>{{ section.settings.headline }}</h1>
-  <div id="map"></div>
+<div id="map"></div>
+<script 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap"
+    defer
+></script>
 
-  <script 
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8&callback=initMap"
-      defer
-  ></script>
-
-  <!-- Feature 2 Scripts -->
-  <script>
-    const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
-    const treeIconUrl = '{{ "tree.png" | asset_url }}';
-    const grassIconUrl = '{{ "grass.png" | asset_url }}';
-
-    const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
-    const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}';
-
-    let mapStyles_dark, mapStyles_light;
-
-    fetch(jsonStylesDarkUrl)
-      .then(response => response.json())
-      .then(data => {
-        mapStyles_dark = data; 
-      })
-      .catch(error => console.error('Error fetching map styles:', error));
-
-    fetch(jsonStylesLightUrl)
-      .then(response => response.json())
-      .then(data => {
-        mapStyles_light = data; 
-      })
-      .catch(error => console.error('Error fetching map styles:', error));
-  </script>
-
-  <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
-
-  {% schema %}
-    {
-      "name": "Forest",
-      "settings": [
-        {
-          "type": "text",
-          "label": "Headline",
-          "id" : "headline"
-        }
-      ],
-      
-      "presets": [{
-          "name": "Forest"
-        }
-      ]
-    }
-  {% endschema %}
-</div>
+{% schema %}
+  {
+    "name": "Forest",
+    "settings": [
+      {
+        "type": "text",
+        "label": "Headline",
+        "id" : "headline"
+      }
+    ],
+    
+    "presets": [{
+        "name": "Forest"
+      }
+    ]
+  }
+{% endschema %}
