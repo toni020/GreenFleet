@@ -6,7 +6,7 @@ let locations = []; // Declare an empty array to store the locations
 const fixedIconSize = 40;
 
 async function fetchLocations() {
-  const response = await fetch('path/to/forest-locations.json'); // Update the path as needed
+  const response = await fetch('assets/forest-locations.json'); // Update the path as needed
   if (!response.ok) {
     throw new Error('Failed to fetch locations: ' + response.statusText);
   }
