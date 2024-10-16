@@ -1,7 +1,7 @@
 let map;
 let markers = [];
 let overlay;
-import { locations } from './forest-locations.js';
+import { locations } from './forest-locations2.js';
 
 
 const fixedIconSize = 40;
