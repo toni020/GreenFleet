@@ -1,22 +1,13 @@
 let map;
 let markers = [];
 let overlay;
-let locations = []; // Declare an empty array to store the locations
 
 const fixedIconSize = 40;
 
-async function fetchLocations() {
-  const response = await fetch('assets/forest-locations.json'); // Update the path as needed
-  if (!response.ok) {
-    throw new Error('Failed to fetch locations: ' + response.statusText);
-  }
-  locations = await response.json(); // Parse the JSON response and assign to locations
-}
+// Assume locations are defined in the global scope from the Liquid template
+let locations = window.locations || []; // Get locations from the global scope, fallback to empty array if undefined
 
 async function initMap() {
-  // Fetch locations before initializing the map
-  await fetchLocations();
-
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
   const { Map } = await google.maps.importLibrary("maps");
 
@@ -49,8 +40,6 @@ function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
   const toggleDarkMode = document.getElementById('toggleDarkMode');
-  const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
-  const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
 
   toggleForest.addEventListener('change', () => {
@@ -117,6 +106,7 @@ function setupToggle() {
       }
 
       fadeIn();
+
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
