@@ -29,19 +29,9 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
-    },
-    "custom_liquid_qeW7Gk": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features</p>",
-        "color_scheme": "",
-        "padding_top": 40,
-        "padding_bottom": 52
-      }
     }
   },
   "order": [
-    "header",
-    "custom_liquid_qeW7Gk"
+    "header"
   ]
 }
