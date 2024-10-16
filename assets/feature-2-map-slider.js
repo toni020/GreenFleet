@@ -45,12 +45,10 @@ function setupToggle() {
   const sourceText = document.querySelector('.source-text');
 
   toggleForest.addEventListener('change', () => {
-    // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
     if (toggleForest.checked) {
-        // Create a marker for each location
         locations.forEach(location => {
             const marker = new google.maps.Marker({
                 map: map,
@@ -58,33 +56,11 @@ function setupToggle() {
                 title: location.city,
                 icon: {
                     url: treeIconUrl,
-                    scaledSize: new google.maps.Size(0, 0) // Starting size for animation
+                    scaledSize: new google.maps.Size(40, 40) // Set a static size for visibility
                 }
             });
-
-            // Function to grow marker size
-            let size = 1;
-            const maxSize = fixedIconSize;
-            const growSpeed = 2;
-
-            function grow() {
-                if (size < maxSize) {
-                    size += growSpeed;
-                    marker.setIcon({
-                        url: treeIconUrl,
-                        scaledSize: new google.maps.Size(size, size)
-                    });
-                    setTimeout(grow, 30);
-                } else {
-                    marker.setIcon({
-                        url: treeIconUrl,
-                        scaledSize: new google.maps.Size(maxSize, maxSize)
-                    });
-                }
-            }
-
-            grow(); // Start growing animation
-            markers.push(marker); // Store marker in the array
+            markers.push(marker); // Store the marker in the array
+            console.log(`Created marker for: ${location.city}`);
         });
     }
 });
