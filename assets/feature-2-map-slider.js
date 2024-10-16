@@ -1,11 +1,10 @@
 let map;
 let markers = [];
 let overlay;
+import { locations } from './forest-locations.js';
+
 
 const fixedIconSize = 40;
-
-// Assume locations are defined in the global scope from the Liquid template
-let locations = window.locations || []; // Get locations from the global scope, fallback to empty array if undefined
 
 async function initMap() {
   const position = { lat: -23.116322976956745, lng: 132.13340905289155 };
@@ -20,6 +19,7 @@ async function initMap() {
     center: position,
     styles: mapStyles_light
   });
+
 
   const aboriginalLandBounds = {
     north: -11,
@@ -40,9 +40,15 @@ function setupToggle() {
   const toggleForest = document.getElementById('toggleMarkers');
   const toggleAboriginal = document.getElementById('toggleAboriginalOverlay');
   const toggleDarkMode = document.getElementById('toggleDarkMode');
+  const toggleLabelForest = document.querySelector('.toggle-label:nth-of-type(1)');
+  const toggleLabelAboriginal = document.querySelector('.toggle-label:nth-of-type(2)');
   const sourceText = document.querySelector('.source-text');
 
+  toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
+
   toggleForest.addEventListener('change', () => {
+    toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
+
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
@@ -134,6 +140,7 @@ function setupToggle() {
     }
   });
 }
+
 
 window.initMap = initMap;
 window.addEventListener('load', initMap);
