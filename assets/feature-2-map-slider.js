@@ -45,26 +45,48 @@ function setupToggle() {
   const sourceText = document.querySelector('.source-text');
 
   toggleForest.addEventListener('change', () => {
+
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
     if (toggleForest.checked) {
-        locations.forEach(location => {
-            const marker = new google.maps.Marker({
-                map: map,
-                position: { lat: location.lat, lng: location.lng },
-                title: location.city,
-                icon: {
-                    url: treeIconUrl,
-                    scaledSize: new google.maps.Size(40, 40) // Set a static size for visibility
-                }
-            });
-            markers.push(marker); // Store the marker in the array
-            console.log(`Created marker for: ${location.city}`);
+      markers = locations.map(location => {
+        const marker = new google.maps.Marker({
+          map: map,
+          position: { lat: location.lat, lng: location.lng },
+          title: location.city,
+          icon: {
+            url: treeIconUrl,
+            scaledSize: new google.maps.Size(0, 0)
+          }
         });
-    }
-});
 
+        let size = 1;
+        const maxSize = fixedIconSize;
+        const growSpeed = 2;
+
+        function grow() {
+          if (size < maxSize) {
+            size += growSpeed;
+            marker.setIcon({
+              url: treeIconUrl,
+              scaledSize: new google.maps.Size(size, size)
+            });
+            setTimeout(grow, 30);
+          } else {
+            marker.setIcon({
+              url: treeIconUrl,
+              scaledSize: new google.maps.Size(maxSize, maxSize)
+            });
+          }
+        }
+
+        grow();
+
+        return marker;
+      });
+    }
+  });
 
   toggleAboriginal.addEventListener('change', () => {
     sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020.' : '';
