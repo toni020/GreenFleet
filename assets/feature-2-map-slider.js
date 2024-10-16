@@ -1,8 +1,7 @@
 let map;
 let markers = [];
 let overlay;
-import { locations } from './forest-locations.js';
-
+let locations = []; // Declare the locations variable here
 
 const fixedIconSize = 40;
 
@@ -11,7 +10,7 @@ async function initMap() {
   const { Map } = await google.maps.importLibrary("maps");
 
   while (!mapStyles_dark) {
-    await new Promise(resolve => setTimeout(resolve, 100)); 
+    await new Promise(resolve => setTimeout(resolve, 100));
   }
 
   map = new Map(document.getElementById("map"), {
@@ -19,7 +18,6 @@ async function initMap() {
     center: position,
     styles: mapStyles_light
   });
-
 
   const aboriginalLandBounds = {
     north: -11,
@@ -32,6 +30,14 @@ async function initMap() {
     aboriginalLandImageUrl,
     aboriginalLandBounds
   );
+
+  // Make sure to wait for the fetch to complete before setting up toggles
+  await fetch(forestLocationsUrl)
+    .then(response => response.json())
+    .then(data => {
+      locations = data; // Store the locations data for use in initMap
+    })
+    .catch(error => console.error('Error fetching forest locations:', error));
 
   setupToggle();
 }
@@ -49,6 +55,7 @@ function setupToggle() {
   toggleForest.addEventListener('change', () => {
     toggleLabelForest.textContent = toggleForest.checked ? 'After Greenfleet Impact' : 'Before Greenfleet Impact';
 
+    // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
@@ -60,7 +67,7 @@ function setupToggle() {
           title: location.city,
           icon: {
             url: treeIconUrl,
-            scaledSize: new google.maps.Size(0, 0)
+            scaledSize: new google.maps.Size(1, 1) // Start with a visible size
           }
         });
 
@@ -140,7 +147,6 @@ function setupToggle() {
     }
   });
 }
-
 
 window.initMap = initMap;
 window.addEventListener('load', initMap);
