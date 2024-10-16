@@ -1,5 +1,9 @@
 // forest-locations.js
 export const locations = [
+  { lat: -35.5313, lng: 138.7761, city: 'Victor Harbor' },
+  { lat: -33.3784, lng: 149.232, city: 'Bathurst' },
+  { lat: -37.5612, lng: 143.8634, city: 'Ballarat' },
+  { lat: -41.4388, lng: 147.1347, city: 'Launceston' }
   { lat: -34.2923902, lng: 149.7934873, city: 'Canberra' },
   { lat: -35.282, lng: 149.128, city: 'Canberra' },
   { lat: -33.8688, lng: 151.2093, city: 'Sydney' },
