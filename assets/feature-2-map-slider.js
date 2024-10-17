@@ -1,7 +1,7 @@
 let map;
 let markers = [];
 let overlay;
-let locations = []; // Declare the locations variable here
+let locations = []; 
 
 const fixedIconSize = 40;
 
@@ -31,11 +31,10 @@ async function initMap() {
     aboriginalLandBounds
   );
 
-  // Make sure to wait for the fetch to complete before setting up toggles
   await fetch(forestLocationsUrl)
     .then(response => response.json())
     .then(data => {
-      locations = data; // Store the locations data for use in initMap
+      locations = data; 
     })
     .catch(error => console.error('Error fetching forest locations:', error));
 
@@ -134,7 +133,6 @@ function setupToggle() {
     }
   });
 
-  // Dark mode toggle
   toggleDarkMode.addEventListener('change', () => {
     if (toggleDarkMode.checked) {
       map.setOptions({ styles: mapStyles_dark });
