@@ -19,21 +19,21 @@
 /* Map Container */
 #map-container {
   display: flex;
-  flex-direction: column; /* Default column layout for smaller screens */
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
   width: 100%;
-  padding-left: 15px; /* Add padding for smaller screens */
-  padding-right: 15px; /* Add padding for smaller screens */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
-/* Map and Toggles Wrapper for phonescreen*/
+/* Map and Toggles Wrapper for phonescreen */
 .map-toggle-wrapper {
   display: flex;
   flex-direction: column;
   width: 100%;
-  max-width: 900px; /* Adjust max width for larger screens */
+  max-width: 900px;
 }
 
 /* Toggle Container */
@@ -71,8 +71,8 @@
 /* Big Text Container */
 .big-text-container {
   display: flex;
-  flex-direction: column; /* Align elements vertically */
-  align-items: center; /* Center them horizontally */
+  flex-direction: column;
+  align-items: center;
   color: #01470e;
   font-weight: bold;
   text-align: justify;
@@ -81,34 +81,35 @@
 /* Big Number Container */
 .big-number-container {
   display: flex;
-  align-items: center; /* Align the number and the icon vertically */
-  justify-content: center; /* Center them horizontally */
+  align-items: center;
+  justify-content: center;
 }
 
 /* Big Number Style */
 .big-number {
-  font-size: 150px; /* Use viewport height for responsive scaling */
+  font-size: 150px;
   font-weight: bold;
-  color: #00a61e; /* Customize color */
+  color: #00a61e;
   line-height: 1;
-  margin-right: 20px; /* Add some space between the number and the icon */
-  overflow: hidden; /* Hide overflow if the number is too large */
-  display: flex; /* Allow for centering */
-  align-items: center; /* Center the text vertically */
+  margin-right: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
-  /* Tree Icon */
+
+/* Tree Icon */
 .tree-icon {
-  width: 70px; /* Adjust icon size on larger screens */
+  width: 70px;
 }
 
 /* For larger screens (like PCs) */
 @media (min-width: 800px) {
   #map {
-      height: 600px;
+    height: 600px;
   }
   
   #map-container {
-    flex-direction: row; /* Side-by-side layout for larger screens */
+    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     padding-left: 100px;
@@ -118,7 +119,7 @@
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 900px; /* Adjust max width for larger screens */
+    max-width: 900px;
   }
 
   .toggle-container {
@@ -127,15 +128,13 @@
     justify-content: space-around;
     width: 100%;
     max-width: 900px;
-    margin: 0 auto; /* Center horizontally */
+    margin: 0 auto;
     margin-bottom: 10px;
-
   }
-
 
   /* Big Text container to the right */
   .big-text-container {
-    align-items: flex-start; /* Align text to the left */
+    align-items: flex-start;
     text-align: left;
     margin-left: 20px;
   }
@@ -143,12 +142,9 @@
   /* Big Text */
   .big-text {
     font-size: 20px;
-    max-width: 300px; /* Limit text width for better layout control */
+    max-width: 300px;
   }
 }
-
-
-
 
 /* Source Text */
 .source-text {
@@ -157,8 +153,6 @@
   text-align: center;
   margin-top: 10px;
 }
-
-
 
 /* Toggle Switch */
 .toggle-switch {
