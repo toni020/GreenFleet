@@ -1,7 +1,7 @@
 let map;
 let markers = [];
 let overlay;
-let locations = []; 
+let locations = [];
 
 const fixedIconSize = 40;
 
@@ -23,18 +23,15 @@ async function initMap() {
     north: -11,
     south: -44.0,
     east: 154.0,
-    west: 112.8,
+    west: 112.8
   };
 
-  overlay = new google.maps.GroundOverlay(
-    aboriginalLandImageUrl,
-    aboriginalLandBounds
-  );
+  overlay = new google.maps.GroundOverlay(aboriginalLandImageUrl, aboriginalLandBounds);
 
   await fetch(forestLocationsUrl)
     .then(response => response.json())
     .then(data => {
-      locations = data; 
+      locations = data;
     })
     .catch(error => console.error('Error fetching forest locations:', error));
 
@@ -50,7 +47,6 @@ function setupToggle() {
   const sourceText = document.querySelector('.source-text');
 
   toggleForest.addEventListener('change', () => {
-    // Clear existing markers
     markers.forEach(marker => marker.setMap(null));
     markers = [];
 
@@ -62,7 +58,7 @@ function setupToggle() {
           title: location.city,
           icon: {
             url: treeIconUrl,
-            scaledSize: new google.maps.Size(1, 1) // Start with a visible size
+            scaledSize: new google.maps.Size(1, 1)
           }
         });
 
@@ -87,14 +83,15 @@ function setupToggle() {
         }
 
         grow();
-
         return marker;
       });
     }
   });
 
   toggleAboriginal.addEventListener('change', () => {
-    sourceText.textContent = toggleAboriginal.checked ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020.' : '';
+    sourceText.textContent = toggleAboriginal.checked
+      ? 'Source: Adapted from "Australia\'s Indigenous land and forest estate" by National Forest Inventory 2020.'
+      : '';
 
     if (toggleAboriginal.checked) {
       overlay.setMap(map);
@@ -114,7 +111,6 @@ function setupToggle() {
       }
 
       fadeIn();
-
     } else {
       let opacity = overlay.getOpacity();
       const fadeOutSpeed = 0.05;
