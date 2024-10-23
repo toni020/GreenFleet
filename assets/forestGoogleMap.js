@@ -36,24 +36,26 @@ async function initMap() {
 
 }
 function myFunction(markerView){
-  // markerView.addEventListener("click",() =>{
-  //   markerView.content.classList.remove("active");
-  //   if (!markerView.content.classList.contains("active")){
-  //       markerView.content.classList.add("active");
-  //   }
-  // else{
-  //     markerView.content.classList.remove("active");
-  //     }
-  //   google.maps.event.addListener(map, "click", function(event) {
-  //     markerView.content.classList.remove("active");
-  //   });
-  // });
+  markerView.addEventListener("click",() =>{
+    markerView.content.classList.remove("active");
     if (!markerView.content.classList.contains("active")){
         markerView.content.classList.add("active");
     }
+  else{
+      markerView.content.classList.remove("active");
+      }
     google.maps.event.addListener(map, "click", function(event) {
       markerView.content.classList.remove("active");
+    });
   });
+
+  
+  //   if (!markerView.content.classList.contains("active")){
+  //       markerView.content.classList.add("active");
+  //   }
+  //   google.maps.event.addListener(map, "click", function(event) {
+  //     markerView.content.classList.remove("active");
+  // });
 }
 
 function buildContent(f){
@@ -85,16 +87,16 @@ function buildContent(f){
           </div>
             <div class="socailMedia">
               <li class="facebook">
-                <a href="https://www.facebook.com/GreenfleetAustralia/">
+                <a href="https://www.facebook.com/GreenfleetAustralia/" target="_blank">
                   <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
                 </a>
               </li>
               <li class="instagram">
-                <a href="https://www.instagram.com/greenfleetaustralia/">
+                <a href="https://www.instagram.com/greenfleetaustralia/" target="_blank">
                   <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
                 </a>
               <li class="linkedin">
-                <a href="https://www.linkedin.com/company/greenfleet/?originalSubdomain=au">
+                <a href="https://www.linkedin.com/company/greenfleet/?originalSubdomain=au" target="_blank">
                   <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
                 </a>
             </div>
