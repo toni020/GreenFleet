@@ -36,19 +36,23 @@ async function initMap() {
 
 }
 function myFunction(markerView){
-  markerView.addEventListener("click",() =>{
-    markerView.content.classList.remove("active");
-    if (!markerView.content.classList.contains("active")){
-        markerView.content.classList.add("active");
-    }
-  else{
-      markerView.content.classList.remove("active");
-      }
-    google.maps.event.addListener(map, "click", function(event) {
-      markerView.content.classList.remove("active");
-    });
-  });
+  if (openMarkerContent && openMarkerContent !== markerView.content) {
+    // Close previously open marker content
+    openMarkerContent.classList.remove("active");
+  }
 
+  markerView.content.classList.toggle("active"); // Toggle the current marker's content
+
+  if (markerView.content.classList.contains("active")) {
+    openMarkerContent = markerView.content; // Set the new active marker content
+  } else {
+    openMarkerContent = null; // No marker is currently open
+  }
+
+  google.maps.event.addListener(map, "click", function () {
+    markerView.content.classList.remove("active"); // Close the marker content when clicking on the map
+    openMarkerContent = null; // Reset the open marker content
+  });
   
   //   if (!markerView.content.classList.contains("active")){
   //       markerView.content.classList.add("active");
