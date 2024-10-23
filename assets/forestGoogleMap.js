@@ -80,12 +80,18 @@ function buildContent(f){
           </div>
             <div class="socailMedia">
               <li class="facebook">
-                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+                <a href="https://www.facebook.com/GreenfleetAustralia/">
+                  <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/facebook.png?v=1727331048">
+                </a>
               </li>
               <li class="instagram">
-                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
+                <a href="https://www.instagram.com/greenfleetaustralia/">
+                  <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/instagram.png?v=1727359025">
+                </a>
               <li class="linkedin">
-                <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+                <a href="https://www.linkedin.com/company/greenfleet/?originalSubdomain=au">
+                  <img src="https://cdn.shopify.com/s/files/1/0888/9650/4126/files/linkedin.png?v=1727359078">
+                </a>
             </div>
 
         </div>
