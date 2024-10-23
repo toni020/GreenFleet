@@ -22,7 +22,7 @@
         "heading_8Thxgd": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Idea #1 - Carbon Footprint Tracker",
             "heading_size": "h1"
           }
         },
@@ -39,6 +39,7 @@
         "text_a7WxQE"
       ],
       "settings": {
+        "image": "shopify://shop_images/bonus1.png",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
@@ -59,7 +60,7 @@
         "heading_9dq68h": {
           "type": "heading",
           "settings": {
-            "heading": "Image with text",
+            "heading": "Idea #2 - Environmental Tracker",
             "heading_size": "h1"
           }
         },
@@ -76,6 +77,7 @@
         "text_XPtyaj"
       ],
       "settings": {
+        "image": "shopify://shop_images/bonus2.jpg",
         "height": "adapt",
         "desktop_image_width": "medium",
         "layout": "image_first",
