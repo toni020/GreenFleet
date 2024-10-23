@@ -51,9 +51,7 @@ function myFunction(markerView){
     if (!markerView.content.classList.contains("active")){
         markerView.content.classList.add("active");
     }
-  // else{
-  //     markerView.content.classList.remove("active");
-  //     }
+
     google.maps.event.addListener(map, "click", function(event) {
       markerView.content.classList.remove("active");
 }
