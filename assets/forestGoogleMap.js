@@ -29,26 +29,30 @@ async function initMap() {
     content: buildContent(forest),
     position: forest.position,
     });
-      
+  
     mapMarker.addListener("click", () => {
       // map.setCenter(mapMarker.position);
       // map.setZoom(8);
       myFunction(mapMarker);
     });
+    
   }
 
 
 }
 function myFunction(markerView){
-  if (!markerView.content.classList.contains("active")){
-      markerView.content.classList.add("active");
-  }
+  markerView.addEventListener("click",() =>{
+    markerView.content.classList.remove("active");
+    if (!markerView.content.classList.contains("active")){
+        markerView.content.classList.add("active");
+    }
   // else{
   //     markerView.content.classList.remove("active");
   //     }
-  google.maps.event.addListener(map, "click", function(event) {
-    markerView.content.classList.remove("active");
-});
+    google.maps.event.addListener(map, "click", function(event) {
+      markerView.content.classList.remove("active");
+    });
+  });
 }
 
 function buildContent(f){
