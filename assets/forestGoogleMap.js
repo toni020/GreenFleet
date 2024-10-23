@@ -30,15 +30,12 @@ async function initMap() {
     position: forest.position,
     });
       
+  }
     mapMarker.addListener("click", () => {
       // map.setCenter(mapMarker.position);
       // map.setZoom(8);
-      if(mapMarker.content.classList.contains("active")){
-        mapMarker.content.classList.remove("active");
-      }
       myFunction(mapMarker);
     });
-  }
 
 
 }
