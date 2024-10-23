@@ -16,15 +16,10 @@ async function initMap() {
     mapId: "DEMO_MAP_ID",
   });
   
-  const mapMarker = new AdvancedMarkerElement({
-    map,
-    position: { lat: -34.2923902, lng: 149.7934873 },
-    content:buildContent(),
 
-  });
 
   for (var forest of forests) {
-    const mapMarker = new google.maps.marker.AdvancedMarkerElement({
+    const mapMarker = new AdvancedMarkerElement({
     map,
     content: buildContent(forest),
     position: forest.position,
