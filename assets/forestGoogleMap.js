@@ -55,12 +55,6 @@ function myFunction(markerView){
     openMarkerContent = null; // Reset the open marker content
   });
   
-  //   if (!markerView.content.classList.contains("active")){
-  //       markerView.content.classList.add("active");
-  //   }
-  //   google.maps.event.addListener(map, "click", function(event) {
-  //     markerView.content.classList.remove("active");
-  // });
 }
 
 function buildContent(f){
