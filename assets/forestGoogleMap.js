@@ -33,6 +33,7 @@ async function initMap() {
     mapMarker.addListener("click", () => {
       // map.setCenter(mapMarker.position);
       // map.setZoom(8);
+      markerView.content.classList.remove("active");
       myFunction(mapMarker);
     });
   }
@@ -41,7 +42,6 @@ async function initMap() {
 }
 function myFunction(markerView){
   if (!markerView.content.classList.contains("active")){
-      markerView.content.classList.remove("active");
       markerView.content.classList.add("active");
   }
   // else{
