@@ -1,4 +1,5 @@
 let map;
+let openMarkerContent = null; 
 
 async function initMap() {
   // The location of Uluru
