@@ -41,7 +41,7 @@ async function initMap() {
 
 }
 function myFunction(markerView){
-  markerView.addEventListener("click",() =>{
+  markerView.addListener("click",() =>{
     markerView.content.classList.remove("active");
     if (!markerView.content.classList.contains("active")){
         markerView.content.classList.add("active");
