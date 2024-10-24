@@ -50,7 +50,7 @@
         "text_UNbUpJ"
       ],
       "settings": {
-        "image": "shopify://shop_images/logo.png",
+        "image": "shopify://shop_images/logo_vertical.png",
         "height": "adapt",
         "desktop_image_width": "small",
         "layout": "image_first",
