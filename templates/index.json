@@ -12,14 +12,62 @@
     "custom_liquid_j47HpH": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">Greenfleet Mapmakers - La Trobe University</h1>",
+        "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">Project Introduction</h1>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 4
       }
+    },
+    "image_with_text_WLAzwW": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pE4TAm": {
+          "type": "heading",
+          "settings": {
+            "heading": "Greenfleet Mapmakers",
+            "heading_size": "h1"
+          }
+        },
+        "caption_4BdEjK": {
+          "type": "caption",
+          "settings": {
+            "caption": "LA TROBE UNIVERSITY STUDENT project",
+            "text_style": "caption-with-letter-spacing",
+            "text_size": "medium"
+          }
+        },
+        "text_UNbUpJ": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Intro</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pE4TAm",
+        "caption_4BdEjK",
+        "text_UNbUpJ"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/logo.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
-    "custom_liquid_j47HpH"
+    "custom_liquid_j47HpH",
+    "image_with_text_WLAzwW"
   ]
 }
