@@ -17,9 +17,16 @@
         "padding_top": 40,
         "padding_bottom": 52
       }
+    },
+    "forest_CxGNQe": {
+      "type": "forest",
+      "settings": {
+        "headline": ""
+      }
     }
   },
   "order": [
-    "custom_liquid_j47HpH"
+    "custom_liquid_j47HpH",
+    "forest_CxGNQe"
   ]
 }
