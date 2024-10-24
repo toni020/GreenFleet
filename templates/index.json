@@ -51,9 +51,9 @@
       ],
       "settings": {
         "image": "shopify://shop_images/logo_vertical.png",
-        "height": "adapt",
+        "height": "medium",
         "desktop_image_width": "small",
-        "layout": "text_first",
+        "layout": "image_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
