@@ -30,15 +30,6 @@
         "padding_bottom": 20
       }
     },
-    "custom_liquid_z49y9J": {
-      "type": "custom-liquid",
-      "settings": {
-        "custom_liquid": "<h1 class=\"feature-2-map-slider-title\">Feature 1 - Dropdown Menu</h1>",
-        "color_scheme": "",
-        "padding_top": 12,
-        "padding_bottom": 0
-      }
-    },
     "forest_hpDRFY": {
       "type": "forest",
       "settings": {
@@ -48,7 +39,6 @@
   },
   "order": [
     "header",
-    "custom_liquid_z49y9J",
     "forest_hpDRFY"
   ]
 }
