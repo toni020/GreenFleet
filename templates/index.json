@@ -12,7 +12,7 @@
     "custom_liquid_j47HpH": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">Project Introduction</h1>",
+        "custom_liquid": "<p style=\"text-align: center;\">{{ 'Select the 3-bar icon to view more features (Mobile)' }}</p>\n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">{{ 'Project Introduction' }}</h1>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 4
