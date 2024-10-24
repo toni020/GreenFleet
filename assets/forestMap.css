@@ -1,6 +1,15 @@
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  padding: 20px; 
+}
+
+
 #map {
   flex-grow: 1;
-  width: 40%;
+  width: 80%; 
   height: 500px;
   position: relative;
   border: 2px solid #ccc;
@@ -8,6 +17,7 @@
   overflow: hidden;
   box-sizing: border-box;
 }
+
 
 /*
  * Forest styles in deactive state.
