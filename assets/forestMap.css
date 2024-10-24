@@ -1,7 +1,13 @@
+.feature-1-dropdown-menu-title {
+  text-align: center;
+  margin: 20px 0;
+}
+
 .map-container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   height: 100vh; 
   margin-left: 100px;
   margin-right: 100px;
