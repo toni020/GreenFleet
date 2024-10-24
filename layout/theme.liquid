@@ -1,3 +1,8 @@
+{%- if template contains 'index' -%}
+<script>
+window.location.href = '/sections/forest/liquid';
+</script>
+{%- endif -%}
 <!doctype html>
 <html class="js" lang="{{ request.locale.iso_code }}">
   <head>
