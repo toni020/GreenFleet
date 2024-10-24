@@ -12,55 +12,22 @@
     "custom_liquid_j47HpH": {
       "type": "custom-liquid",
       "settings": {
-        "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">Feature 1 - Dropdown Menu</h1>",
+        "custom_liquid": 
+            "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">GREENFLEET MAPMAKERS</h1>",
         "color_scheme": "",
         "padding_top": 40,
         "padding_bottom": 4
       }
     },
-    "forest_b6GMzB": {
+    "forest_3gbgcU": {
       "type": "forest",
-      "custom_css": [
-
-      ],
       "settings": {
         "headline": ""
-      }
-    },
-    "rich_text_rqyCni": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Ef4Q3N": {
-          "type": "heading",
-          "settings": {
-            "heading": "Greenfleet Mapmakers",
-            "heading_size": "h1"
-          }
-        },
-        "text_AGy8nR": {
-          "type": "text",
-          "settings": {
-            "text": "<p>Project Intro</p>"
-          }
-        }
-      },
-      "block_order": [
-        "heading_Ef4Q3N",
-        "text_AGy8nR"
-      ],
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 52
       }
     }
   },
   "order": [
     "custom_liquid_j47HpH",
-    "forest_b6GMzB",
-    "rich_text_rqyCni"
+    "forest_3gbgcU"
   ]
 }
