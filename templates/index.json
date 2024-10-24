@@ -20,13 +20,47 @@
     },
     "forest_b6GMzB": {
       "type": "forest",
+      "custom_css": [
+
+      ],
       "settings": {
         "headline": ""
+      }
+    },
+    "rich_text_rqyCni": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_Ef4Q3N": {
+          "type": "heading",
+          "settings": {
+            "heading": "Greenfleet Mapmakers",
+            "heading_size": "h1"
+          }
+        },
+        "text_AGy8nR": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Project Intro</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_Ef4Q3N",
+        "text_AGy8nR"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
       }
     }
   },
   "order": [
     "custom_liquid_j47HpH",
-    "forest_b6GMzB"
+    "forest_b6GMzB",
+    "rich_text_rqyCni"
   ]
 }
