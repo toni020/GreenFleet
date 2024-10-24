@@ -53,7 +53,7 @@
         "image": "shopify://shop_images/logo_vertical.png",
         "height": "adapt",
         "desktop_image_width": "small",
-        "layout": "image_first",
+        "layout": "text_first",
         "desktop_content_position": "top",
         "desktop_content_alignment": "left",
         "content_layout": "no-overlap",
