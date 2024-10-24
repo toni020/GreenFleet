@@ -2,9 +2,11 @@
   flex-grow: 1;
   width: 100%;
   height: 400px;
-  margin: 0 auto; 
-  border-top: 30px solid transparent; 
-  border-bottom: 30px solid transparent; 
+  position: relative;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 /*
