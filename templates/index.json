@@ -15,10 +15,10 @@
         "custom_liquid": "<p style=\"text-align: center;\">Select the 3-bar icon to view more features (Mobile)</p> \n\n<h1 class=\"feature-2-map-slider-title\" style=\"text-align: center;\">Feature 1 - Dropdown Menu</h1>",
         "color_scheme": "",
         "padding_top": 40,
-        "padding_bottom": 52
+        "padding_bottom": 4
       }
     },
-    "forest_CxGNQe": {
+    "forest_3gbgcU": {
       "type": "forest",
       "settings": {
         "headline": ""
@@ -27,6 +27,6 @@
   },
   "order": [
     "custom_liquid_j47HpH",
-    "forest_CxGNQe"
+    "forest_3gbgcU"
   ]
 }
