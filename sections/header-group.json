@@ -29,9 +29,16 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "forest_rEppJb": {
+      "type": "forest",
+      "settings": {
+        "headline": ""
+      }
     }
   },
   "order": [
-    "header"
+    "header",
+    "forest_rEppJb"
   ]
 }
