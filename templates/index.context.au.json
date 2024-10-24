@@ -13,18 +13,8 @@
     "market": "au"
   },
   "sections": {
-    "forest_ifpmzM": {
-      "settings": {
-      },
-      "blocks": {
-      },
-      "block_order": [
-
-      ]
-    }
   },
   "order": [
-    "custom_liquid_j47HpH",
-    "forest_ifpmzM"
+    "custom_liquid_j47HpH"
   ]
 }
