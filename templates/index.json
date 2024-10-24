@@ -23,10 +23,21 @@
       "settings": {
         "headline": ""
       }
+    },
+    "page_DitfiR": {
+      "type": "page",
+      "settings": {
+        "page": "",
+        "heading_size": "h1",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "custom_liquid_j47HpH",
-    "forest_kHAYTR"
+    "forest_kHAYTR",
+    "page_DitfiR"
   ]
 }
