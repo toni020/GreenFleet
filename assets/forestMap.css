@@ -11,6 +11,12 @@
   margin-right: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+  .map-container {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
 
 #map {
   flex-grow: 1;
