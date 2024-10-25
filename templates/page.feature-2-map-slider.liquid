@@ -1,94 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feature 2 - Map Slider</title>
+    <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Feature 2 - Map Slider</title>
-  <link rel="stylesheet" href="{{ 'feature-2-map-slider.css' | asset_url }}">
+    <script
+      async
+      defer
+      src="https://maps.googleapis.com/maps/api/js?key={{ page.metafields.custom.google_maps_api_key }}&callback=initMap"
+    ></script>
+  </head>
 
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key={{ page.metafields.custom.google_maps_api_key }}&callback=initMap"></script>
-</head>
+  <body>
+    <p style="text-align: center;">Select the 3-bar icon to view more features (Mobile)</p>
 
-<body>
+    <h1 class="feature-2-map-slider-title">Feature 2 - Map Filters</h1>
 
-  <p style="text-align: center;">Select the 3-bar icon to view more features (Mobile)</p>
-
-  <h1 class="feature-2-map-slider-title">Feature 2 - Map Filters</h1>
-
-  <div id="map-container">
-    <!-- Map and toggle buttons as one block -->
-    <div class="map-toggle-wrapper">
-      <div class="toggle-container">
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleMarkers">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Greenfleet Impact</span>
+    <div id="map-container">
+      <!-- Map and toggle buttons as one block -->
+      <div class="map-toggle-wrapper">
+        <div class="toggle-container">
+          <div class="toggle-item">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggleMarkers">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Greenfleet Impact</span>
+          </div>
+          <div class="toggle-item">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggleAboriginalOverlay">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Indigenous Forest Area</span>
+          </div>
+          <div class="toggle-item">
+            <label class="toggle-switch">
+              <input type="checkbox" id="toggleDarkMode">
+              <span class="slider"></span>
+            </label>
+            <span class="toggle-label">Dark Mode</span>
+          </div>
         </div>
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleAboriginalOverlay">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Indigenous Forest Area</span>
-        </div>
-        <div class="toggle-item">
-          <label class="toggle-switch">
-            <input type="checkbox" id="toggleDarkMode">
-            <span class="slider"></span>
-          </label>
-          <span class="toggle-label">Dark Mode</span>
-        </div>
+
+        <div id="map"></div>
+        <p class="source-text"></p>
       </div>
 
-      <div id="map"></div>
-      <p class="source-text"></p>
-    </div>
-
-    <div class="big-text-container">
-      <div class="big-number-container">
-        <span class="big-number">10.8</span>
-        <img src="{{ 'tree.png' | asset_url }}" alt="Tree Icon" class="tree-icon">
+      <div class="big-text-container">
+        <div class="big-number-container">
+          <span class="big-number">10.8</span>
+          <img src="{{ 'tree.png' | asset_url }}" alt="Tree Icon" class="tree-icon">
+        </div>
+        <div class="big-text">MILLION TREES PLANTED ACROSS AUSTRALIA & NEW ZEALAND</div>
       </div>
-      <div class="big-text">MILLION TREES PLANTED ACROSS AUSTRALIA & NEW ZEALAND</div>
     </div>
-  </div>
 
-  <script>
-    const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
-    const treeIconUrl = '{{ "tree2.png" | asset_url }}';
+    <script>
+      const aboriginalLandImageUrl = '{{ "aboriginal_map_pixelated.png" | asset_url }}';
+      const treeIconUrl = '{{ "tree.png" | asset_url }}';
 
-    const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
-    const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}';
-    const forestLocationsUrl = '{{ "forest-locations.json" | asset_url }}';
+      const jsonStylesDarkUrl = '{{ "map_custom_theme_dark.json" | asset_url }}';
+      const jsonStylesLightUrl = '{{ "map_custom_theme_light.json" | asset_url }}';
+      const forestLocationsUrl = '{{ "forest-locations.json" | asset_url }}';
 
-    let mapStyles_dark, mapStyles_light;
+      let mapStyles_dark, mapStyles_light;
 
-    fetch(jsonStylesDarkUrl)
-      .then(response => response.json())
-      .then(data => {
-        mapStyles_dark = data;
-      })
-      .catch(error => console.error('Error fetching map styles:', error));
+      fetch(jsonStylesDarkUrl)
+        .then(response => response.json())
+        .then(data => {
+          mapStyles_dark = data;
+        })
+        .catch(error => console.error('Error fetching map styles:', error));
 
-    fetch(jsonStylesLightUrl)
-      .then(response => response.json())
-      .then(data => {
-        mapStyles_light = data;
-      })
-      .catch(error => console.error('Error fetching map styles:', error));
+      fetch(jsonStylesLightUrl)
+        .then(response => response.json())
+        .then(data => {
+          mapStyles_light = data;
+        })
+        .catch(error => console.error('Error fetching map styles:', error));
 
-    fetch(forestLocationsUrl)
-      .then(response => response.json())
-      .then(data => {
-        locations = data;
-      })
-      .catch(error => console.error('Error fetching forest locations:', error));
-  </script>
+      fetch(forestLocationsUrl)
+        .then(response => response.json())
+        .then(data => {
+          locations = data;
+        })
+        .catch(error => console.error('Error fetching forest locations:', error));
+    </script>
 
-  <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
-</body>
-
+    <script type="module" src="{{ 'feature-2-map-slider.js' | asset_url }}" defer></script>
+  </body>
 </html>
