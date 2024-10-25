@@ -14,7 +14,5 @@
   { "lat": -35.5313, "lng": 138.7761, "city": "Victor Harbor" },
   { "lat": -33.3784, "lng": 149.232, "city": "Bathurst" },
   { "lat": -37.5612, "lng": 143.8634, "city": "Ballarat" },
-  { "lat": -41.4388, "lng": 147.1347, "city": "Launceston" },
-  { "lat": -36.8485, "lng": 174.7633, "city": "Auckland" },
-  { "lat": -43.5321, "lng": 172.6362, "city": "Christchurch" }
+  { "lat": -41.4388, "lng": 147.1347, "city": "Launceston" }
 ]
