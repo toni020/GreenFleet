@@ -137,13 +137,7 @@ function shareMe(){
       }
     }
 }
-// function aboutMe(forest){
-//   if (forest?.link === "") {
-//     alert("Sorry, the forest isn't available now.");
-//   }else{
-//     window.open(forest?.link, "_blank");
-//   }
-// }
+
 
 function imageSlider(forest, content){
   var container = content.querySelector(".slider");
@@ -244,6 +238,7 @@ const forests = [
     address: "Yurol Ringtail Forest, McKinnon Drive, Pomona, QLD 4568",
     link: "https://www.greenfleet.com.au/blogs/forest/yurol-ringtail",
     images:[],
+    video:"https://www.youtube.com/watch?v=LqsiN8uHnS0&list=TLGG90lV4jQE8IUyODEwMjAyNA&t=14s",
     intro:"Spanning two sites located on Kabi Kabi Country in Queensland, Yurol and Ringtail make up around 1,100 hectares of cleared land that Greenfleet is restoring to legally protected native forest. ",
   },
 ];
