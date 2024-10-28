@@ -227,11 +227,12 @@
   margin-left:5px;
 }
 .forest.active .facebook:hover{
-  filter: brightness(1.75);
+  filter: brightness(1.25);
 }
 .forest.active .instagram{
+  filter: brightness(1.25);
 }
 .forest.active .linkedin{
-
+  filter: brightness(1.25);
 }
 
