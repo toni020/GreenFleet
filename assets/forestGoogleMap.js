@@ -80,9 +80,14 @@ function buildContent(f){
     <img class="icon" src = "https://cdn.shopify.com/s/files/1/0888/9650/4126/files/tree.png?v=1726456389">
     <section class="container">
       <div class="slider-wrapper">
-        <div class="slider">
-        </div>
+        <div class="slider"></div>
       </div>
+      ${f.videos && f.videos.length > 0 ? `
+        <video controls width="100%">
+          <source src="${f.videos[0]}" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      ` : ""}
     </section>
     <div class="menu">
       <div class="name">
