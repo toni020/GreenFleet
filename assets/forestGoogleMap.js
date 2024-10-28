@@ -239,13 +239,7 @@ const forests = [
     images:[],
     intro:"Spanning two sites located on Kabi Kabi Country in Queensland, Yurol and Ringtail make up around 1,100 hectares of cleared land that Greenfleet is restoring to legally protected native forest. ",
   },
-  {
-    name: "Lyrebird ",
-    address: "380 Snowdens Rd, Boolarra South, VIC 3870",
-    link: "https://www.greenfleet.com.au/blogs/forest/lyrebird",
-    images:[],
-    intro:"Hello world!!! ",
-  },
+
 ];
 
 window.initMap = initMap;
