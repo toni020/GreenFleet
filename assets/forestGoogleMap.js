@@ -28,12 +28,17 @@ async function initMap() {
     });
   
     mapMarker.addListener("click", () => {
-      // map.setCenter(mapMarker.position);
-      // map.setZoom(8);
-      myFunction(mapMarker);
+      toggleActiveForest(mapMarker.content);
     });
     
   }
+  map.addListener("click", () => {
+    if (openMarkerContent) {
+      openMarkerContent.classList.remove("active");
+      openMarkerContent.style.zIndex = ''; // Reset z-index
+      openMarkerContent = null;
+    }
+  });
 
 
 }
@@ -50,25 +55,20 @@ async function geocodeAddress(address) {
   }
 }
 
-function myFunction(markerView){
-  if (openMarkerContent && openMarkerContent !== markerView.content) {
-    // Close previously open marker content
+function toggleActiveForest(contentElement) {
+  if (openMarkerContent && openMarkerContent !== contentElement) {
     openMarkerContent.classList.remove("active");
+    openMarkerContent.style.zIndex = ''; // Reset z-index of previously active element
   }
 
-  markerView.content.classList.toggle("active"); // Toggle the current marker's content
-
-  if (markerView.content.classList.contains("active")) {
-    openMarkerContent = markerView.content; // Set the new active marker content
+  contentElement.classList.toggle("active");
+  if (contentElement.classList.contains("active")) {
+    contentElement.style.zIndex = currentZIndex--; // Decrease z-index for the next active element
+    openMarkerContent = contentElement;
   } else {
-    openMarkerContent = null; // No marker is currently open
+    contentElement.style.zIndex = ''; // Reset z-index if deactivated
+    openMarkerContent = null;
   }
-
-  google.maps.event.addListener(map, "click", function () {
-    markerView.content.classList.remove("active"); // Close the marker content when clicking on the map
-    openMarkerContent = null; // Reset the open marker content
-  });
-  
 }
 
 function buildContent(f){
