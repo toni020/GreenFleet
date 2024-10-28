@@ -226,13 +226,22 @@
   height:30px;
   margin-left:5px;
 }
-.forest.active .facebook:hover{
-  filter: brightness(1.25);
+.forest.active .facebook{
+  filter: brightness(1);
 }
-.forest.active .instagram:hover{
-  filter: brightness(1.25);
+.forest.active .instagram{
+  filter: brightness(1);
 }
-.forest.active .linkedin:hover{
-  filter: brightness(1.25);
+.forest.active .linkedin{
+  filter: brightness(1);
 }
 
+.forest.active .facebook:hover{
+  filter: brightness(1.5);
+}
+.forest.active .instagram{
+  filter: brightness(1);
+}
+.forest.active .linkedin{
+  filter: brightness(1);
+}
