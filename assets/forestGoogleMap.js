@@ -20,10 +20,11 @@ async function initMap() {
 
 
   for (var forest of forests) {
+    const position = await geocodeAddress(forest.address);
     const mapMarker = new AdvancedMarkerElement({
     map,
     content: buildContent(forest),
-    position: forest.position,
+    position: position,
     });
   
     mapMarker.addListener("click", () => {
@@ -36,6 +37,19 @@ async function initMap() {
 
 
 }
+
+async function geocodeAddress(address) {
+  const apiKey = 'AIzaSyCvbBZMdQ710YM1aSpZf8GGAQpBEnhMOi8';
+  const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${apiKey}`);
+  const data = await response.json();
+  if (data.status === 'OK') {
+    return data.results[0].geometry.location;
+  } else {
+    console.error('Geocode was not successful for the following reason: ' + data.status);
+    return { lat: -25.344, lng: 131.036 }; // Default location on error
+  }
+}
+
 function myFunction(markerView){
   if (openMarkerContent && openMarkerContent !== markerView.content) {
     // Close previously open marker content
