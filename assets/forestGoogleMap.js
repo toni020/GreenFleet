@@ -234,6 +234,13 @@ const forests = [
            "https://www.caravanrvcamping.com.au/assets/webshop/cms/82/782-1.jpg?1598483204",],
     intro:"Greenfleet has been working with the NSW National Parks and Wildlife Service (NPWS) since 2008 to revegetate a number of sites within Kosciuszko National Park. Five separate sites are undergoing a Greenfleet transformation, with a total area of approximately 442.5 hectares.<br> Primarily used for grazing prior to being incorporated into Kosciuszko National Park in1967, natural regeneration at these sites has been slow and sporadic because of weed infestation, kangaroo and pest animal populations, and compacted soils.",
   },
+  {
+    name: "Yurol-Ringtail ",
+    address: "Yurol Ringtail Forest, McKinnon Drive, Pomona, QLD 4568",
+    link: "https://www.greenfleet.com.au/blogs/forest/yurol-ringtail",
+    images:[],
+    intro:"",
+  },
 ];
 
 window.initMap = initMap;
