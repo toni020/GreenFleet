@@ -237,11 +237,11 @@
 }
 
 .forest.active .facebook:hover{
-  filter: brightness(1.5);
+  filter: brightness(1.15);
 }
 .forest.active .instagram:hover{
-  filter: brightness(1.5);
+  filter: brightness(1.15);
 }
 .forest.active .linkedin:hover{
-  filter: brightness(1.5);
+  filter: brightness(1.15);
 }
