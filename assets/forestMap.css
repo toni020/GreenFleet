@@ -226,7 +226,8 @@
   height:30px;
   margin-left:5px;
 }
-.forest.active .facebook{
+.forest.active .facebook:hover{
+  filter: brightness(1.75);
 }
 .forest.active .instagram{
 }
